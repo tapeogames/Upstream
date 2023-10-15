@@ -126,7 +126,9 @@ Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño 
 
 El juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
 
-**Arte conceptual**![](RackMultipart20231015-1-zouzsj_html_523cc4f6a3e7e18e.jpg)
+**Arte conceptual**
+![Darwin Evo 1 - Turn Around](https://github.com/tapeogames/Upstream/assets/145482203/c0123d66-6ae1-491b-a170-dee013ed3b0a)
+
 
 # INTERFAZ DE USUARIO
 
@@ -147,8 +149,9 @@ Una vez el jugador se encuentre en el juego tendrán en todo momento la opción 
 Finalmente, cuando los jugadores superen un nivel, serán llevados a una pantalla de victoria donde se le capacitará al jugador ir al siguiente nivel.
 
 #
+![Diagrama flujo 1](https://github.com/tapeogames/Upstream/assets/145482203/5fb176ec-0195-4fac-b07d-a16444a61eff)
 
-![](RackMultipart20231015-1-zouzsj_html_5a6c37e4b0b1a31f.png)
+
 
 **Interfaz de la pantalla inicial**
 
@@ -158,7 +161,8 @@ Al hacer clic en el botón correspondiente a la edad, los jugadores podrán sele
 
 Asimismo, para elegir su género, se han proporcionado tres opciones: "Masculino", "Femenino" y "Otro".
 
-![](RackMultipart20231015-1-zouzsj_html_7cdaf6be29ed3d11.png)
+![Diagrama flujo 2](https://github.com/tapeogames/Upstream/assets/145482203/16ad2d37-6fda-46cd-9a2e-8e30cd0e0b8f)
+
 
 **Interfaz del menú de inicio**
 
@@ -170,7 +174,8 @@ El tercer botón, "Créditos", se encontrará la información sobre los desarrol
 
 Finalmente, si deseas cerrar el juego y volver al escritorio o al menú principal de tu plataforma de juego, el cuarto botón, "Salir", te permitirá hacerlo de manera rápida y sencilla.
 
-![](RackMultipart20231015-1-zouzsj_html_93fe7b242354c8d1.png)
+![Diagrama flujo 3](https://github.com/tapeogames/Upstream/assets/145482203/6690b1cc-d223-44f6-99cb-c6f07df5ab13)
+
 
 **Interfaz del selector de niveles**
 
@@ -192,7 +197,8 @@ Si en algún momento necesitas recordar los controles o deseas consultarlos para
 
 Finalmente, si deseas abandonar el nivel actual y regresar al menú de inicio para explorar otras opciones o seleccionar un nivel diferente, el cuarto botón, "Salir", te permitirá hacerlo.
 
-![](RackMultipart20231015-1-zouzsj_html_8944d2fd5f4f52ee.png)
+![Diagrama flujo 4](https://github.com/tapeogames/Upstream/assets/145482203/27b92b0b-00d9-45b0-9e2d-dea7d2873033)
+
 
 **Interfaz del menú de victoria**
 
@@ -202,7 +208,8 @@ El primer botón, identificado como "Siguiente Nivel", te llevará al siguiente 
 
 Si en cambio prefieres volver al punto de inicio o explorar otras opciones disponibles en el jeugom el segundo botón, señalado como "Menú Principal", te llevará de vuelta al menú principal del juego.
 
-![](RackMultipart20231015-1-zouzsj_html_643766c22981304a.png)
+![Diagrama flujo 5](https://github.com/tapeogames/Upstream/assets/145482203/68f58b04-19e2-48a5-9715-5cd45caf5c49)
+
 
 # MECÁNICAS DE JUEGO
 
