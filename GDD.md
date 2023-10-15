@@ -318,4 +318,6 @@ Como modelo de negocio de nuestra empresa se ha escogido la fidelización. Tenem
 
 Nos hemos centrado en una mezcla entre micro-transacciones y DLCs. Creemos que una de las maneras de obtener beneficios a través del juego es consiguiendo vender productos extra, como paquetes, niveles o skins adicionales, para todo aquel que quiera obtener todos los elementos del videojuego.
 
-![](RackMultipart20231015-1-zouzsj_html_94e85ad1986567ac.png)
+![Canvas de Modelo de Negocio Tabla para estrategia planeación negocio pastel moderno](https://github.com/tapeogames/Upstream/assets/145482203/b3c84d89-fbdc-4461-93e9-6cae40b2cb19)
+
+
