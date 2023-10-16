@@ -59,6 +59,8 @@ El público objetivo principal de " **Upstream**" son niños y preadolescentes e
 
 Además del público infantil, " **Upstream**" también puede atraer a padres, maestros y cuidadores interesados en ofrecer a los niños una experiencia de juego educativa y enriquecedora.
 
+En un principio se plantearon los siguinetes MOODBOARDS:
+
 ![moodboard 1](https://github.com/tapeogames/Upstream/assets/145482203/0ca1c3ec-6fa9-45bd-858f-6ab5b239ae6e)
 ![moodboard 2](https://github.com/tapeogames/Upstream/assets/145482203/bf84fa6e-e8bc-4db2-8e33-fbd1da57dc9e)
 
