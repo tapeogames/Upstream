@@ -251,6 +251,11 @@ La primera mecánica principal es el movimiento. El jugador podrá moverse en la
 
 Otra mecánica del juego es el arrastrar y empujar objetos como pueden ser troncos, barriles, nenúfares… etc. Los niveles se diseñarán con el objetivo de mantener este concepto pero aumentando la complejidad del mapa para que el usuario necesite pensar sus movimientos y planear en su cabeza cómo resolver el puzzle.
 
+
+![Pull Concept](https://github.com/tapeogames/Upstream/assets/115087211/c96570eb-2054-43d7-b713-101147a2ddfb)
+![Push Concept](https://github.com/tapeogames/Upstream/assets/115087211/61b8c07c-169c-4587-afee-d2bae7de9138)
+
+
 Cabe destacar también que Darwin podrá aprovechar ciertas superficies para deslizarse y avanzar varias casillas, en lo referido a la tierra, y además podrá aprovechar corrientes del agua para el mismo fin.
 
 El personaje contará con un sistema de progresión de mecánicas que irá relacionado con la etapa evolutiva en la que se encuentra el personaje, estas serán tres:
@@ -263,8 +268,6 @@ El personaje contará con un sistema de progresión de mecánicas que irá relac
 
 En cuanto a los controles del juego, para ordenador, se podrá mover a Darwin con WASD y para interactuar con un objeto y arrastrarlo, habrá que pulsar y mantener el espacio. Para movil (pendiente consulta por dificultad de implementación)
 
-![Pull Concept](https://github.com/tapeogames/Upstream/assets/115087211/c96570eb-2054-43d7-b713-101147a2ddfb)
-![Push Concept](https://github.com/tapeogames/Upstream/assets/115087211/61b8c07c-169c-4587-afee-d2bae7de9138)
 
 
 # CONTROLES
