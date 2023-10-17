@@ -134,9 +134,11 @@ Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño 
 
 ## Estilo visual y gráficos
 
-"Upstream" es un videojuego de gráficos 3D que presenta una perspectiva isométrica con cámara fija. Su estilo visual persigue una estética estilizada de tipo "cartoon".
+"Upstream" es un videojuego de gráficos 3D que presenta una perspectiva isométrica con cámara fija. Su estilo visual persigue una estética estilizada de tipo "cartoon", con colores llanos y agradables, alejado de una visión realista y detallada. Esto se debe a que dicha estética se considera coherente para la clase de juego a desarrollar, ya que consigue simplificar los elementos que el usuario observa en los niveles, pudiendo analizar mejor los puzles y premeditar sus acciones sin distraerse con aspectos visuales excesivamente complejos e innecesarios. Además, al estar enfocada a niños de 3 a 12 años, permite llamar su atención a primera vista y retenerlos en el juego gracias al atractivo visual, sin caer en el error de diseñarlo con un estilo demasiado infantil.
 
-El juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
+Cabe destacar que el diseño de Darwin también posee un significado importante. Pese a que este personaje se enfrenta a diferentes retos y situaciones difíciles, siempre se puede apreciar en su cara cómo sigue tranquilo e intenta resolver los puzles con calma. Esto, reforzado por la ambientación y los colores poco saturados o agobiantes, se ha hecho con el objetivo de que los niños se vean representados con Darwin. Que asimilen que, aunque uno se pueda enfrentar a situaciones complejas, deben mantener la serenidad y centrarse en hacerlo lo mejor que puedan, sin caer en la desesperación y entrar en pánico. De esta forma no solo se enseñan aptitudes de pensamiento computacional, sino que además se promueve el aprendizaje de estas con tranqulidad, paciencia y esfuerzo.
+
+En cuanto a la relevancia artística de los entornos, el juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
 
 **Arte conceptual** ![Darwin Evo 1 - Turn Around](https://github.com/tapeogames/Upstream/assets/145482203/e6413e1a-47e4-4686-8069-42537256b5e3)
 
