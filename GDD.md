@@ -73,11 +73,11 @@ En un principio se plantearon los siguinetes MOODBOARDS:
 
 ## Trama principal y subtramas
 
-La narrativa central del juego trata sobre la aventura de un pequeño anfibio llamado Darwin durante el regreso con su familia. Esta especie de anfibios similares a las salamandras habita en riachuelos, donde depositan sus huevos y los dejan fluir río abajo. El objetivo es que, al eclosionar, las nuevas generaciones se enfrenten a los desafíos que encuentren en su viaje de regreso a casa.
+La narrativa central del juego trata sobre la aventura de un pequeño anfibio llamado Darwin durante el regreso con su familia. Esta especie de anfibios, similares a las salamandras, habita en las zonas altas de los riachuelos, donde depositan sus huevos y cuidan de sus crías en las aguas más tranquilas. Sin embargo, debido a un accidente, los padres de Darwin pierden el huevo de donde nacería él, no pudiendo evitar que la corriente se lo llevara río abajo. Darwin nace entonces en una pequeña cueva, alejado de su familia y de su especie, por lo que deberá explorar el mundo que le rodea y avanzar río arriba para volver a casa.
 
 Acompañaremos a Darwin a lo largo de este viaje, donde deberá ingeniárselas para superar las dificultades del camino. Además veremos su crecimiento, ya que irá transitando por las diferentes fases de la metamorfosis, aprendiendo y ganando experiencia en su travesía.
 
-También se cruzará con diferentes criaturas, de las cuales algunas serán obstáculos a evitar, mientras que otras necesitarán de su ayuda.
+También se cruzará con las diferentes criaturas con las que comparte ecosistema, de las cuales algunas serán obstáculos a evitar, mientras que otras necesitarán de su ayuda.
 
 ## Entornos
 
@@ -95,9 +95,9 @@ El juego contiene un único personaje principal, Darwin, controlado por el usuar
 
 ## Darwin
 
-Como ya se ha mencionado en el apartado de narrativa, Darwin pertenece a una especie de anfibios que atraviesan un proceso de metamorfosis, similar al de las ranas y sapos. Comienzan su crecimiento como renacuajos y poco a poco evolucionan hasta convertirse en salamandras con patas y cola. Las consecuencias en el juego de este concepto se explican con más detalle en el apartado de mecánicas, ya que cada estado de la evolución de Darwin permitirá al jugador aplicar distintas mecánicas de juego en los niveles.
+Como ya se ha mencionado en el apartado de narrativa, Darwin pertenece a una especie de anfibios que atraviesan un proceso de metamorfosis, similar al de las ranas y sapos. Comienzan su crecimiento como renacuajos y poco a poco evolucionan hasta convertirse en salamandras con patas y cola. Las consecuencias en el juego de este concepto se explican con más detalle en el apartado de mecánicas, ya que cada estado de la evolución de Darwin permitirá al jugador aplicar distintas mecánicas de juego en los niveles. El objetivo de este proceso evolutivo es ir acorde con la progresión de dificultad de los niveles. Se pretende mostrar a los niños una especie de metáfora de cómo uno debe adaptarse y mejorar a medida que vaya enfrentándose a nuevos retos, probando nuevas ideas o intentando resolver los problemas con formas de pensar distintas. Esto se verá representado en el juego por ejemplo cuando Darwin pase de ser un renacuajo a una salamandra con patas, por lo que el niño que esté jugando deberá alterar su visión de cómo resolver los puzles al tener en cuenta que ahora puede caminar por terreno firme y no solo nadar.
 
-Pese a la cantidad de adversidades a las que se debe enfrentar, Darwin posee una personalidad relajada y alegre. Esto se puede apreciar en su constante sonrisa y naturaleza tranquila.
+Pese a la cantidad de adversidades a las que se debe enfrentar, Darwin posee una personalidad relajada y alegre. Esto se puede apreciar en su constante sonrisa y naturaleza tranquila. Este diseño también posee un significado importante. Pese a que nuestro personaje se enfrenta a diferentes retos y situaciones difíciles, siempre se puede apreciar en su cara cómo sigue tranquilo e intenta resolver los puzles con calma. Esto, reforzado por la ambientación y los colores poco saturados o agobiantes, se ha hecho con el objetivo de que los niños se vean representados con Darwin. Que asimilen que, aunque uno se pueda enfrentar a situaciones complejas, deben mantener la serenidad y centrarse en hacerlo lo mejor que puedan, sin caer en la desesperación y entrar en pánico. De esta forma no solo se enseñan aptitudes de pensamiento computacional, sino que además se promueve el aprendizaje de estas con tranqulidad, paciencia y esfuerzo.
 
 ## NPCs
 
@@ -136,11 +136,10 @@ Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño 
 
 "Upstream" es un videojuego de gráficos 3D que presenta una perspectiva isométrica con cámara fija. Su estilo visual persigue una estética estilizada de tipo "cartoon", con colores llanos y agradables, alejado de una visión realista y detallada. Esto se debe a que dicha estética se considera coherente para la clase de juego a desarrollar, ya que consigue simplificar los elementos que el usuario observa en los niveles, pudiendo analizar mejor los puzles y premeditar sus acciones sin distraerse con aspectos visuales excesivamente complejos e innecesarios. Además, al estar enfocada a niños de 3 a 12 años, permite llamar su atención a primera vista y retenerlos en el juego gracias al atractivo visual, sin caer en el error de diseñarlo con un estilo demasiado infantil.
 
-Cabe destacar que el diseño de Darwin también posee un significado importante. Pese a que este personaje se enfrenta a diferentes retos y situaciones difíciles, siempre se puede apreciar en su cara cómo sigue tranquilo e intenta resolver los puzles con calma. Esto, reforzado por la ambientación y los colores poco saturados o agobiantes, se ha hecho con el objetivo de que los niños se vean representados con Darwin. Que asimilen que, aunque uno se pueda enfrentar a situaciones complejas, deben mantener la serenidad y centrarse en hacerlo lo mejor que puedan, sin caer en la desesperación y entrar en pánico. De esta forma no solo se enseñan aptitudes de pensamiento computacional, sino que además se promueve el aprendizaje de estas con tranqulidad, paciencia y esfuerzo.
+**Arte conceptual** 
+![Darwin Evo 1 - Turn Around](https://github.com/tapeogames/Upstream/assets/145482203/e6413e1a-47e4-4686-8069-42537256b5e3)
 
 En cuanto a la relevancia artística de los entornos, el juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
-
-**Arte conceptual** ![Darwin Evo 1 - Turn Around](https://github.com/tapeogames/Upstream/assets/145482203/e6413e1a-47e4-4686-8069-42537256b5e3)
 
 
 # MÚSICA Y SONIDO
