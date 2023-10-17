@@ -119,6 +119,13 @@ En la última fase, Darwin ha salido al exterior y se encontrará con elementos 
 
 Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño será acorde al espacio de juego del nivel, es decir, se podrá encontrar con aves en la tercera fase, desarrollada en el exterior, pero no en la primera ya que está en la cueva. Además, la complejidad de los escenarios y de sus puzzles se irá complicando a lo largo de los niveles, haciendo así que el jugador se enfrente a nuevos retos.
 
+**Diseño de nivel 0**
+![Nivel0](https://github.com/tapeogames/Upstream/assets/115087211/9117f769-9241-4c82-8933-d8b126285400)
+
+**Diseño de nivel 1**
+![Nivel1](https://github.com/tapeogames/Upstream/assets/115087211/18e9d8ed-f3dd-4f1f-8e15-4a0f87138466)
+
+
 # ARTE Y GRÁFICOS
 
 ## Estilo visual y gráficos
