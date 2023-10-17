@@ -12,6 +12,8 @@ Javier de las Peñas Fernandez
 
 Luna Bouzón Rodríguez
 
+
+
 **ÍNDICE**
 
 2. Introducción
@@ -39,6 +41,8 @@ Luna Bouzón Rodríguez
 13. Tecnología y Plataforma
 
 14. Modelo de Negocio
+
+
 
 
 # INTRODUCCIÓN
