@@ -258,8 +258,10 @@ La primera mecánica principal es el movimiento. El jugador podrá moverse en la
 
 Otra mecánica del juego es el arrastrar y empujar objetos como pueden ser troncos, barriles, nenúfares… etc. Los niveles se diseñarán con el objetivo de mantener este concepto pero aumentando la complejidad del mapa para que el usuario necesite pensar sus movimientos y planear en su cabeza cómo resolver el puzzle.
 
-
+**Pull Mechanic**
 ![Pull Concept](https://github.com/tapeogames/Upstream/assets/115087211/c96570eb-2054-43d7-b713-101147a2ddfb)
+
+**Push Mechanic**
 ![Push Concept](https://github.com/tapeogames/Upstream/assets/115087211/61b8c07c-169c-4587-afee-d2bae7de9138)
 
 
