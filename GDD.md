@@ -274,7 +274,7 @@ Actualmente, como no contamos con una implementación final, los controles bási
 ![wasd](https://github.com/tapeogames/Upstream/assets/145482203/67a7b706-e7da-4c12-944e-9fad2ede1a90)
 
 
-Este será para el movimiento en el mundo virtual en el eje xz. En este caso, **A** será izquierda; **D** , derecha; **W** , arriba y **S** , abajo. Además, el personaje tendrá la posibilidad de empujar algunos objetos interactuables con la tecla **P** , y este objeto se moverá en dirección en la que mire el personaje y se pulse la tecla. Además, si se mantiene pulsada la misma tecla, también habrá la posibilidad de arrastrar hacia el sentido trasero del personaje. Esto será inicialmente así en ordenador, pero está previsto añadir también controles para móviles, que aún están por determinar.
+Este será para el movimiento en el mundo virtual en el eje xz. En este caso, **A** será izquierda; **D** , derecha; **W** , arriba y **S** , abajo. Además, el personaje tendrá la posibilidad de empujar algunos objetos interactuables con la tecla **ESPACIO** , y este objeto se moverá en dirección en la que mire el personaje y se pulse la tecla. Además, si se mantiene pulsada la misma tecla, también habrá la posibilidad de arrastrar hacia el sentido trasero del personaje. Esto será inicialmente así en ordenador, pero está previsto añadir también controles para móviles, que aún están por determinar.
 
 # TECNOLOGÍA Y PLATAFORMA
 
@@ -372,7 +372,9 @@ Como resultados, los padres ven como el hijo mejora sus habilidades y conocimien
 
 El "Business Model Toolbox" o "Caja de Herramientas" es una herramienta que ayuda a las empresas a diseñar y visualizar sus modelos de negocio de manera más sencilla. La Caja de Herramientas incluye herramientas físicas o digitales, como tarjetas o imanes, que hacen más fácil trabajar con el "Canvas del modelo de negocio" en talleres y reuniones de planificación. En resumen, es una ayuda visual para pensar en cómo funciona un negocio y cómo mejorar su estrategia.
 
-**Canvas del modelo de negocio**
+![caja herramientas](https://github.com/tapeogames/Upstream/assets/115087211/f4a07c49-925c-4cbb-9b31-1fa7078463a5)
+
+## Canvas del modelo de negocio
 
 Como modelo de negocio de nuestra empresa se ha escogido la fidelización. Tenemos como objetivo captar y conservar a nuestros clientes por varias razones. Queremos hacernos notar en una industria que es altamente competitiva. De esta forma, formando y construyendo nuestra propia comunidad de jugadores aseguramos ingresos recurrentes y feedback constante para la mejora de errores y posibles sugerencias para proyectos futuros.
 
