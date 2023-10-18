@@ -182,77 +182,45 @@ En el proceso de desarrollo de las interfaces de nuestro juego, hemos establecid
 
 ![Diagrama Flujo Upstream](https://github.com/tapeogames/Upstream/assets/81293638/af0232ee-dd3e-4339-afdb-e15979146692)
 
-
-Al abrir Upstream, la primera interacción que los jugadores encontrarán, después de una breve introducción con el logotipo de Tapeo Games, es una pantalla inicial en la que deberán proporcionar su edad y género. Esta información será utilizada con el objetivo de crear una base de datos y analizar las métricas y estadísticas de cada jugador. De esta forma, se podrá estudiar cuánto tiempo de media tarda cada uno en superar los niveles, la agilidad a la hora de navegar por los menús, etc. También se podrá analizar si efectivamente Upstream está ayudando a mejorar sus capacidades de pensamiento computacional, viendo su progreso entre niveles y observando su aprendizaje de mecánicas.
-
-Después, los jugadores serán llevados al menú inicial, donde tendrán 4 botones con diferentes funciones. JUGAR les llevará a la pantalla de selección de niveles, donde podrán elegir qué nivel jugar (sólo se podrá jugar a un nivel si se ha superado previamente el anterior, excepto con el nivel 0). AJUSTES les llevará a un menú de ajustes donde podrán modificar aspectos como el volumen o consultar los controles. CRÉDITOS les mostrará una pantalla donde se citará la autoría del juego y el equipo desarrollador. Finalmente, el botón SALIR cerrará el juego.
-
-Una vez el usuario ha seleccionado el nivel que desea jugar, en este podrá pausar la partida. El menú de pausa mostrará a su vez 4 botones: REANUDAR para continuar jugando el nivel, AJUSTES para configurar aspectos como el volumen, CONTROLES para consultar los controles y SALIR para regresar a la pantalla de selección de niveles (perderá todo el progreso del nivel actual).
-
-Finalmente, cuando los jugadores superen un nivel, serán llevados a una pantalla de victoria donde se le capacitará al jugador ir al siguiente nivel o regresar a la pantalla de selección de niveles.
-
-#
-
-
 **Interfaz de la pantalla inicial**
 
-En esta interfaz los jugadores podrán personalizar su experiencia de juego seleccionando su edad y género.
-
-Al hacer clic en el botón correspondiente a la edad, los jugadores podrán seleccionar, mediante un desplegable, su edad.
-
-Asimismo, para elegir su género, se han proporcionado tres opciones: "Masculino", "Femenino" y "Otro".
+Al abrir Upstream, la primera interacción que los jugadores encontrarán, después de una breve introducción con el logotipo de Tapeo Games, es una pantalla inicial en la que deberán proporcionar su edad y género. Esta información será utilizada con el objetivo de crear una base de datos y analizar las métricas y estadísticas de cada jugador. De esta forma, se podrá estudiar cuánto tiempo de media tarda cada uno en superar los niveles, la agilidad a la hora de navegar por los menús, etc. También se podrá analizar si efectivamente Upstream está ayudando a mejorar sus capacidades de pensamiento computacional, viendo su progreso entre niveles y observando su aprendizaje de mecánicas.
 
 ![Diagrama flujo 2](https://github.com/tapeogames/Upstream/assets/145482203/75511079-8eec-400d-86e3-68e05bf91a64)
 
 
 **Interfaz del menú de inicio**
 
-En el menú de inicio de Upstream, los jugadores se encontrarán con una serie de botones entre los cuales se encuentra el de "Jugar", el cual te llevará directamente a la trama del juego. Al hacer clic en él se te dirigirá a la historia del juego donde, posteriormente, podrás
-
-seleccionar el nivel.
-
-Si prefieres ajustar las configuraciones del juego o consultar los controles antes de comenzar, el segundo botón, "Ajustes", será tu elección. Aquí podrás ajustar el volumen del juego a tu preferencia, asegurándote de que la experiencia auditiva se adapte a tus necesidades. Además, podrás encontrar una sección dedicada a los controles, donde podrás revisar y familiarizarte con las teclas y los comandos necesarios para poder jugar al juego de manera correcta.
-
-El tercer botón, "Créditos", se encontrará la información sobre los desarrolladores, diseñadores y creativos que trabajaron en el juego, así como cualquier otra contribución destacada.
-
-Finalmente, si deseas cerrar el juego y volver al escritorio o al menú principal de tu plataforma de juego, el cuarto botón, "Salir", te permitirá hacerlo de manera rápida y sencilla.
+Después, los jugadores serán llevados al menú inicial, donde tendrán 4 botones con diferentes funciones. JUGAR les llevará a la pantalla de selección de niveles, donde podrán elegir qué nivel jugar (sólo se podrá jugar a un nivel si se ha superado previamente el anterior, excepto con el nivel 0). Si los usuarios prefieren configurar su experiencia antes de jugar, AJUSTES les llevará a un menú de ajustes donde podrán modificar diversos aspectos como el volumen o consultar los controles. CRÉDITOS les mostrará una pantalla donde se citará la autoría del juego y el equipo desarrollador, exhibiendo además cualquier otra contribución externa destacada. Finalmente, el botón SALIR cerrará el juego de manera rápida y sencilla.
 
 ![Diagrama flujo 3](https://github.com/tapeogames/Upstream/assets/145482203/7e0b108f-f7f9-4cd5-ba39-82a550de1bbf)
 
 
 **Interfaz del selector de niveles**
 
-En la interfaz del selector de niveles de Upstream, los jugadores encontrarán un mapa donde podrán hacer clic en el nivel que deseen jugar. Este mapa está diseñado para facilitar la elección de niveles de manera sencilla y visualmente atractiva.
+En la interfaz del selector de niveles de Upstream, los jugadores encontrarán un menú donde podrán hacer clic en el nivel que deseen jugar. Este menú estará ambientado en el mundo del juego, con el escenario y los botones para elegir nivel mezclados artísticamente, similar a los mundos del conocido juego New Super Mario Bros.
 
-Cuando los jugadores accedan a esta pantalla, observarán un mapa que representa el mundo del mundo. En este mapa, se mostrarán varios niveles y ubicaciones importantes.
+Para seleccionar un nivel en particular, los jugadores simplemente deberán hacer clic en el icono correspondiente y serán llevados al mapa de dicho nivel, donde ya podrán jugarlo.
 
-Para seleccionar un nivel en particular, los jugadores simplemente deberán hacer clic en el icono correspondiente. Una vez seleccionado, el juego los llevará directamente al nivel elegido.
+Referencia visual (New Super Mario Bros Wii):
+![hq720](https://github.com/tapeogames/Upstream/assets/81293638/bd3e98ba-2a6c-4561-aa02-bbfab9f7b553)
+
 
 **Interfaz del menú de pausa**
 
-Dentro del menú de pausa, encontrarás cuatro botones esenciales que te permitirán tomar el control de tu experiencia de juego de manera sencilla y conveniente.
-
-En primer botón, "Reanudar", te permitirá retomar el jeugo desde el punto en el que lo dejaste, continuando el nivel exactamente donde lo dejaste.
-
-El segundo botón, "Ajustes", te brindará la posibilidad de modificar el volumen del juego a tu gusto.
-
-Si en algún momento necesitas recordar los controles o deseas consultarlos para mejorar tu destreza en el juego, el tercer botón, "Controles", te llevará a una sección donde encontrarás toda la información necesaria sobre cómo navegar e interactuar en Upstream.
-
-Finalmente, si deseas abandonar el nivel actual y regresar al menú de inicio para explorar otras opciones o seleccionar un nivel diferente, el cuarto botón, "Salir", te permitirá hacerlo.
+Una vez el usuario ha seleccionado el nivel que desea jugar, en este podrá pausar la partida. El menú de pausa mostrará a su vez 4 botones: REANUDAR para continuar jugando el nivel, AJUSTES para configurar aspectos como el volumen, CONTROLES para consultar los controles y SALIR para regresar a la pantalla de selección de niveles (perderá todo el progreso del nivel actual).
 
 ![Diagrama flujo 4](https://github.com/tapeogames/Upstream/assets/145482203/479d44f0-3eab-40f8-9473-2c9cd0c4315a)
 
 
 **Interfaz del menú de victoria**
 
-En el menú de victoria se encontrarán dos botones fundamentales que te permitirán decidir cómo proceder después de completar un nivel.
-
-El primer botón, identificado como "Siguiente Nivel", te llevará al siguiente nivel en la secuencia de la historia del juego.
-
-Si en cambio prefieres volver al punto de inicio o explorar otras opciones disponibles en el jeugom el segundo botón, señalado como "Menú Principal", te llevará de vuelta al menú principal del juego.
+En el menú de victoria se encontrarán dos botones fundamentales que te permitirán decidir cómo proceder después de completar un nivel. El primer botón, SIGUIENTE NIVEL, te llevará al próximo nivel en la secuencia de la historia del juego. Si en cambio prefieres volver al punto de inicio o explorar otras opciones disponibles en el jeugo, el segundo botón, MENÚ PRINCIPAL, te llevará de vuelta al menú principal del juego.
 
 ![Diagrama flujo 5](https://github.com/tapeogames/Upstream/assets/145482203/e05b4985-5e65-44a7-a1fa-7c8b0de9320d)
 
+
+#
 
 # MECÁNICAS DE JUEGO
 
