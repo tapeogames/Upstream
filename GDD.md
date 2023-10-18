@@ -180,19 +180,18 @@ En el proceso de desarrollo de las interfaces de nuestro juego, hemos establecid
 
 **Diagrama de flujo de Interfaces**
 
-En el juego Upstream, la primera interacción que los jugadores encontrarán es una pantalla inicial en la que deberán proporcionar su edad y género. Una vez ingresada está información, la pantalla mostrará el distintivo logo de Tapeo Games.
+![Diagrama Flujo Upstream](https://github.com/tapeogames/Upstream/assets/81293638/af0232ee-dd3e-4339-afdb-e15979146692)
 
-Después de la presentación del logo, los jugadores serán llevados al menú principal del juego. Si desean comenzar su aventura, simplemente deberán presionar el botón "Jugar" en el menú.
 
-Al seleccionar "Jugar", los jugadores serán transportados a la trama principal del jeugo. Una pantalla narrativa desplegará la historia que los sumergirá en el mundo de Upstream. Después de conocer el contexto, los jugadores podrán elegir su nivel a través de un selector de niveles.
+Al abrir Upstream, la primera interacción que los jugadores encontrarán, después de una breve introducción con el logotipo de Tapeo Games, es una pantalla inicial en la que deberán proporcionar su edad y género. Esta información será utilizada con el objetivo de crear una base de datos y analizar las métricas y estadísticas de cada jugador. De esta forma, se podrá estudiar cuánto tiempo de media tarda cada uno en superar los niveles, la agilidad a la hora de navegar por los menús, etc. También se podrá analizar si efectivamente Upstream está ayudando a mejorar sus capacidades de pensamiento computacional, viendo su progreso entre niveles y observando su aprendizaje de mecánicas.
 
-Una vez el jugador se encuentre en el juego tendrán en todo momento la opción de pausar el juego, simplemente presionando el botón de pausa. Esto abrirá una pantalla de pausa, donde podrán ajustar configuraciones o tomar un breve descanso.
+Después, los jugadores serán llevados al menú inicial, donde tendrán 4 botones con diferentes funciones. JUGAR les llevará a la pantalla de selección de niveles, donde podrán elegir qué nivel jugar (sólo se podrá jugar a un nivel si se ha superado previamente el anterior, excepto con el nivel 0). AJUSTES les llevará a un menú de ajustes donde podrán modificar aspectos como el volumen o consultar los controles. CRÉDITOS les mostrará una pantalla donde se citará la autoría del juego y el equipo desarrollador. Finalmente, el botón SALIR cerrará el juego.
 
-Finalmente, cuando los jugadores superen un nivel, serán llevados a una pantalla de victoria donde se le capacitará al jugador ir al siguiente nivel.
+Una vez el usuario ha seleccionado el nivel que desea jugar, en este podrá pausar la partida. El menú de pausa mostrará a su vez 4 botones: REANUDAR para continuar jugando el nivel, AJUSTES para configurar aspectos como el volumen, CONTROLES para consultar los controles y SALIR para regresar a la pantalla de selección de niveles (perderá todo el progreso del nivel actual).
+
+Finalmente, cuando los jugadores superen un nivel, serán llevados a una pantalla de victoria donde se le capacitará al jugador ir al siguiente nivel o regresar a la pantalla de selección de niveles.
 
 #
-
-![Diagrama flujo 1](https://github.com/tapeogames/Upstream/assets/145482203/7b8664cc-6463-4960-8316-46a3988f78fe)
 
 
 **Interfaz de la pantalla inicial**
