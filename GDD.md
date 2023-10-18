@@ -203,6 +203,7 @@ En la interfaz del selector de niveles de Upstream, los jugadores encontrarán u
 Para seleccionar un nivel en particular, los jugadores simplemente deberán hacer clic en el icono correspondiente y serán llevados al mapa de dicho nivel, donde ya podrán jugarlo.
 
 Referencia visual (New Super Mario Bros Wii):
+
 ![hq720](https://github.com/tapeogames/Upstream/assets/81293638/bd3e98ba-2a6c-4561-aa02-bbfab9f7b553)
 
 
