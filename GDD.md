@@ -123,12 +123,6 @@ En la última fase, Darwin ha salido al exterior y se encontrará con elementos 
 
 Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño será acorde al espacio de juego del nivel, es decir, se podrá encontrar con aves en la tercera fase, desarrollada en el exterior, pero no en la primera ya que está en la cueva. Además, la complejidad de los escenarios y de sus puzzles se irá complicando a lo largo de los niveles, haciendo así que el jugador se enfrente a nuevos retos.
 
-**Diseño de nivel 0**
-![Nivel0](https://github.com/tapeogames/Upstream/assets/115087211/9117f769-9241-4c82-8933-d8b126285400)
-
-**Diseño de nivel 1**
-![Nivel1](https://github.com/tapeogames/Upstream/assets/115087211/18e9d8ed-f3dd-4f1f-8e15-4a0f87138466)
-
 
 # ARTE Y GRÁFICOS
 
@@ -136,10 +130,16 @@ Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño 
 
 "Upstream" es un videojuego de gráficos 3D que presenta una perspectiva isométrica con cámara fija. Su estilo visual persigue una estética estilizada de tipo "cartoon", con colores llanos y agradables, alejado de una visión realista y detallada. Esto se debe a que dicha estética se considera coherente para la clase de juego a desarrollar, ya que consigue simplificar los elementos que el usuario observa en los niveles, pudiendo analizar mejor los puzles y premeditar sus acciones sin distraerse con aspectos visuales excesivamente complejos e innecesarios. Además, al estar enfocada a niños de 3 a 12 años, permite llamar su atención a primera vista y retenerlos en el juego gracias al atractivo visual, sin caer en el error de diseñarlo con un estilo demasiado infantil.
 
+En cuanto a la relevancia artística de los entornos, el juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
+
 **Arte conceptual** 
 ![Darwin Evo 1 - Turn Around](https://github.com/tapeogames/Upstream/assets/145482203/e6413e1a-47e4-4686-8069-42537256b5e3)
+Darwin presenta un diseño basado en formas redondeadas, tanto circulares como triangulares, dando un aspecto amigable, inofensivo y dinámico. Su paleta de color cálida con tonos rosados afianza esa sensación de cercanía y simpatía. Al ser un renacuajo en esta primera fase, tiene una proporción del cuerpo de dos cabezas, mostrando su corta edad y entrando en un diseño más estilizado.
 
-En cuanto a la relevancia artística de los entornos, el juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
+![Phase One Levels- Concept]()
+
+Como se ha mencionado antes, los niveles de la primera fase se sitúan en una cueva, teniendo la apariencia de un entorno un tanto hostil. Para ello se utiliza una tenue iluminación para una ambientación más lúgubre acorde con la ubicación, y se hace uso de los contrastes tanto de forma, como de color y tamaño. De esta forma el escenario está compuesto de formas triangulares llenas de ángulos y una paleta monocromática fría, donde Darwin destaca por su forma redonda y color cálido, generando un ambiente más agresivo y oscuro, en el que encontramos a un Darwin solo e indefenso.
+
 
 
 # MÚSICA Y SONIDO
@@ -282,6 +282,19 @@ El personaje contará con un sistema de progresión de mecánicas que irá relac
 
 En cuanto a los controles del juego, para ordenador, se podrá mover a Darwin con WASD y para interactuar con un objeto y arrastrarlo, habrá que pulsar y mantener el espacio. Para movil (pendiente consulta por dificultad de implementación)
 
+# DISEÑO DE NIVELES
+
+Los niveles están distribuidos se basan en la resolución de puzles por medio de las diferentes mecánicas que se han expuesto y acorde con la fase de la metamorfosis de Darwin. Estos serán 12 niveles, cuatro por cada una de las etapas ya mencionadas y tendrán una duración de entre 3-5 minutos de media.
+
+**Diseño de nivel 0**
+![Nivel0](https://github.com/tapeogames/Upstream/assets/115087211/9117f769-9241-4c82-8933-d8b126285400)
+
+El nivel inicial está diseñado como primer contacto del jugador con los puzzles y mecánicas del juego, la razón por la cual su complejidad es sencilla. Se busca que el usuario conozca dos elementos, las ramas, del cual se podrá empujar y tirar, y los nenúfares/piedritas, por las que Darwin puede pasar, pero los troncos no.
+
+**Diseño de nivel 1**
+![Nivel1](https://github.com/tapeogames/Upstream/assets/115087211/18e9d8ed-f3dd-4f1f-8e15-4a0f87138466)
+
+Este siguiente nivel aumenta en complejidad e introduce al jugador en una situación más común de la resolución de puzles, la contradicción y el conflicto. El usuario tendrá que pensar el orden de sus acciones para que no supongan un obstáculo más a la hora de encontrar la solución. Además se introduce la arena/suelo para enseñar que no se puede pasar a través de ella, aunque en un futuro cuando Darwin haya crecido sí serán zonas transitables.
 
 
 # CONTROLES
