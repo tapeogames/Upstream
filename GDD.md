@@ -133,7 +133,9 @@ Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño 
 En cuanto a la relevancia artística de los entornos, el juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
 
 **Arte conceptual** 
+![Darwin Character Sheet Evo 1 REDISEÑO](https://github.com/tapeogames/Upstream/assets/81293638/d8c0cf99-65cc-43a8-9ec2-2b75b3d9cedd)
 ![Darwin Evo 1 - Turn Around](https://github.com/tapeogames/Upstream/assets/145482203/e6413e1a-47e4-4686-8069-42537256b5e3)
+
 Darwin presenta un diseño basado en formas redondeadas, tanto circulares como triangulares, dando un aspecto amigable, inofensivo y dinámico. Su paleta de color cálida con tonos rosados afianza esa sensación de cercanía y simpatía. Al ser un renacuajo en esta primera fase, tiene una proporción del cuerpo de dos cabezas, mostrando su corta edad y entrando en un diseño más estilizado.
 
 ![Phase One Levels- Concept]()
