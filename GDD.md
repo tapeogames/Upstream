@@ -219,7 +219,7 @@ Referencia visual (New Super Mario Bros Wii):
 
 ![hq720](https://github.com/tapeogames/Upstream/assets/81293638/bd3e98ba-2a6c-4561-aa02-bbfab9f7b553)
 
-<br>
+
 **Interfaz del menú de pausa**
 
 Una vez el usuario ha seleccionado el nivel que desea jugar, en este podrá pausar la partida. El menú de pausa mostrará a su vez 4 botones: REANUDAR para continuar jugando el nivel, AJUSTES para configurar aspectos como el volumen, CONTROLES para consultar los controles y SALIR para regresar a la pantalla de selección de niveles (perderá todo el progreso del nivel actual).
@@ -330,59 +330,65 @@ El usuario, o persona que jugará a Upstream, será una persona con edad compren
 
 Un mapa de empatía en modelos de negocio es una herramienta visual que ayuda a comprender mejor a los clientes o usuarios de un producto o servicio. Esta herramienta se utiliza en el proceso de diseño de negocios para desarrollar una comprensión más profunda de las necesidades, deseos, motivaciones y frustraciones de los clientes. El objetivo es ponerse en el lugar del cliente para poder crear productos o servicios que realmente satisfagan sus necesidades y expectativas.
 
+<br>
+
 Ejemplo de mapa de empatía desde el punto de vista de un niño que juega al juego:
 
-1.¿Qué piensan y sienten?
+**1.¿Qué piensan y sienten?**
 
 Los niños a estas edades (Aprox 6-10 años) piensan, fundamentalmente, en divertirse mientras juegan, quieren sentirse desafiados mientras logran éxito a medida que va avanzando el juego.
 
 Además, cabe destacar que se sienten emocionados cuando encuentran personajes o mundos llamativos para ellos.
 
-2.¿Qué ven?
+**2.¿Qué ven?**
 
 Debido a la gran evolución y expansión de los videojuegos, a día de hoy, cualquier persona puede jugar a juegos, independientemente de la edad que pueda tener el cliente. Asimismo, lo que el niño ve son anuncios de juegos en línea y en la televisión, ven también a amigos y compañeros de clase jugando videojuegos o, también, ven a sus padres y maestros animándolos a aprender mientras juegan.
 
-3.¿Qué oyen?
+**3.¿Qué oyen?**
 
 La interacción con otras personas es fundamental, ya que pueden escuchar a amigos suyos hablando de juegos emocionantes que han jugado hace poco. Además, no solo pueden oír de un vínculo cercano, sino también gracias a plataformas como Youtube y Twitch, donde la gente podría opinar de cualquier aspecto relacionado con el juego. Asimismo, debido a que el público del juego es joven, se podría dejar influenciar fácilmente por otras personas.
 
-4.¿Qué dicen y hacen?
+**4.¿Qué dicen y hacen?**
 
 Entre las cosas que pueden decir se encuentra el hablar acerca de los logros o metas que han podido superar en el juego con sus amigos o familiares. Dentro de lo que pueden hacer podría encontrarse el descargar nuevos juegos en los diferentes dispositivos, ya sea móvil, PC, consola, etc. Y, además, jugar a diario para desafiar sus habilidades y desbloquear recompensas.
 
-5.Esfuerzos
+**5.Esfuerzos**
 
 Los niños, al tener poca experiencia, necesitan de un gran esfuerzo para resolver rompecabezas o superar obstáculos en el juego que, a lo mejor, para una persona más mayor, no tendría problema ninguno en solventar. Además, invierten tiempo y energía en aprender y mejorar sus habilidades y, en caso de que para él le esté siendo muy difícil, buscan ayuda de amigos o familiares para enfrentar de forma más fácil el desafío.
 
-6. Resultados
+**6. Resultados**
 
 Como resultado experimentan un aumento en sus habilidades cognitivas y se sienten más confiados al superar nuevos desafíos para ellos. Además, mientras aprenden, disfrutan de una experiencia de juego divertida y educativa.
 
+<br>
+
 Ejemplo de mapa de empatía desde el punto de vista del padre del niño que juega el juego:
 
-1.¿Qué piensan y sienten?
+**1.¿Qué piensan y sienten?**
 
 Los padres fundamentalmente piensan en la responsabilidad de supervisar las actividades en línea de sus hijos. Además, quieren que sus hijos tengan experiencias educativas de aprendizaje de calidad, pero, que a la vez sean divertidas para el niño.
 
-2.¿Qué ven?
+**2.¿Qué ven?**
 
 Con la influencia de las redes sociales, los padres podrían ver anuncios de juegos infantiles didácticos en redes sociales y sitios web.
 
 A su vez, ven a otros padres discutiendo juegos y aplicaciones infantiles lo cual puede producir que, en un futuro no muy lejano, acaben comprando el producto.
 
-3.¿Qué oyen?
+**3.¿Qué oyen?**
 
 La comunicación con otras personas es fundamental, ya que el padre del niño podría oír a otros padres o personas hablar de recomendaciones sobre juegos educativos y seguros. Además, muchas veces no tienes que irte muy lejos a preguntar a otras personas, sino que tu propio hijo te puede comentar acerca del videojuego al que le gustaría jugar.
 
-4.¿Qué dicen y hacen?
+**4.¿Qué dicen y hacen?**
 
 Estos padres discuten con otros padres sobre qué juegos son apropiados y seguros y, de los cuales el niño podría sacar algún conocimiento del cual aprender. Del mismo modo, los padres podrían probar ellos mismos el juego antes de dárselo al niño para corroborar que puede ser un producto beneficioso para ellos y que no va a ser una mala influencia.
 
-5.Esfuerzos
+**5.Esfuerzos**
 
 Dentro de los esfuerzos, los padres empeñan tiempo en encontrar juegos educativos y seguros que sean fructíferos y rentables para el niño. Además, dedican tiempo a investigar y leer reseñas sobre el juego en cuestión para ver que opina más gente.
 
-6. Resultados
+**6. Resultados**
+
+<br>
 
 Como resultados, los padres ven como el hijo mejora sus habilidades y conocimientos a través del juego y, se sienten aliviados cuando ven a sus hijos disfrutar de un juego que es educativo y seguro.
 
