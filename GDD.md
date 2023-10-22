@@ -219,7 +219,7 @@ Referencia visual (New Super Mario Bros Wii):
 
 ![hq720](https://github.com/tapeogames/Upstream/assets/81293638/bd3e98ba-2a6c-4561-aa02-bbfab9f7b553)
 
-
+<br>
 **Interfaz del menú de pausa**
 
 Una vez el usuario ha seleccionado el nivel que desea jugar, en este podrá pausar la partida. El menú de pausa mostrará a su vez 4 botones: REANUDAR para continuar jugando el nivel, AJUSTES para configurar aspectos como el volumen, CONTROLES para consultar los controles y SALIR para regresar a la pantalla de selección de niveles (perderá todo el progreso del nivel actual).
