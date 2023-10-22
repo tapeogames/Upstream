@@ -258,7 +258,9 @@ A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su r
 | Rama  | movible | - |
 | Nenúfares  | inamovible atravesable | - |
 | Tronco  | movible | - |
+| Corriente  | inamovible atravesable con objeto | Las corrientes son sólo en una dirección. Una vez se atraviese en dicha dirección, el obstáculo se convertirá en inamovible no atravesable ya que Darwin no podrá ir a contra corriente|
 
+<br>
 
 **Pull Mechanic**
 ![Pull Concept](https://github.com/tapeogames/Upstream/assets/81293638/3ac35bd4-af46-410e-bb50-9d31c5cb4c65)
@@ -268,8 +270,6 @@ A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su r
 **Push Mechanic**
 ![Push Concept](https://github.com/tapeogames/Upstream/assets/81293638/8010077f-74cd-469f-a954-754153d940f3)
 
-
-Cabe destacar también que Darwin podrá aprovechar ciertas superficies para deslizarse y avanzar varias casillas, en lo referido a la tierra, y además podrá aprovechar corrientes del agua para el mismo fin.
 
 El personaje contará con un sistema de progresión de mecánicas que irá relacionado con la etapa evolutiva en la que se encuentra el personaje, estas serán tres:
 
