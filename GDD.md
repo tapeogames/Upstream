@@ -388,9 +388,9 @@ Dentro de los esfuerzos, los padres empeñan tiempo en encontrar juegos educativ
 
 **6. Resultados**
 
-<br>
-
 Como resultados, los padres ven como el hijo mejora sus habilidades y conocimientos a través del juego y, se sienten aliviados cuando ven a sus hijos disfrutar de un juego que es educativo y seguro.
+
+<br>
 
 ## Caja de herramientas
 
