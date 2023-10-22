@@ -146,9 +146,12 @@ En cuanto a la relevancia artística de los entornos, el juego estará dividido 
 
 Darwin presenta un diseño basado en formas redondeadas, tanto circulares como triangulares, dando un aspecto amigable, inofensivo y dinámico. Su paleta de color cálida con tonos rosados afianza esa sensación de cercanía y simpatía. Al ser un renacuajo en esta primera fase, tiene una proporción del cuerpo de dos cabezas, mostrando su corta edad y entrando en un diseño más estilizado.
 
-![Phase One Levels- Concept]()
-
 Como se ha mencionado antes, los niveles de la primera fase se sitúan en una cueva, teniendo la apariencia de un entorno un tanto hostil. Para ello se utiliza una tenue iluminación para una ambientación más lúgubre acorde con la ubicación, y se hace uso de los contrastes tanto de forma, como de color y tamaño. De esta forma el escenario está compuesto de formas triangulares llenas de ángulos y una paleta monocromática fría, donde Darwin destaca por su forma redonda y color cálido, generando un ambiente más agresivo y oscuro, en el que encontramos a un Darwin solo e indefenso.
+
+**Arte conceptual** 
+<br>
+![_Escenario1_Upstream](https://github.com/tapeogames/Upstream/assets/81293638/3d67b268-6114-4713-a5e4-862ad70d2a56)
+
 
 <br>
 
