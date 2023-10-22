@@ -11,9 +11,9 @@
 | Fabio Elías Rengifo García | fe.rengifo.2020@alumnos.urjc.e      |    faviolado |
 | Lucas Rubio Lezana | l.rubiol.2020@alumnos.urjc.es      |    LucasWiggie |
 
+<br>
 
-
-**ÍNDICE**
+##**Índice**
 
 1. Introducción
 
@@ -42,7 +42,7 @@
 13. Modelo de Negocio
 
 
-
+<br>
 
 # INTRODUCCIÓN
 
