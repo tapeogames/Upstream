@@ -251,7 +251,7 @@ Los obstáculos se dividen en dos categorías principales: movibles e inamovible
 A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su respectiva categorización:
 
 | Obstáculo       | Categoría         | Observaciones  |
-| ------------- |:-------------:| --------------:|
+| :------------- |:-------------:| :------------- |
 | Roca  | inamovible no atravesable | - |
 | Banco de arena  | inamovible atravesable | No atravesable con Darwin renacuajo o renacuajo adulto |
 | Estalagmitas  | inamovible atravesable | - |
