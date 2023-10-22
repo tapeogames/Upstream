@@ -3,7 +3,7 @@
 ## **Tapeo Games**
 
 | Nombre        | Mail          | Perfil GitHub  |
-| ------------- |:-------------:| --------------:|
+| ------------- |:-------------:| --------------|
 | Javier Álvarez Perez  | j.alvarezp.2020@alumnos.urjc.es | JavierAlper |
 | Luna Bouzón Rodríguez    | l.bouzon.2020@alumnos.urjc.es | lunsbzn |
 | Yeray Da Silva de las Heras    | y.da.2020@alumnos.urjc.es      |   yerayds |
