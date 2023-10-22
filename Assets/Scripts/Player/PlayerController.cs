@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,11 +14,13 @@ public class PlayerController : SceneObject
     private Vector3 xPos = new Vector3(1.00f, 0.00f, 0.00f);
     private Vector3 xNeg = new Vector3(-1.00f, 0.00f, 0.00f);
 
-    public PushableObjectController pushObject;
+    //public PushableObjectController pushObjectx[indexObject];
+    public PushableObjectController[] pushObject;
     private SphereCollider forward;
 
     public static bool grabbing;
     public static bool canGrab;
+    public static int indexObject;
 
     public Vector3 playerLookAt;
     public float speed;
@@ -67,7 +70,7 @@ public class PlayerController : SceneObject
             {
                 MoveToPosition(leftTile.GetTilePosition());
             } 
-            else if (grabbing && leftTile.activate && pushObject.leftTile != null)
+            else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null)
             {
                 Debug.Log(xNeg + " " + xPos);
                 Debug.Log(playerLookAt);
@@ -89,7 +92,7 @@ public class PlayerController : SceneObject
             {
                 MoveToPosition(rightTile.GetTilePosition());
             }
-            else if (grabbing && rightTile.activate && pushObject.rightTile != null)
+            else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null)
             {
                 Debug.Log(xNeg + " " + xPos);
                 Debug.Log(playerLookAt);
@@ -115,7 +118,7 @@ public class PlayerController : SceneObject
             {
                 MoveToPosition(forwardTile.GetTilePosition());
             }
-            else if (grabbing && forwardTile.activate && pushObject.forwardTile != null)
+            else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null)
             {
                 Debug.Log(zNeg + " " + zPos);
                 Debug.Log(playerLookAt);
@@ -138,7 +141,7 @@ public class PlayerController : SceneObject
             {
                 MoveToPosition(backwardTile.GetTilePosition());
             }
-            else if (grabbing && backwardTile.activate && pushObject.backwardTile != null)
+            else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null)
             {
                 Debug.Log(zNeg + " " + zPos);
                 Debug.Log(playerLookAt);
@@ -162,20 +165,21 @@ public class PlayerController : SceneObject
             Debug.Log("SPACE");
             if (canGrab)
             {
-                if (!pushObject.isGrabbed)
+                Debug.Log("index obj: " + indexObject);
+                if (!pushObject[indexObject].isGrabbed)
                 {
                     playerLookAt = playerAvatar.transform.forward;
                     playerLookAt.Normalize();
                     Debug.Log(playerLookAt);
-                    pushObject.GrabObject();
+                    pushObject[indexObject].GrabObject();
                     grabbing = true;
-                    pushObject.currentTile.activate = true;
+                    pushObject[indexObject].currentTile.activate = true;
                 }
                 else
                 {
                     grabbing = false;
-                    pushObject.ReleaseObject();
-                    pushObject.currentTile.activate = false;
+                    pushObject[indexObject].ReleaseObject();
+                    pushObject[indexObject].currentTile.activate = false;
 
                 }
             }

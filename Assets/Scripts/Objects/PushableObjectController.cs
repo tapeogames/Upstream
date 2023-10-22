@@ -7,6 +7,7 @@ public class PushableObjectController : SceneObject
 {
     private GameObject pushableObject;
     public PlayerController playerController;
+    public int index;
 
     public bool isGrabbed = false;
     public bool isTriggered = false;
@@ -39,6 +40,7 @@ public class PushableObjectController : SceneObject
         }
         if (other.CompareTag("ForwardPlayer"))
         {
+            PlayerController.indexObject = index;
             PlayerController.canGrab = true;
         }
     }
