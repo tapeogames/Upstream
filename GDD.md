@@ -2,54 +2,54 @@
 
 ## **Tapeo Games**
 
-Javier Álvarez Perez
+| Nombre        | Mail          | Perfil GitHub  |
+| :------------- |:-------------:| :------------- |
+| Javier Álvarez Perez  | j.alvarezp.2020@alumnos.urjc.es | JavierAlper |
+| Luna Bouzón Rodríguez    | l.bouzon.2020@alumnos.urjc.es | lunsbzn |
+| Yeray Da Silva de las Heras    | y.da.2020@alumnos.urjc.es      |   yerayds |
+| Javier de las Peñas Fernandez | j.delaspenas.2020@alumnos.urjc.es    |    Javieeh |
+| Fabio Elías Rengifo García | fe.rengifo.2020@alumnos.urjc.e      |    faviolado |
+| Lucas Rubio Lezana | l.rubiol.2020@alumnos.urjc.es      |    LucasWiggie |
 
-Lucas Rubio Lezana
+<br>
 
-Yeray da Silva de las Heras
+## **Índice**
 
-Javier de las Peñas Fernandez
+1. Introducción
 
-Luna Bouzón Rodríguez
+2. Visión del Juego
 
+3. Narrativa
 
+4. Personajes
 
-**ÍNDICE**
+5. Mundo y Entorno
 
-2. Introducción
+6. Arte y Gráficos
 
-3. Visión del Juego
+7. Música y Sonido
 
-4. Mecánicas del Juego
+8. Interfaz de Usuario
 
-5. Personajes
+9. Mecánicas de Juego
 
-6. Mundo y Entorno
+10. Diseño de Niveles
 
-7. Historia y Narrativa
+11. Controles
 
-8. Arte y Gráficos
+12. Tecnología y Plataforma
 
-9. Sonido y Música
+13. Modelo de Negocio
 
-10. Interfaz de Usuario (UI)
-
-11. Mecánicas de Juego
-
-12. Controles
-
-13. Tecnología y Plataforma
-
-14. Modelo de Negocio
-
-
-
+<br>
 
 # INTRODUCCIÓN
 
 El propósito del siguiente Game Design Document es proporcionar una visión general detallada de nuestro proyecto de videojuego, " **Upstream**". Este GDD servirá como hoja de ruta esencial para el desarrollo y diseño de nuestro juego, destacando la trama principal y las subtramas que darán vida a esta experiencia única.
 
 **Upstream** es un videojuego 3D single-player para web que impulsa el pensamiento computacional en niños. El juego cuenta con diversos niveles a lo largo de los cuales el jugador será capaz de observar el desarrollo y crecimiento de Darwin, nuestro protagonista. Es un juego de tipo puzzle en el que el jugador deberá desplazarse por el escenario esquivando y desplazando obstáculos para llegar a una meta final, la cual representa el hogar de dichos anfibios.
+
+<br>
 
 # VISIÓN DEL JUEGO
 
@@ -63,11 +63,12 @@ El público objetivo principal de " **Upstream**" son niños y preadolescentes e
 
 Además del público infantil, " **Upstream**" también puede atraer a padres, maestros y cuidadores interesados en ofrecer a los niños una experiencia de juego educativa y enriquecedora.
 
-En un principio se plantearon los siguinetes MOODBOARDS:
+En un principio se plantearon los siguinetes Mood Boards:
 
 ![moodboard 1](https://github.com/tapeogames/Upstream/assets/145482203/0ca1c3ec-6fa9-45bd-858f-6ab5b239ae6e)
 ![moodboard 2](https://github.com/tapeogames/Upstream/assets/145482203/bf84fa6e-e8bc-4db2-8e33-fbd1da57dc9e)
 
+<br>
 
 # NARRATIVA
 
@@ -88,6 +89,8 @@ Mientras es un renacuajo, se verá abrumado por la situación y se sentirá en u
 En su siguiente fase, ya posee más experiencia y comenzará a ver las cosas de manera diferente, donde no todo son obstáculos de gran peligro. Los ambientes se iluminarán con colores más cálidos, evocando un amanecer, las formas serán más redondeadas, aunque se mantendrán elementos de la estética anterior. Darwin ha salido de la cueva y empieza a descubrir la naturaleza exterior del riachuelo.
 
 Finalmente, al comienzo de su etapa adulta, Darwin ya tiene más conocimiento y percibe su entorno, peligros y dificultades de forma más realista. Por ello los escenarios adquirirán una apariencia más acogedora, con una iluminación diurna, colores más naturales y las formas amigables prevalecerán sobre las agresivas.
+
+<br>
 
 # PERSONAJES
 
@@ -111,6 +114,8 @@ En algunos niveles, una de las casillas estará ocupada por una mamá pato y otr
 
 El jugador se encontrará con ellos en ciertos niveles en los que un sapo ocupará una casilla y estará croando, provocando vibraciones en el agua que no permitirán pasar a Darwin. Sin embargo, este obstáculo se puede sobrepasar si Darwin le lleva una mosca al sapo, el cual al empezar a comérsela, dejará de croar.
 
+<br>
+
 # MUNDO Y ENTORNO
 
 La principal característica del entorno de juego es que este está diseñado para que el movimiento no sea libre, sino por cuadrículas. Esta decisión de diseño se debe a la naturaleza del juego, ya que como este está basado en puzzles, quisimos hacer que hubiese casillas de juego para que el usuario pueda resolverlos de forma más lógica para que pueda desarrollar de forma más efectiva su pensamiento computacional.
@@ -123,6 +128,7 @@ En la última fase, Darwin ha salido al exterior y se encontrará con elementos 
 
 Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño será acorde al espacio de juego del nivel, es decir, se podrá encontrar con aves en la tercera fase, desarrollada en el exterior, pero no en la primera ya que está en la cueva. Además, la complejidad de los escenarios y de sus puzzles se irá complicando a lo largo de los niveles, haciendo así que el jugador se enfrente a nuevos retos.
 
+<br>
 
 # ARTE Y GRÁFICOS
 
@@ -133,16 +139,21 @@ Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño 
 En cuanto a la relevancia artística de los entornos, el juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
 
 **Arte conceptual** 
+<br>
 ![Darwin Character Sheet Evo 1 REDISEÑO](https://github.com/tapeogames/Upstream/assets/81293638/d8c0cf99-65cc-43a8-9ec2-2b75b3d9cedd)
+<br>
 ![Darwin Evo 1 - Turn Around](https://github.com/tapeogames/Upstream/assets/145482203/e6413e1a-47e4-4686-8069-42537256b5e3)
 
 Darwin presenta un diseño basado en formas redondeadas, tanto circulares como triangulares, dando un aspecto amigable, inofensivo y dinámico. Su paleta de color cálida con tonos rosados afianza esa sensación de cercanía y simpatía. Al ser un renacuajo en esta primera fase, tiene una proporción del cuerpo de dos cabezas, mostrando su corta edad y entrando en un diseño más estilizado.
 
-![Phase One Levels- Concept]()
-
 Como se ha mencionado antes, los niveles de la primera fase se sitúan en una cueva, teniendo la apariencia de un entorno un tanto hostil. Para ello se utiliza una tenue iluminación para una ambientación más lúgubre acorde con la ubicación, y se hace uso de los contrastes tanto de forma, como de color y tamaño. De esta forma el escenario está compuesto de formas triangulares llenas de ángulos y una paleta monocromática fría, donde Darwin destaca por su forma redonda y color cálido, generando un ambiente más agresivo y oscuro, en el que encontramos a un Darwin solo e indefenso.
 
+**Arte conceptual** 
+<br>
+![_Escenario1_Upstream](https://github.com/tapeogames/Upstream/assets/81293638/3d67b268-6114-4713-a5e4-862ad70d2a56)
 
+
+<br>
 
 # MÚSICA Y SONIDO
 
@@ -174,6 +185,8 @@ Los efectos de sonido son fundamentales para brindar retroalimentación y vida a
 
 La música y los efectos de sonido serán diseñados específicamente para asegurar que contribuyan a una experiencia de juego divertida y apropiada para los niños, manteniendo un ambiente alegre y amigable en todo momento.
 
+<br>
+
 # INTERFAZ DE USUARIO
 
 Una interfaz en un juego, a menudo llamada "interfaz de usuario" o "UI", se refiere a todos los elementos visuales y gráficos que permiten a los jugadores interactuar con el juego y obtener información sobre su progreso, opciones y estado actual. La interfaz de usuario es una parte esencial de cualquier juego y desempeña un papel crucial por varias razones entre las que destacan la facilidad ante la comunicación, la inmersión que proporciona, el control y la navegación que provee, etc.
@@ -183,6 +196,7 @@ En el proceso de desarrollo de las interfaces de nuestro juego, hemos establecid
 **Diagrama de flujo de Interfaces**
 
 ![Diagrama Flujo Upstream](https://github.com/tapeogames/Upstream/assets/81293638/af0232ee-dd3e-4339-afdb-e15979146692)
+
 
 **Interfaz de la pantalla inicial**
 
@@ -216,41 +230,61 @@ Una vez el usuario ha seleccionado el nivel que desea jugar, en este podrá paus
 ![Diagrama flujo 4](https://github.com/tapeogames/Upstream/assets/145482203/479d44f0-3eab-40f8-9473-2c9cd0c4315a)
 
 
+
 **Interfaz del menú de victoria**
 
 En el menú de victoria se encontrarán dos botones fundamentales que te permitirán decidir cómo proceder después de completar un nivel. El primer botón, SIGUIENTE NIVEL, te llevará al próximo nivel en la secuencia de la historia del juego. Si en cambio prefieres volver al punto de inicio o explorar otras opciones disponibles en el jeugo, el segundo botón, MENÚ PRINCIPAL, te llevará de vuelta al menú principal del juego.
 
 ![Diagrama flujo 5](https://github.com/tapeogames/Upstream/assets/145482203/e05b4985-5e65-44a7-a1fa-7c8b0de9320d)
 
-
-#
+<br>
 
 # MECÁNICAS DE JUEGO
 
 A lo largo del juego, se irán presentando diferentes mecánicas de progresión para incrementar la dificultad de los niveles y presentar un reto al jugador, que deberá saber cómo aplicarlas para poder avanzar.
 
-La primera mecánica principal es el movimiento. El jugador podrá moverse en las 4 direcciones cardinales y además podrá escalar objetos que tengan un relieve considerable. A través del diseño de niveles se hará que esta mecánica sea necesaria para completar los niveles. Esta será la mecánica clave del videojuego ya que el objetivo es que el jugador sepa llegar hasta cierto punto del escenario esquivando todos los obstáculos y moviendo objetos para situarlos a su favor.
+La mecánica principal es el movimiento del personaje. El jugador podrá moverse en las 4 direcciones cardinales utilizando los respectivos controles con las teclas ASDW y avanzará de casilla en casilla (las casillas no serán visibles pero el usuario podrá observar cómo Darwin se mueve en unidades y no de forma continua). El diseño de niveles se ha realizado de forma que esta mecánica sea esencial para poder avanzar en el juego, ya que el objetivo principal en cada nivel es llegar a la salida.
 
-Otra mecánica del juego es el arrastrar y empujar objetos como pueden ser troncos, barriles, nenúfares… etc. Los niveles se diseñarán con el objetivo de mantener este concepto pero aumentando la complejidad del mapa para que el usuario necesite pensar sus movimientos y planear en su cabeza cómo resolver el puzzle.
+Sin embargo, pese a que Darwin podrá moverse con cierta libertad por los niveles, en ellos se encontrará con numerosos obstáculos. El usuario podrá interactuar con algunos de ellos gracias a la mecánica de agarrar/empujar, la cual permite mover dichos obstáculos a otras casillas para abrirse paso hacia la salida. Este concepto se mantendrá a lo largo de todo el juego pero se explotará de numerosas formas para aumentar la complejidad, obligar al jugador a planificar más sus acciones y diversificar los puzles.
+
+Los obstáculos se dividen en dos categorías principales: movibles e inamovibles. 
+- **Movibles**: Darwin no puede atravesarlos, pero sí agarrarlos o empujarlos. Estas acciones no se pueden realizar lateralmente, es decir, cuando Darwin coge el objeto movible (por ejemplo una rama), sólo se podrá mover hacia delante o hacia atrás con ella. 
+- **Inamovibles**: Darwin no puede empujarlos ni agarrarlos. Sirven como obstáculo dentro del mapa, colocados estratégicamente para aumentar la complejidad del nivel. Pueden ser de tres tipos: *no atravesables* (Darwin no puede pasar a través de ellos), *atravesables* (Darwin, si no está agarrando o empujando un objeto, puede pasar a través de ellos) o *atravesables con objeto* (Darwin puede pasar a través de ellos, ya sea él sólo o sujetando un objeto).
+
+A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su respectiva categorización:
+
+| Obstáculo       | Categoría         | Observaciones  |
+| :------------- |:-------------:| :------------- |
+| Roca  | inamovible no atravesable | - |
+| Banco de arena  | inamovible atravesable | No atravesable con Darwin renacuajo o renacuajo adulto |
+| Estalagmitas  | inamovible atravesable | - |
+| Rama  | movible | - |
+| Nenúfares  | inamovible atravesable | - |
+| Tronco  | movible | - |
+| Corriente  | inamovible atravesable con objeto | Las corrientes son sólo en una dirección. Una vez se atraviese en dicha dirección, el obstáculo se convertirá en inamovible no atravesable ya que Darwin no podrá ir a contra corriente|
+
+<br>
 
 **Pull Mechanic**
 ![Pull Concept](https://github.com/tapeogames/Upstream/assets/81293638/3ac35bd4-af46-410e-bb50-9d31c5cb4c65)
+
+<br>
 
 **Push Mechanic**
 ![Push Concept](https://github.com/tapeogames/Upstream/assets/81293638/8010077f-74cd-469f-a954-754153d940f3)
 
 
-Cabe destacar también que Darwin podrá aprovechar ciertas superficies para deslizarse y avanzar varias casillas, en lo referido a la tierra, y además podrá aprovechar corrientes del agua para el mismo fin.
-
 El personaje contará con un sistema de progresión de mecánicas que irá relacionado con la etapa evolutiva en la que se encuentra el personaje, estas serán tres:
 
-- Renacuajo: en esta etapa Darwin solo podrá ir por el agua ya que sus patas son demasiado pequeñas como para poder salir del agua, la única mecánica que destaca es la del movimiento, que en este caso no tendrá verticalidad.
+- **Renacuajo**: en esta etapa Darwin solo podrá ir por el agua ya que sus patas son demasiado pequeñas como para poder salir del agua, la única mecánica que destaca es la del movimiento, que en este caso no tendrá verticalidad.
 
-- Renacuajo adulto: durante esta etapa el personaje podrá nadar por el agua y además podrá salir a la tierra y deslizarse por ciertos bloques, pero no podrá caminar porque sus patas no son suficientemente fuertes. También podrá empujar cosas pequeñas por el agua, como palos, hojas etc…
+- **Renacuajo adulto**: durante esta etapa el personaje podrá nadar por el agua y además podrá salir a la tierra y deslizarse por ciertos bloques, pero no podrá caminar porque sus patas no son suficientemente fuertes. También podrá empujar cosas pequeñas por el agua, como palos, hojas etc…
 
-- Salamandra: en esta etapa Darwin habrá alcanzado su estado de evolución completo por lo que podrá moverse por todos los terrenos y además podrá escalar por ciertas zonas. También podrá mover objetos tanto pequeños como grandes.
+- **Salamandra**: en esta etapa Darwin habrá alcanzado su estado de evolución completo por lo que podrá moverse por todos los terrenos y además podrá escalar por ciertas zonas. También podrá mover objetos tanto pequeños como grandes.
 
 En cuanto a los controles del juego, para ordenador, se podrá mover a Darwin con WASD y para interactuar con un objeto y arrastrarlo, habrá que pulsar y mantener el espacio. Para movil (pendiente consulta por dificultad de implementación)
+
+<br>
 
 # DISEÑO DE NIVELES
 
@@ -266,6 +300,23 @@ El nivel inicial está diseñado como primer contacto del jugador con los puzzle
 
 Este siguiente nivel aumenta en complejidad e introduce al jugador en una situación más común de la resolución de puzles, la contradicción y el conflicto. El usuario tendrá que pensar el orden de sus acciones para que no supongan un obstáculo más a la hora de encontrar la solución. Además se introduce la arena/suelo para enseñar que no se puede pasar a través de ella, aunque en un futuro cuando Darwin haya crecido sí serán zonas transitables.
 
+<br>
+
+# PENSAMIENTO COMPUTACIONAL
+
+Upstream incorpora puzles diseñados para promover y desarrollar habilidades de pensamiento computacional, cuyos enfoque reside en la resolución de problemas y busca, no solo entretener, sino también cultivar habilidades fundamentales que pueden servir a los usuarios a desarrollar ciertas competencias útiles en la era digital en la que nos encontramos.
+
+El pensamiento computacional, comprende una serie de competencias que trascienden la programación y la tecnología, y que son aplicables en situaciones cotidianas. Upstream se presenta como una herramienta efectiva para el fomento de este tipo de pensamiento al desafiar a los jugadores con una serie de puzles.
+
+Una de las características primordiales del pensamiento computacional que Upstream refuerza es la abstracción. El usuario se enfrenta a situaciones que demandan la identificación de patrones o conexiones entre elementos en el juego. Este proceso implica la habilidad de simplificar problemas complejos, una competencia esencial para la toma de decisiones en la vida diaria. Un ejemplo de esta característica que está implementado en Upstream es el reconocimiento de que objetos pueden resultar útiles al usuario o no, por ejemplo, los objetos que puede empujar y arrastrar (que son aquellos que se encuentran flotando en el agua en el caso de la primera etapa) y por los que no puede pasar, o aquellos por los que puede pasar pero no puede atravesarlo ningún otro objeto. Es decir, buscamos que el usuario reconozca elementos clave para poder resolver los puzzles a los que se enfrenta.
+
+La descomposición es otro pilar que se fortalece a medida que los jugadores abordan los puzles de Upstream. El juego plantea desafíos que con frecuencia requieren la descomposición de un problema en componentes más pequeños y manejables. Este enfoque en la resolución de problemas es una competencia fundamental en la informática y también en la vida en general, dado que permite enfrentar problemas complejos de manera sistemática y ordenada.  Por ejemplo, para poder pasar al final del nivel, el jugador necesitará ir quitando obstáculos y situandolos en otras zonas, siempre buscando no entorpecer el camino hasta otra zona donde puede haber elementos que resulten útiles al jugador posteriormente.
+
+La generalización constituye el tercer elemento central del pensamiento computacional que Upstream busca promover. A lo largo del juego, los jugadores se encuentran con diversos desafíos, cada uno con sus propias reglas y dinámicas. Con el avance en el juego, se espera que generalicen principios y estrategias previamente adquiridos para su aplicación efectiva en nuevos contextos. Esta capacidad de extrapolar conocimiento es de gran utilidad tanto en la programación como en la toma de decisiones cotidianas, donde se afrontan situaciones inesperadas. Aunque en Upstream existe una curva de dificultad progresiva, se ha buscado diseñar los niveles para que el usuario sea capaz de reconocer ciertas situaciones y que una vez que haya superado unos cuantos niveles, sepa reconocer peligros, ayudas y atajos para poder llegar a la casilla final, este sería el caso de corrientes, obstáculos, personajes peligrosos, paredes escalables o teletransportes.
+
+En resumen, Upstream trasciende del entretenimiento y busca posicionarse como una herramienta educativa de vanguardia que promueve habilidades de pensamiento computacional. A través de la aplicación de conceptos como la abstracción, la descomposición y la generalización, el juego busca desafiar a los jugadores para que estos adquieran destrezas fundamentales para afrontar problemas de la era digital, y de la propia vida cotidiana.
+
+<br>
 
 # CONTROLES
 
@@ -277,6 +328,8 @@ Actualmente, como no contamos con una implementación final, los controles bási
 
 
 Este será para el movimiento en el mundo virtual en el eje xz. En este caso, **A** será izquierda; **D** , derecha; **W** , arriba y **S** , abajo. Además, el personaje tendrá la posibilidad de empujar algunos objetos interactuables con la tecla **ESPACIO** , y este objeto se moverá en dirección en la que mire el personaje y se pulse la tecla. Además, si se mantiene pulsada la misma tecla, también habrá la posibilidad de arrastrar hacia el sentido trasero del personaje. Esto será inicialmente así en ordenador, pero está previsto añadir también controles para móviles, que aún están por determinar.
+
+<br>
 
 # TECNOLOGÍA Y PLATAFORMA
 
@@ -302,9 +355,9 @@ Además de las plataformas de lanzamiento conviene enfatizar la plataforma de di
 
 Esta estrategia de lanzamiento y distribución se alinea con nuestro objetivo de hacer que el juego esté disponible para una amplia variedad de plataformas, brindando a los jugadores la flexibilidad de elegir dónde y cómo quieren disfrutar de nuestra creación.
 
-# MODELO DE NEGOCIO
+<br>
 
-##
+# MODELO DE NEGOCIO
 
 ## Información de usuario
 
@@ -314,67 +367,82 @@ El usuario, o persona que jugará a Upstream, será una persona con edad compren
 
 Un mapa de empatía en modelos de negocio es una herramienta visual que ayuda a comprender mejor a los clientes o usuarios de un producto o servicio. Esta herramienta se utiliza en el proceso de diseño de negocios para desarrollar una comprensión más profunda de las necesidades, deseos, motivaciones y frustraciones de los clientes. El objetivo es ponerse en el lugar del cliente para poder crear productos o servicios que realmente satisfagan sus necesidades y expectativas.
 
+<br>
+
 Ejemplo de mapa de empatía desde el punto de vista de un niño que juega al juego:
 
-1.¿Qué piensan y sienten?
+**1.¿Qué piensan y sienten?**
 
 Los niños a estas edades (Aprox 6-10 años) piensan, fundamentalmente, en divertirse mientras juegan, quieren sentirse desafiados mientras logran éxito a medida que va avanzando el juego.
 
 Además, cabe destacar que se sienten emocionados cuando encuentran personajes o mundos llamativos para ellos.
 
-2.¿Qué ven?
+**2.¿Qué ven?**
 
 Debido a la gran evolución y expansión de los videojuegos, a día de hoy, cualquier persona puede jugar a juegos, independientemente de la edad que pueda tener el cliente. Asimismo, lo que el niño ve son anuncios de juegos en línea y en la televisión, ven también a amigos y compañeros de clase jugando videojuegos o, también, ven a sus padres y maestros animándolos a aprender mientras juegan.
 
-3.¿Qué oyen?
+**3.¿Qué oyen?**
 
 La interacción con otras personas es fundamental, ya que pueden escuchar a amigos suyos hablando de juegos emocionantes que han jugado hace poco. Además, no solo pueden oír de un vínculo cercano, sino también gracias a plataformas como Youtube y Twitch, donde la gente podría opinar de cualquier aspecto relacionado con el juego. Asimismo, debido a que el público del juego es joven, se podría dejar influenciar fácilmente por otras personas.
 
-4.¿Qué dicen y hacen?
+**4.¿Qué dicen y hacen?**
 
 Entre las cosas que pueden decir se encuentra el hablar acerca de los logros o metas que han podido superar en el juego con sus amigos o familiares. Dentro de lo que pueden hacer podría encontrarse el descargar nuevos juegos en los diferentes dispositivos, ya sea móvil, PC, consola, etc. Y, además, jugar a diario para desafiar sus habilidades y desbloquear recompensas.
 
-5.Esfuerzos
+**5.Esfuerzos**
 
 Los niños, al tener poca experiencia, necesitan de un gran esfuerzo para resolver rompecabezas o superar obstáculos en el juego que, a lo mejor, para una persona más mayor, no tendría problema ninguno en solventar. Además, invierten tiempo y energía en aprender y mejorar sus habilidades y, en caso de que para él le esté siendo muy difícil, buscan ayuda de amigos o familiares para enfrentar de forma más fácil el desafío.
 
-6. Resultados
+**6. Resultados**
 
 Como resultado experimentan un aumento en sus habilidades cognitivas y se sienten más confiados al superar nuevos desafíos para ellos. Además, mientras aprenden, disfrutan de una experiencia de juego divertida y educativa.
 
+<br>
+
 Ejemplo de mapa de empatía desde el punto de vista del padre del niño que juega el juego:
 
-1.¿Qué piensan y sienten?
+**1.¿Qué piensan y sienten?**
 
 Los padres fundamentalmente piensan en la responsabilidad de supervisar las actividades en línea de sus hijos. Además, quieren que sus hijos tengan experiencias educativas de aprendizaje de calidad, pero, que a la vez sean divertidas para el niño.
 
-2.¿Qué ven?
+**2.¿Qué ven?**
 
 Con la influencia de las redes sociales, los padres podrían ver anuncios de juegos infantiles didácticos en redes sociales y sitios web.
 
 A su vez, ven a otros padres discutiendo juegos y aplicaciones infantiles lo cual puede producir que, en un futuro no muy lejano, acaben comprando el producto.
 
-3.¿Qué oyen?
+**3.¿Qué oyen?**
 
 La comunicación con otras personas es fundamental, ya que el padre del niño podría oír a otros padres o personas hablar de recomendaciones sobre juegos educativos y seguros. Además, muchas veces no tienes que irte muy lejos a preguntar a otras personas, sino que tu propio hijo te puede comentar acerca del videojuego al que le gustaría jugar.
 
-4.¿Qué dicen y hacen?
+**4.¿Qué dicen y hacen?**
 
 Estos padres discuten con otros padres sobre qué juegos son apropiados y seguros y, de los cuales el niño podría sacar algún conocimiento del cual aprender. Del mismo modo, los padres podrían probar ellos mismos el juego antes de dárselo al niño para corroborar que puede ser un producto beneficioso para ellos y que no va a ser una mala influencia.
 
-5.Esfuerzos
+**5.Esfuerzos**
 
 Dentro de los esfuerzos, los padres empeñan tiempo en encontrar juegos educativos y seguros que sean fructíferos y rentables para el niño. Además, dedican tiempo a investigar y leer reseñas sobre el juego en cuestión para ver que opina más gente.
 
-6. Resultados
+**6. Resultados**
 
 Como resultados, los padres ven como el hijo mejora sus habilidades y conocimientos a través del juego y, se sienten aliviados cuando ven a sus hijos disfrutar de un juego que es educativo y seguro.
 
+<br>
+
 ## Caja de herramientas
 
-El "Business Model Toolbox" o "Caja de Herramientas" es una herramienta que ayuda a las empresas a diseñar y visualizar sus modelos de negocio de manera más sencilla. La Caja de Herramientas incluye herramientas físicas o digitales, como tarjetas o imanes, que hacen más fácil trabajar con el "Canvas del modelo de negocio" en talleres y reuniones de planificación. En resumen, es una ayuda visual para pensar en cómo funciona un negocio y cómo mejorar su estrategia.
+El “Business Model Toolbox” o “Caja de Herramientas” es una herramienta que ayuda a las empresas a diseñar y visualizar sus modelos de negocio de manera más sencilla. La Caja de Herramientas incluye herramientas físicas o digitales, como tarjetas o imanes, que hacen más fácil trabajar con el “Canvas del modelo de negocio” en talleres y reuniones de planificación. En resumen, es una ayuda visual para pensar en cómo funciona un negocio y cómo mejorar su estrategia.
 
 ![caja herramientas](https://github.com/tapeogames/Upstream/assets/115087211/f4a07c49-925c-4cbb-9b31-1fa7078463a5)
+
+Inicialmente, nuestra caja de herramientas establece una relación directa con nuestros compradores, ya que ellos aportan recursos financieros a cambio de una copia de nuestro juego.
+
+Por otro lado, mantenemos colaboraciones con otras empresas, especialmente en el proceso de distribución. Estas empresas proporcionan visibilidad en el mercado y servicios técnicos, como servidores que nos permiten crear clasificaciones mundiales basadas en el tiempo que los jugadores invierten en cada nivel. Además, estas plataformas de distribución nos brindan datos clave, como las descargas del juego, la cantidad de jugadores en un momento específico, el punto máximo de usuarios simultáneos, así como reseñas de los usuarios. Esta colaboración se sustenta en un acuerdo mutuo donde estas empresas reciben una parte de los beneficios que generamos.
+
+Con respecto a los centros educativos, nuestra relación gira en torno a la venta de nuestro producto, a la vez que nos proveen información valiosa sobre el progreso de los alumnos. Esto nos permite evaluar el valor educativo de nuestro juego.
+
+Por último, identificamos dos posibles fuentes de financiamiento. En un escenario, el gobierno podría respaldar nuestro proyecto a través de concursos centrados en propuestas educativas, donde el ganador recibe un financiamiento significativo para llevar a cabo su idea. Por otro lado, existe la posibilidad de que una empresa nos contrate para desarrollar nuestra idea, otorgándonos financiamiento a lo largo de la duración del proyecto. En este último caso, la empresa que nos contrata obtendría derechos sobre el proyecto y proporcionaría recursos y experiencia.
+
 
 ## Canvas del modelo de negocio
 
