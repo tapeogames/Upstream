@@ -41,7 +41,6 @@
 
 13. Modelo de Negocio
 
-
 <br>
 
 # INTRODUCCIÓN
@@ -49,6 +48,8 @@
 El propósito del siguiente Game Design Document es proporcionar una visión general detallada de nuestro proyecto de videojuego, " **Upstream**". Este GDD servirá como hoja de ruta esencial para el desarrollo y diseño de nuestro juego, destacando la trama principal y las subtramas que darán vida a esta experiencia única.
 
 **Upstream** es un videojuego 3D single-player para web que impulsa el pensamiento computacional en niños. El juego cuenta con diversos niveles a lo largo de los cuales el jugador será capaz de observar el desarrollo y crecimiento de Darwin, nuestro protagonista. Es un juego de tipo puzzle en el que el jugador deberá desplazarse por el escenario esquivando y desplazando obstáculos para llegar a una meta final, la cual representa el hogar de dichos anfibios.
+
+<br>
 
 # VISIÓN DEL JUEGO
 
@@ -67,6 +68,7 @@ En un principio se plantearon los siguinetes MOODBOARDS:
 ![moodboard 1](https://github.com/tapeogames/Upstream/assets/145482203/0ca1c3ec-6fa9-45bd-858f-6ab5b239ae6e)
 ![moodboard 2](https://github.com/tapeogames/Upstream/assets/145482203/bf84fa6e-e8bc-4db2-8e33-fbd1da57dc9e)
 
+<br>
 
 # NARRATIVA
 
@@ -87,6 +89,8 @@ Mientras es un renacuajo, se verá abrumado por la situación y se sentirá en u
 En su siguiente fase, ya posee más experiencia y comenzará a ver las cosas de manera diferente, donde no todo son obstáculos de gran peligro. Los ambientes se iluminarán con colores más cálidos, evocando un amanecer, las formas serán más redondeadas, aunque se mantendrán elementos de la estética anterior. Darwin ha salido de la cueva y empieza a descubrir la naturaleza exterior del riachuelo.
 
 Finalmente, al comienzo de su etapa adulta, Darwin ya tiene más conocimiento y percibe su entorno, peligros y dificultades de forma más realista. Por ello los escenarios adquirirán una apariencia más acogedora, con una iluminación diurna, colores más naturales y las formas amigables prevalecerán sobre las agresivas.
+
+<br>
 
 # PERSONAJES
 
@@ -110,6 +114,8 @@ En algunos niveles, una de las casillas estará ocupada por una mamá pato y otr
 
 El jugador se encontrará con ellos en ciertos niveles en los que un sapo ocupará una casilla y estará croando, provocando vibraciones en el agua que no permitirán pasar a Darwin. Sin embargo, este obstáculo se puede sobrepasar si Darwin le lleva una mosca al sapo, el cual al empezar a comérsela, dejará de croar.
 
+<br>
+
 # MUNDO Y ENTORNO
 
 La principal característica del entorno de juego es que este está diseñado para que el movimiento no sea libre, sino por cuadrículas. Esta decisión de diseño se debe a la naturaleza del juego, ya que como este está basado en puzzles, quisimos hacer que hubiese casillas de juego para que el usuario pueda resolverlos de forma más lógica para que pueda desarrollar de forma más efectiva su pensamiento computacional.
@@ -122,6 +128,7 @@ En la última fase, Darwin ha salido al exterior y se encontrará con elementos 
 
 Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño será acorde al espacio de juego del nivel, es decir, se podrá encontrar con aves en la tercera fase, desarrollada en el exterior, pero no en la primera ya que está en la cueva. Además, la complejidad de los escenarios y de sus puzzles se irá complicando a lo largo de los niveles, haciendo así que el jugador se enfrente a nuevos retos.
 
+<br>
 
 # ARTE Y GRÁFICOS
 
@@ -141,7 +148,7 @@ Darwin presenta un diseño basado en formas redondeadas, tanto circulares como t
 
 Como se ha mencionado antes, los niveles de la primera fase se sitúan en una cueva, teniendo la apariencia de un entorno un tanto hostil. Para ello se utiliza una tenue iluminación para una ambientación más lúgubre acorde con la ubicación, y se hace uso de los contrastes tanto de forma, como de color y tamaño. De esta forma el escenario está compuesto de formas triangulares llenas de ángulos y una paleta monocromática fría, donde Darwin destaca por su forma redonda y color cálido, generando un ambiente más agresivo y oscuro, en el que encontramos a un Darwin solo e indefenso.
 
-
+<br>
 
 # MÚSICA Y SONIDO
 
@@ -172,6 +179,8 @@ Los efectos de sonido son fundamentales para brindar retroalimentación y vida a
 - **Ajustes de Volumen:** Se proporcionará la opción de ajustar el volumen de música y efectos de sonido en el menú de configuración del juego para garantizar la comodidad de los jugadores.
 
 La música y los efectos de sonido serán diseñados específicamente para asegurar que contribuyan a una experiencia de juego divertida y apropiada para los niños, manteniendo un ambiente alegre y amigable en todo momento.
+
+<br>
 
 # INTERFAZ DE USUARIO
 
@@ -221,8 +230,7 @@ En el menú de victoria se encontrarán dos botones fundamentales que te permiti
 
 ![Diagrama flujo 5](https://github.com/tapeogames/Upstream/assets/145482203/e05b4985-5e65-44a7-a1fa-7c8b0de9320d)
 
-
-#
+<br>
 
 # MECÁNICAS DE JUEGO
 
@@ -251,6 +259,8 @@ El personaje contará con un sistema de progresión de mecánicas que irá relac
 
 En cuanto a los controles del juego, para ordenador, se podrá mover a Darwin con WASD y para interactuar con un objeto y arrastrarlo, habrá que pulsar y mantener el espacio. Para movil (pendiente consulta por dificultad de implementación)
 
+<br>
+
 # DISEÑO DE NIVELES
 
 Los niveles están distribuidos se basan en la resolución de puzles por medio de las diferentes mecánicas que se han expuesto y acorde con la fase de la metamorfosis de Darwin. Estos serán 12 niveles, cuatro por cada una de las etapas ya mencionadas y tendrán una duración de entre 3-5 minutos de media.
@@ -265,6 +275,7 @@ El nivel inicial está diseñado como primer contacto del jugador con los puzzle
 
 Este siguiente nivel aumenta en complejidad e introduce al jugador en una situación más común de la resolución de puzles, la contradicción y el conflicto. El usuario tendrá que pensar el orden de sus acciones para que no supongan un obstáculo más a la hora de encontrar la solución. Además se introduce la arena/suelo para enseñar que no se puede pasar a través de ella, aunque en un futuro cuando Darwin haya crecido sí serán zonas transitables.
 
+<br>
 
 # CONTROLES
 
@@ -276,6 +287,8 @@ Actualmente, como no contamos con una implementación final, los controles bási
 
 
 Este será para el movimiento en el mundo virtual en el eje xz. En este caso, **A** será izquierda; **D** , derecha; **W** , arriba y **S** , abajo. Además, el personaje tendrá la posibilidad de empujar algunos objetos interactuables con la tecla **ESPACIO** , y este objeto se moverá en dirección en la que mire el personaje y se pulse la tecla. Además, si se mantiene pulsada la misma tecla, también habrá la posibilidad de arrastrar hacia el sentido trasero del personaje. Esto será inicialmente así en ordenador, pero está previsto añadir también controles para móviles, que aún están por determinar.
+
+<br>
 
 # TECNOLOGÍA Y PLATAFORMA
 
@@ -301,9 +314,9 @@ Además de las plataformas de lanzamiento conviene enfatizar la plataforma de di
 
 Esta estrategia de lanzamiento y distribución se alinea con nuestro objetivo de hacer que el juego esté disponible para una amplia variedad de plataformas, brindando a los jugadores la flexibilidad de elegir dónde y cómo quieren disfrutar de nuestra creación.
 
-# MODELO DE NEGOCIO
+<br>
 
-##
+# MODELO DE NEGOCIO
 
 ## Información de usuario
 
