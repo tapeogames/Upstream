@@ -63,7 +63,7 @@ El público objetivo principal de " **Upstream**" son niños y preadolescentes e
 
 Además del público infantil, " **Upstream**" también puede atraer a padres, maestros y cuidadores interesados en ofrecer a los niños una experiencia de juego educativa y enriquecedora.
 
-En un principio se plantearon los siguinetes MOODBOARDS:
+En un principio se plantearon los siguinetes Mood Boards:
 
 ![moodboard 1](https://github.com/tapeogames/Upstream/assets/145482203/0ca1c3ec-6fa9-45bd-858f-6ab5b239ae6e)
 ![moodboard 2](https://github.com/tapeogames/Upstream/assets/145482203/bf84fa6e-e8bc-4db2-8e33-fbd1da57dc9e)
@@ -139,7 +139,9 @@ Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño 
 En cuanto a la relevancia artística de los entornos, el juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
 
 **Arte conceptual** 
+<br>
 ![Darwin Character Sheet Evo 1 REDISEÑO](https://github.com/tapeogames/Upstream/assets/81293638/d8c0cf99-65cc-43a8-9ec2-2b75b3d9cedd)
+<br>
 ![Darwin Evo 1 - Turn Around](https://github.com/tapeogames/Upstream/assets/145482203/e6413e1a-47e4-4686-8069-42537256b5e3)
 
 Darwin presenta un diseño basado en formas redondeadas, tanto circulares como triangulares, dando un aspecto amigable, inofensivo y dinámico. Su paleta de color cálida con tonos rosados afianza esa sensación de cercanía y simpatía. Al ser un renacuajo en esta primera fase, tiene una proporción del cuerpo de dos cabezas, mostrando su corta edad y entrando en un diseño más estilizado.
@@ -192,6 +194,7 @@ En el proceso de desarrollo de las interfaces de nuestro juego, hemos establecid
 
 ![Diagrama Flujo Upstream](https://github.com/tapeogames/Upstream/assets/81293638/af0232ee-dd3e-4339-afdb-e15979146692)
 
+
 **Interfaz de la pantalla inicial**
 
 Al abrir Upstream, la primera interacción que los jugadores encontrarán, después de una breve introducción con el logotipo de Tapeo Games, es una pantalla inicial en la que deberán proporcionar su edad y género. Esta información será utilizada con el objetivo de crear una base de datos y analizar las métricas y estadísticas de cada jugador. De esta forma, se podrá estudiar cuánto tiempo de media tarda cada uno en superar los niveles, la agilidad a la hora de navegar por los menús, etc. También se podrá analizar si efectivamente Upstream está ayudando a mejorar sus capacidades de pensamiento computacional, viendo su progreso entre niveles y observando su aprendizaje de mecánicas.
@@ -224,6 +227,7 @@ Una vez el usuario ha seleccionado el nivel que desea jugar, en este podrá paus
 ![Diagrama flujo 4](https://github.com/tapeogames/Upstream/assets/145482203/479d44f0-3eab-40f8-9473-2c9cd0c4315a)
 
 
+
 **Interfaz del menú de victoria**
 
 En el menú de victoria se encontrarán dos botones fundamentales que te permitirán decidir cómo proceder después de completar un nivel. El primer botón, SIGUIENTE NIVEL, te llevará al próximo nivel en la secuencia de la historia del juego. Si en cambio prefieres volver al punto de inicio o explorar otras opciones disponibles en el jeugo, el segundo botón, MENÚ PRINCIPAL, te llevará de vuelta al menú principal del juego.
@@ -242,7 +246,7 @@ Otra mecánica del juego es el arrastrar y empujar objetos como pueden ser tronc
 
 **Pull Mechanic**
 ![Pull Concept](https://github.com/tapeogames/Upstream/assets/81293638/3ac35bd4-af46-410e-bb50-9d31c5cb4c65)
-
+<br>
 **Push Mechanic**
 ![Push Concept](https://github.com/tapeogames/Upstream/assets/81293638/8010077f-74cd-469f-a954-754153d940f3)
 
