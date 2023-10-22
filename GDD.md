@@ -2,45 +2,44 @@
 
 ## **Tapeo Games**
 
-Javier Álvarez Perez
-
-Lucas Rubio Lezana
-
-Yeray da Silva de las Heras
-
-Javier de las Peñas Fernandez
-
-Luna Bouzón Rodríguez
+| Nombre        | Mail          | Perfil GitHub  |
+| ------------- |:-------------:| --------------:|
+| Javier Álvarez Perez  | j.alvarezp.2020@alumnos.urjc.es | JavierAlper |
+| Luna Bouzón Rodríguez    | l.bouzon.2020@alumnos.urjc.es | lunsbzn |
+| Yeray Da Silva de las Heras    | y.da.2020@alumnos.urjc.es      |   yerayds |
+| Javier de las Peñas Fernandez | j.delaspenas.2020@alumnos.urjc.es    |    Javieeh |
+| Fabio Elías Rengifo García | fe.rengifo.2020@alumnos.urjc.e      |    faviolado |
+| Lucas Rubio Lezana | l.rubiol.2020@alumnos.urjc.es      |    LucasWiggie |
 
 
 
 **ÍNDICE**
 
-2. Introducción
+1. Introducción
 
-3. Visión del Juego
+2. Visión del Juego
 
-4. Mecánicas del Juego
+3. Mecánicas del Juego
 
-5. Personajes
+4. Personajes
 
-6. Mundo y Entorno
+5. Mundo y Entorno
 
-7. Historia y Narrativa
+6. Historia y Narrativa
 
-8. Arte y Gráficos
+7. Arte y Gráficos
 
-9. Sonido y Música
+8. Sonido y Música
 
-10. Interfaz de Usuario (UI)
+9. Interfaz de Usuario (UI)
 
-11. Mecánicas de Juego
+10. Mecánicas de Juego
 
-12. Controles
+11. Controles
 
-13. Tecnología y Plataforma
+12. Tecnología y Plataforma
 
-14. Modelo de Negocio
+13. Modelo de Negocio
 
 
 
