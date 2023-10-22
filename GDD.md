@@ -19,21 +19,21 @@
 
 2. Visión del Juego
 
-3. Mecánicas del Juego
+3. Narrativa
 
 4. Personajes
 
 5. Mundo y Entorno
 
-6. Historia y Narrativa
+6. Arte y Gráficos
 
-7. Arte y Gráficos
+7. Música y Sonido
 
-8. Sonido y Música
+8. Interfaz de Usuario
 
-9. Interfaz de Usuario (UI)
+9. Mecánicas de Juego
 
-10. Mecánicas de Juego
+10. Diseño de Niveles
 
 11. Controles
 
@@ -240,13 +240,31 @@ En el menú de victoria se encontrarán dos botones fundamentales que te permiti
 
 A lo largo del juego, se irán presentando diferentes mecánicas de progresión para incrementar la dificultad de los niveles y presentar un reto al jugador, que deberá saber cómo aplicarlas para poder avanzar.
 
-La primera mecánica principal es el movimiento. El jugador podrá moverse en las 4 direcciones cardinales y además podrá escalar objetos que tengan un relieve considerable. A través del diseño de niveles se hará que esta mecánica sea necesaria para completar los niveles. Esta será la mecánica clave del videojuego ya que el objetivo es que el jugador sepa llegar hasta cierto punto del escenario esquivando todos los obstáculos y moviendo objetos para situarlos a su favor.
+La mecánica principal es el movimiento del personaje. El jugador podrá moverse en las 4 direcciones cardinales utilizando los respectivos controles con las teclas ASDW y avanzará de casilla en casilla (las casillas no serán visibles pero el usuario podrá observar cómo Darwin se mueve en unidades y no de forma continua). El diseño de niveles se ha realizado de forma que esta mecánica sea esencial para poder avanzar en el juego, ya que el objetivo principal en cada nivel es llegar a la salida.
 
-Otra mecánica del juego es el arrastrar y empujar objetos como pueden ser troncos, barriles, nenúfares… etc. Los niveles se diseñarán con el objetivo de mantener este concepto pero aumentando la complejidad del mapa para que el usuario necesite pensar sus movimientos y planear en su cabeza cómo resolver el puzzle.
+Sin embargo, pese a que Darwin podrá moverse con cierta libertad por los niveles, en ellos se encontrará con numerosos obstáculos. El usuario podrá interactuar con algunos de ellos gracias a la mecánica de agarrar/empujar, la cual permite mover dichos obstáculos a otras casillas para abrirse paso hacia la salida. Este concepto se mantendrá a lo largo de todo el juego pero se explotará de numerosas formas para aumentar la complejidad, obligar al jugador a planificar más sus acciones y diversificar los puzles.
+
+Los obstáculos se dividen en dos categorías principales: movibles e inamovibles. 
+- **Movibles**: Darwin no puede atravesarlos, pero sí agarrarlos o empujarlos. Estas acciones no se pueden realizar lateralmente, es decir, cuando Darwin coge el objeto movible (por ejemplo una rama), sólo se podrá mover hacia delante o hacia atrás con ella. 
+- **Inamovibles**: Darwin no puede empujarlos ni agarrarlos. Sirven como obstáculo dentro del mapa, colocados estratégicamente para aumentar la complejidad del nivel. Pueden ser de tres tipos: *no atravesables* (Darwin no puede pasar a través de ellos), *atravesables* (Darwin, si no está agarrando o empujando un objeto, puede pasar a través de ellos) o *atravesables con objeto* (Darwin puede pasar a través de ellos, ya sea él sólo o sujetando un objeto).
+
+A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su respectiva categorización:
+
+| Obstáculo       | Categoría         | Observaciones  |
+| ------------- |:-------------:| --------------:|
+| Roca  | inamovible no atravesable | - |
+| Banco de arena  | inamovible atravesable | No atravesable con Darwin renacuajo o renacuajo adulto |
+| Estalagmitas  | inamovible atravesable | - |
+| Rama  | movible | - |
+| Nenúfares  | inamovible atravesable | - |
+| Tronco  | movible | - |
+
 
 **Pull Mechanic**
 ![Pull Concept](https://github.com/tapeogames/Upstream/assets/81293638/3ac35bd4-af46-410e-bb50-9d31c5cb4c65)
+
 <br>
+
 **Push Mechanic**
 ![Push Concept](https://github.com/tapeogames/Upstream/assets/81293638/8010077f-74cd-469f-a954-754153d940f3)
 
@@ -255,11 +273,11 @@ Cabe destacar también que Darwin podrá aprovechar ciertas superficies para des
 
 El personaje contará con un sistema de progresión de mecánicas que irá relacionado con la etapa evolutiva en la que se encuentra el personaje, estas serán tres:
 
-- Renacuajo: en esta etapa Darwin solo podrá ir por el agua ya que sus patas son demasiado pequeñas como para poder salir del agua, la única mecánica que destaca es la del movimiento, que en este caso no tendrá verticalidad.
+- **Renacuajo**: en esta etapa Darwin solo podrá ir por el agua ya que sus patas son demasiado pequeñas como para poder salir del agua, la única mecánica que destaca es la del movimiento, que en este caso no tendrá verticalidad.
 
-- Renacuajo adulto: durante esta etapa el personaje podrá nadar por el agua y además podrá salir a la tierra y deslizarse por ciertos bloques, pero no podrá caminar porque sus patas no son suficientemente fuertes. También podrá empujar cosas pequeñas por el agua, como palos, hojas etc…
+- **Renacuajo adulto**: durante esta etapa el personaje podrá nadar por el agua y además podrá salir a la tierra y deslizarse por ciertos bloques, pero no podrá caminar porque sus patas no son suficientemente fuertes. También podrá empujar cosas pequeñas por el agua, como palos, hojas etc…
 
-- Salamandra: en esta etapa Darwin habrá alcanzado su estado de evolución completo por lo que podrá moverse por todos los terrenos y además podrá escalar por ciertas zonas. También podrá mover objetos tanto pequeños como grandes.
+- **Salamandra**: en esta etapa Darwin habrá alcanzado su estado de evolución completo por lo que podrá moverse por todos los terrenos y además podrá escalar por ciertas zonas. También podrá mover objetos tanto pequeños como grandes.
 
 En cuanto a los controles del juego, para ordenador, se podrá mover a Darwin con WASD y para interactuar con un objeto y arrastrarlo, habrá que pulsar y mantener el espacio. Para movil (pendiente consulta por dificultad de implementación)
 
