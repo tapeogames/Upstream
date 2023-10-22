@@ -19,4 +19,9 @@ public class WinCondition : MonoBehaviour
             win.enabled = true;
         }
     }
+
+    public void Quitar()
+    {
+        win.enabled = false;
+    }
 }
