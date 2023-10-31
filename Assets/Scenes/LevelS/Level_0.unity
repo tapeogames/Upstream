@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: sceneObject
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1437306146879275597, guid: e31f72ba007e7954796a7ef333f1c1bd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2944412958481021160, guid: e31f72ba007e7954796a7ef333f1c1bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -186,8 +190,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2422433385009427439, guid: e31f72ba007e7954796a7ef333f1c1bd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 773169274}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8567960059813606699, guid: e31f72ba007e7954796a7ef333f1c1bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 202154340}
   m_SourcePrefab: {fileID: 100100000, guid: e31f72ba007e7954796a7ef333f1c1bd, type: 3}
+--- !u!1 &202154339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8567960059813606699, guid: e31f72ba007e7954796a7ef333f1c1bd, type: 3}
+  m_PrefabInstance: {fileID: 202154338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &202154340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202154339}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c119625b2167f246a5351daa1570df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activate: 1
+  tileCenter: {fileID: 0}
 --- !u!1 &204041772
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Level0
       objectReference: {fileID: 0}
+    - target: {fileID: 4460724045090998511, guid: 01a85898f9c224541a40f3f8236529f4, type: 3}
+      propertyPath: m_TagString
+      value: PlayerDetectorCurrent
+      objectReference: {fileID: 0}
     - target: {fileID: 7669707194490301390, guid: 01a85898f9c224541a40f3f8236529f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5
@@ -463,6 +493,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1359006576}
     m_Modifications:
+    - target: {fileID: 18412550004260716, guid: 58e76eb42a691ad48b053c5fa00adf6e, type: 3}
+      propertyPath: m_TagString
+      value: ObjectDetector
+      objectReference: {fileID: 0}
     - target: {fileID: 962938829810020552, guid: 58e76eb42a691ad48b053c5fa00adf6e, type: 3}
       propertyPath: someObject
       value: 
@@ -471,6 +505,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 1109606032647516841, guid: 58e76eb42a691ad48b053c5fa00adf6e, type: 3}
+      propertyPath: m_TagString
+      value: ObjectDetector
+      objectReference: {fileID: 0}
     - target: {fileID: 2023944289634381356, guid: 58e76eb42a691ad48b053c5fa00adf6e, type: 3}
       propertyPath: someObject
       value: 
@@ -523,10 +561,22 @@ PrefabInstance:
       propertyPath: someObject
       value: 
       objectReference: {fileID: 1078643469}
+    - target: {fileID: 6043926701051669718, guid: 58e76eb42a691ad48b053c5fa00adf6e, type: 3}
+      propertyPath: m_TagString
+      value: ObjectDetector
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710895594756768185, guid: 58e76eb42a691ad48b053c5fa00adf6e, type: 3}
+      propertyPath: m_TagString
+      value: ObjectDetector
+      objectReference: {fileID: 0}
     - target: {fileID: 6902922882300237942, guid: 58e76eb42a691ad48b053c5fa00adf6e, type: 3}
       propertyPath: someObject
       value: 
       objectReference: {fileID: 1078643469}
+    - target: {fileID: 7369110519417449702, guid: 58e76eb42a691ad48b053c5fa00adf6e, type: 3}
+      propertyPath: m_TagString
+      value: ObjectDetectorCurrent
+      objectReference: {fileID: 0}
     - target: {fileID: 7504831679565799552, guid: 58e76eb42a691ad48b053c5fa00adf6e, type: 3}
       propertyPath: someObject
       value: 
@@ -633,7 +683,6 @@ MonoBehaviour:
   isTriggered: 0
   offset: {x: 0, y: 0, z: 0}
   moving: 0
-  isPushed: 0
   movingDirection: {x: 0, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   distanceToTarget: 0

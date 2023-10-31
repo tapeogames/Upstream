@@ -17,14 +17,7 @@ public class Tile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (activate == false)
-        {
-            tileCenter.enabled = false;
-        }
-        else
-        {
-            tileCenter.enabled = true;
-        }*/
+
     }
 
     public Vector3 GetTilePosition()
@@ -38,14 +31,14 @@ public class Tile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ObjectDetector") && !PlayerController.grabbing)
+        if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing)
         {
             activate = false;
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("ObjectDetector"))
+        if (other.CompareTag("ObjectDetectorCurrent"))
         {
             activate = true;
         }
