@@ -13,8 +13,7 @@ public class PushableObjectController : SceneObject
     public bool isTriggered = false;
     public Vector3 offset;
 
-    public bool moving;
-    public bool isPushed;
+    public bool moving = false;
     public Vector3 movingDirection;
     public Vector3 targetPosition;
     public float distanceToTarget;

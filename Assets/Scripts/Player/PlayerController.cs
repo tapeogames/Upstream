@@ -20,6 +20,7 @@ public class PlayerController : SceneObject
 
     public static bool grabbing;
     public static bool canGrab;
+    public static bool passThrough;
     public static int indexObject;
 
     public Vector3 playerLookAt;
@@ -62,7 +63,7 @@ public class PlayerController : SceneObject
 
     void ReadInput() {
 
-        
+
         if (Input.GetKeyDown(KeyCode.D))
         {
             Debug.Log("D");
