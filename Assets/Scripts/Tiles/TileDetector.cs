@@ -24,6 +24,7 @@ public class TileDetector : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        //creo q podemos setear los tiles detector a true o false con condiciones en este triger
         Tile tile = other.GetComponent<Tile>();
         if (tile != null)
         {

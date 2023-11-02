@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public bool activate = true;
+    public bool activatePlayer = true;
+    public bool activateObject = true;
     public BoxCollider tileCenter;
     
 
     void Start()
     {
         tileCenter = GetComponent<BoxCollider>();
+        tileCenter.name = "tileCenter";
     }
 
     // Update is called once per frame
@@ -33,14 +35,16 @@ public class Tile : MonoBehaviour
     {
         if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing)
         {
-            activate = false;
+            activatePlayer = false;
+            activateObject = false;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("ObjectDetectorCurrent"))
         {
-            activate = true;
+            activatePlayer = true;
+            activateObject = true;
         }
     }
 }
