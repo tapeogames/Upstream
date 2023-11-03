@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stalagmite : Tile
+public class Sand : Tile
 {
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ObjectDetector") && PlayerController.grabbing)
         {
-            Debug.Log("HOLAA");
+            Debug.Log("HOLAA ARENA");
 
         } 
     }

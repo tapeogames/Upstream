@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileDetector : MonoBehaviour
+public class TileDetectorObject : MonoBehaviour
 {
     public enum TileDetectorType
     {
@@ -30,17 +30,29 @@ public class TileDetector : MonoBehaviour
         {
             switch (detectorType)
             {
-                case TileDetectorType.Left:                    
-                    someObject.SetLeftTile(tile);                    
+                case TileDetectorType.Left:
+                    if (tile is not Stalagmite)
+                    {
+                        someObject.SetLeftTile(tile);
+                    }
                     break;
-                case TileDetectorType.Right:                    
-                    someObject.SetRightTile(tile);                    
+                case TileDetectorType.Right:
+                    if (tile is not Stalagmite)
+                    {
+                        someObject.SetRightTile(tile);
+                    }
                     break;
-                case TileDetectorType.Forward:                    
-                    someObject.SetForwardTile(tile);                    
+                case TileDetectorType.Forward:
+                    if (tile is not Stalagmite)
+                    {
+                        someObject.SetForwardTile(tile);
+                    }
                     break;
                 case TileDetectorType.Backward:
-                   someObject.SetBackwardTile(tile);                    
+                    if (tile is not Stalagmite)
+                    {
+                        someObject.SetBackwardTile(tile);
+                    }
                     break;
                 case TileDetectorType.Floor:
                     someObject.SetCurrentTile(tile);
