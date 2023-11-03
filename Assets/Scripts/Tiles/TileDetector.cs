@@ -37,7 +37,10 @@ public class TileDetector : MonoBehaviour
                     someObject.SetRightTile(tile);
                     break;
                 case TileDetectorType.Forward:
-                    someObject.SetForwardTile(tile);
+                    if (tile is not Stalagmite || !PlayerController.grabbing)
+                    {
+                        someObject.SetForwardTile(tile);
+                    }
                     break;
                 case TileDetectorType.Backward:
                     someObject.SetBackwardTile(tile);

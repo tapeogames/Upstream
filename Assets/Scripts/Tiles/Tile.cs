@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public bool activatePlayer = true;
-    public bool activateObject = true;
+    public bool activate = true;
     public BoxCollider tileCenter;
     
 
@@ -16,35 +15,24 @@ public class Tile : MonoBehaviour
         tileCenter.name = "tileCenter";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public Vector3 GetTilePosition()
     {
         return (Vector3.right*transform.position.x+Vector3.forward*transform.position.z);
     }
 
-    
-
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing)
         {
-            activatePlayer = false;
-            activateObject = false;
+            activate = false;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("ObjectDetectorCurrent"))
         {
-            activatePlayer = true;
-            activateObject = true;
+            activate = true;
         }
     }
 }

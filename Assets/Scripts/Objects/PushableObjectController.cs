@@ -24,12 +24,6 @@ public class PushableObjectController : SceneObject
         pushableObject = sceneObject;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         
@@ -87,12 +81,5 @@ public class PushableObjectController : SceneObject
             pushableObject.transform.parent = null;
         }
     }
-
-
-    
-
-    
-
-
 
 }
