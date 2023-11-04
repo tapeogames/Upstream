@@ -28,37 +28,37 @@ public class TileDetectorObject : MonoBehaviour
         Tile tile = other.GetComponent<Tile>();
         if (tile != null)
         {
-            switch (detectorType)
-            {
-                case TileDetectorType.Left:
-                    if (tile is not Stalagmite)
-                    {
-                        someObject.SetLeftTile(tile);
-                    }
-                    break;
-                case TileDetectorType.Right:
-                    if (tile is not Stalagmite)
-                    {
-                        someObject.SetRightTile(tile);
-                    }
-                    break;
-                case TileDetectorType.Forward:
-                    if (tile is not Stalagmite)
-                    {
-                        someObject.SetForwardTile(tile);
-                    }
-                    break;
-                case TileDetectorType.Backward:
-                    if (tile is not Stalagmite)
-                    {
-                        someObject.SetBackwardTile(tile);
-                    }
-                    break;
-                case TileDetectorType.Floor:
-                    someObject.SetCurrentTile(tile);
-                    break;
-            }
-
+                switch (detectorType)
+                {
+                
+                    case TileDetectorType.Left:
+                        if (tile is not Stalagmite && tile is not Sand)
+                        {
+                            someObject.SetLeftTile(tile);
+                        }
+                        break;
+                    case TileDetectorType.Right:
+                        if (tile is not Stalagmite && tile is not Sand)
+                        {
+                            someObject.SetRightTile(tile);
+                        }
+                        break;
+                    case TileDetectorType.Forward:
+                        if (tile is not Stalagmite && tile is not Sand)
+                        {
+                            someObject.SetForwardTile(tile);
+                        }
+                        break;
+                    case TileDetectorType.Backward:
+                        if (tile is not Stalagmite && tile is not Sand)
+                        {
+                            someObject.SetBackwardTile(tile);
+                        }
+                        break;
+                    case TileDetectorType.Floor:
+                        someObject.SetCurrentTile(tile);
+                        break;
+                }
         }
     }
     private void OnTriggerExit(Collider other)
@@ -89,6 +89,8 @@ public class TileDetectorObject : MonoBehaviour
         }
 
     }
+
+
 
 
 }

@@ -5,13 +5,24 @@ using UnityEngine;
 public class Sand : Tile
 {
 
+    public bool isInside = false;
+    public bool start = true;
+
+
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ObjectDetector") && PlayerController.grabbing)
+        if (other.CompareTag("ObjectDetectorCurrent") && start)
         {
-            Debug.Log("HOLAA ARENA");
+            GetComponent<Sand>().SendMessage("ActivateIsInside");
+        }
+    }
 
-        } 
+    public void ActivateIsInside()
+    {
+        isInside = true;
+
+        start = false;
     }
 
 }
