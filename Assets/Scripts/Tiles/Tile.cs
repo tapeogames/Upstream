@@ -25,9 +25,11 @@ public class Tile : MonoBehaviour
     {
         if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing)
         {
+            Debug.Log("HA ENTRADO");
             activate = false;
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("ObjectDetectorCurrent"))

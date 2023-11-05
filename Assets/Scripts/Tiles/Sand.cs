@@ -7,12 +7,18 @@ public class Sand : Tile
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing)
+        {
+            Debug.Log("HA ENTRADO");
+            activate = false;
+        }
+
         if (other.CompareTag("ObjectDetectorCurrent"))
         {
             TileDetectorObject detectorObject = other.GetComponentInParent<TileDetectorObject>();
             if (detectorObject != null)
             {
-                detectorObject.ActivateIsInside();
+                TileDetectorObject.isInside = true;
             }
         }
     }
@@ -21,10 +27,11 @@ public class Sand : Tile
     {
         if (other.CompareTag("ObjectDetectorCurrent"))
         {
+            activate = true;
             TileDetectorObject detectorObject = other.GetComponentInParent<TileDetectorObject>();
             if (detectorObject != null)
             {
-                detectorObject.ActivateIsOutside();
+                TileDetectorObject.isInside = false;
             }
         }
     }

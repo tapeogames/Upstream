@@ -16,22 +16,12 @@ public class TileDetectorObject : MonoBehaviour
 
     public TileDetectorType detectorType;
     public SceneObject someObject;
-    public bool isInside = false;
+
+    public static bool isInside = false;
 
     void Start()
     {
         
-    }
-    public void ActivateIsInside()
-    {
-        isInside = true;
-        Debug.Log("esta en arena");
-    }
-
-    public void ActivateIsOutside()
-    {
-        isInside = false;
-        Debug.Log("esta fuera de la arena"); 
     }
 
     private void OnTriggerStay(Collider other)
