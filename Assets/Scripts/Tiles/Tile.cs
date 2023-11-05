@@ -12,30 +12,24 @@ public class Tile : MonoBehaviour
     void Start()
     {
         tileCenter = GetComponent<BoxCollider>();
+        tileCenter.name = "tileCenter";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public Vector3 GetTilePosition()
     {
         return (Vector3.right*transform.position.x+Vector3.forward*transform.position.z);
     }
 
-    
-
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing)
         {
+            Debug.Log("HA ENTRADO");
             activate = false;
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("ObjectDetectorCurrent"))

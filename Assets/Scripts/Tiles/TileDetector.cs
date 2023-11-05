@@ -24,22 +24,23 @@ public class TileDetector : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        //creo q podemos setear los tiles detector a true o false con condiciones en este triger
         Tile tile = other.GetComponent<Tile>();
         if (tile != null)
         {
             switch (detectorType)
             {
-                case TileDetectorType.Left:
-                    someObject.SetLeftTile(tile);
+                case TileDetectorType.Left:                    
+                    someObject.SetLeftTile(tile);                    
                     break;
-                case TileDetectorType.Right:
-                    someObject.SetRightTile(tile);
+                case TileDetectorType.Right:                    
+                    someObject.SetRightTile(tile);                    
                     break;
-                case TileDetectorType.Forward:
-                    someObject.SetForwardTile(tile);
+                case TileDetectorType.Forward:                    
+                    someObject.SetForwardTile(tile);                    
                     break;
                 case TileDetectorType.Backward:
-                    someObject.SetBackwardTile(tile);
+                   someObject.SetBackwardTile(tile);                    
                     break;
                 case TileDetectorType.Floor:
                     someObject.SetCurrentTile(tile);
