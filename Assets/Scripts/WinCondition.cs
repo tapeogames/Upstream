@@ -15,7 +15,7 @@ public class WinCondition : MonoBehaviour
     {
         if (other.CompareTag("ForwardPlayer"))
         {
-            Debug.Log("entra trigger");
+            //Debug.Log("entra trigger");
             win.enabled = true;
         }
     }
