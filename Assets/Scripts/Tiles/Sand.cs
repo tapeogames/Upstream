@@ -5,24 +5,28 @@ using UnityEngine;
 public class Sand : Tile
 {
 
-    public bool isInside = false;
-    public bool start = true;
-
-
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ObjectDetectorCurrent") && start)
+        if (other.CompareTag("ObjectDetectorCurrent"))
         {
-            GetComponent<Sand>().SendMessage("ActivateIsInside");
+            TileDetectorObject detectorObject = other.GetComponentInParent<TileDetectorObject>();
+            if (detectorObject != null)
+            {
+                detectorObject.ActivateIsInside();
+            }
         }
     }
 
-    public void ActivateIsInside()
+    private void OnTriggerExit(Collider other)
     {
-        isInside = true;
-
-        start = false;
+        if (other.CompareTag("ObjectDetectorCurrent"))
+        {
+            TileDetectorObject detectorObject = other.GetComponentInParent<TileDetectorObject>();
+            if (detectorObject != null)
+            {
+                detectorObject.ActivateIsOutside();
+            }
+        }
     }
 
 }

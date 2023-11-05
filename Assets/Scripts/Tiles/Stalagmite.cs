@@ -9,7 +9,7 @@ public class Stalagmite : Tile
     {
         if (other.CompareTag("ObjectDetector") && PlayerController.grabbing)
         {
-            Debug.Log("HOLAA");
+            Debug.Log("STALAGMITE");
 
         } 
     }

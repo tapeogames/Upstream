@@ -73,11 +73,8 @@ public class PlayerController : SceneObject
             }
             else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null)
             {
-                Debug.Log(xNeg + " " + xPos);
-                Debug.Log(playerLookAt);
                 if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
                 {
-                    Debug.Log("entra en el if");
                     MoveToPosition(leftTile.GetTilePosition());
                 }
             }
@@ -95,8 +92,6 @@ public class PlayerController : SceneObject
             }
             else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null)
             {
-                Debug.Log(xNeg + " " + xPos);
-                Debug.Log(playerLookAt);
                 if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
                 {
                     MoveToPosition(rightTile.GetTilePosition());
@@ -121,8 +116,6 @@ public class PlayerController : SceneObject
             }
             else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null)
             {
-                Debug.Log(zNeg + " " + zPos);
-                Debug.Log(playerLookAt);
                 if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
                 {
                     MoveToPosition(forwardTile.GetTilePosition());
@@ -144,8 +137,6 @@ public class PlayerController : SceneObject
             }
             else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null)
             {
-                Debug.Log(zNeg + " " + zPos);
-                Debug.Log(playerLookAt);
                 if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
                 {
                     MoveToPosition(backwardTile.GetTilePosition());

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TileDetectorObject : MonoBehaviour
@@ -15,12 +16,23 @@ public class TileDetectorObject : MonoBehaviour
 
     public TileDetectorType detectorType;
     public SceneObject someObject;
+    public bool isInside = false;
 
     void Start()
     {
         
     }
+    public void ActivateIsInside()
+    {
+        isInside = true;
+        Debug.Log("esta en arena");
+    }
 
+    public void ActivateIsOutside()
+    {
+        isInside = false;
+        Debug.Log("esta fuera de la arena"); 
+    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -32,25 +44,25 @@ public class TileDetectorObject : MonoBehaviour
                 {
                 
                     case TileDetectorType.Left:
-                        if (tile is not Stalagmite && tile is not Sand)
+                        if (tile is not Stalagmite && tile is not Sand || (tile is Sand && isInside))
                         {
                             someObject.SetLeftTile(tile);
                         }
                         break;
                     case TileDetectorType.Right:
-                        if (tile is not Stalagmite && tile is not Sand)
+                        if (tile is not Stalagmite && tile is not Sand || (tile is Sand && isInside))
                         {
                             someObject.SetRightTile(tile);
                         }
                         break;
                     case TileDetectorType.Forward:
-                        if (tile is not Stalagmite && tile is not Sand)
+                        if (tile is not Stalagmite && tile is not Sand || (tile is Sand && isInside))
                         {
                             someObject.SetForwardTile(tile);
                         }
                         break;
                     case TileDetectorType.Backward:
-                        if (tile is not Stalagmite && tile is not Sand)
+                        if (tile is not Stalagmite && tile is not Sand || (tile is Sand && isInside))
                         {
                             someObject.SetBackwardTile(tile);
                         }
