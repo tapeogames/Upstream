@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PushableObjectController : SceneObject
 {
-    private GameObject pushableObject;
+    public GameObject pushableObject;
     public PlayerController playerController;
     public int index;
 

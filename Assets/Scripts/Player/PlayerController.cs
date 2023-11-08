@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class PlayerController : SceneObject
 {
-    private GameObject playerAvatar;
+    public GameObject playerAvatar;
 
 
     private Vector3 zPos = new Vector3(0.00f, 0.00f, 1.00f);

@@ -533,6 +533,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3466688151362131084, guid: f729493643522da42b81cec5891f3a4c, type: 3}
+      propertyPath: whirlpools.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466688151362131084, guid: f729493643522da42b81cec5891f3a4c, type: 3}
       propertyPath: pushObjectxd.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -540,6 +544,14 @@ PrefabInstance:
       propertyPath: pushObject.Array.data[0]
       value: 
       objectReference: {fileID: 699371087}
+    - target: {fileID: 3466688151362131084, guid: f729493643522da42b81cec5891f3a4c, type: 3}
+      propertyPath: whirlpools.Array.data[0]
+      value: 
+      objectReference: {fileID: 2084364753}
+    - target: {fileID: 3466688151362131084, guid: f729493643522da42b81cec5891f3a4c, type: 3}
+      propertyPath: whirlpools.Array.data[1]
+      value: 
+      objectReference: {fileID: 1895978325}
     - target: {fileID: 3466688151362131084, guid: f729493643522da42b81cec5891f3a4c, type: 3}
       propertyPath: pushObjectxd.Array.data[0]
       value: 
@@ -861,6 +873,7 @@ MonoBehaviour:
   rightTile: {fileID: 0}
   forwardTile: {fileID: 0}
   backwardTile: {fileID: 0}
+  pushableObject: {fileID: 0}
   playerController: {fileID: 1438166009}
   index: 0
   isGrabbed: 0
@@ -2259,6 +2272,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Remolino
       objectReference: {fileID: 0}
+    - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: whirlpools.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: whirlpools.Array.data[0]
+      value: 
+      objectReference: {fileID: 2084364753}
+    - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: whirlpools.Array.data[1]
+      value: 
+      objectReference: {fileID: 1895978325}
     - target: {fileID: 6684772193436305601, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -2304,6 +2333,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+--- !u!114 &1895978325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+  m_PrefabInstance: {fileID: 1895978324}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9e4933d9b39034bbdb1d4cd9227fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1909545130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2440,6 +2480,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Remolino
       objectReference: {fileID: 0}
+    - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: whirlpools.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: whirlpools.Array.data[0]
+      value: 
+      objectReference: {fileID: 2084364753}
+    - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: whirlpools.Array.data[1]
+      value: 
+      objectReference: {fileID: 1895978325}
     - target: {fileID: 6684772193436305601, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5
@@ -2485,6 +2537,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+--- !u!114 &2084364753 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+  m_PrefabInstance: {fileID: 2084364752}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9e4933d9b39034bbdb1d4cd9227fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2111721478
 PrefabInstance:
   m_ObjectHideFlags: 0
