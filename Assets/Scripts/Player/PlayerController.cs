@@ -6,8 +6,9 @@ using UnityEngine.UIElements;
 
 public class PlayerController : SceneObject
 {
-    private GameObject playerAvatar;
-
+    public GameObject playerAvatar;
+    public GameObject detectors;
+    public float distance;
 
     private Vector3 zPos = new Vector3(0.00f, 0.00f, 1.00f);
     private Vector3 zNeg = new Vector3(0.00f, 0.00f, -1.00f);
@@ -37,7 +38,7 @@ public class PlayerController : SceneObject
 
     void Start()
     {
-        playerAvatar = sceneObject;
+        
     }
 
     // Update is called once per frame

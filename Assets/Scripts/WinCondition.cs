@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WinCondition : MonoBehaviour
 {
-    public GameObject win;
+    public Canvas win;
 
     private void Start()
     {
-        win.SetActive(false);
+        win.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -16,8 +16,12 @@ public class WinCondition : MonoBehaviour
         if (other.CompareTag("ForwardPlayer"))
         {
             //Debug.Log("entra trigger");
-            win.SetActive(true);
+            win.enabled = true;
         }
     }
 
+    public void Quitar()
+    {
+        win.enabled = false;
+    }
 }
