@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2294,9 +2294,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 758969539}
     m_Modifications:
+    - target: {fileID: 288396973617392580, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 873737350432985595, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: m_Name
       value: Remolino
+      objectReference: {fileID: 0}
+    - target: {fileID: 908215966505237344, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: index
@@ -2374,8 +2382,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8390684980782335042, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5736758673650789492, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
@@ -2390,11 +2403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9e4933d9b39034bbdb1d4cd9227fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &1895978326 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 1758746578338620163, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
-  m_PrefabInstance: {fileID: 1895978324}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1895978327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5556229553625407347, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
@@ -2562,7 +2570,7 @@ PrefabInstance:
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: tileCenter
       value: 
-      objectReference: {fileID: 1895978326}
+      objectReference: {fileID: 0}
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: playerOrigin
       value: 
@@ -2628,7 +2636,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5736758673650789492, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}

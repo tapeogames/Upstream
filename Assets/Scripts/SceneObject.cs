@@ -6,7 +6,6 @@ public class SceneObject : MonoBehaviour
 {
 
     public GameObject sceneObject;
-
     public Tile currentTile;
     public Tile leftTile;
     public Tile rightTile;
