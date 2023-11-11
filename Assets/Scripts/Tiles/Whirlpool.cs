@@ -9,11 +9,6 @@ public class Whirlpool : Tile
     public Transform partnerPosition;
     Vector3 posY = new Vector3(0, 1, 0);
 
-    public BoxCollider front;
-    public BoxCollider back;
-    public BoxCollider right;
-    public BoxCollider left;
-
     private Vector3 posFront = new Vector3(0,0,1);
     private Vector3 posRight = new Vector3(1, 0, 0);
 
@@ -30,15 +25,15 @@ public class Whirlpool : Tile
         {
             obj.transform.position = partnerPosition.position - posFront + posY;
         } 
-        if(!IsPositionOccupied(partnerPosition.position + posRight))
+        else if(!IsPositionOccupied(partnerPosition.position + posRight))
         {
             obj.transform.position = partnerPosition.position + posRight + posY;
         }
-        if (!IsPositionOccupied(partnerPosition.position + posFront))
+        else if (!IsPositionOccupied(partnerPosition.position + posFront))
         {
             obj.transform.position = partnerPosition.position + posFront + posY;
         }
-        if (!IsPositionOccupied(partnerPosition.position - posRight))
+        else if (!IsPositionOccupied(partnerPosition.position - posRight))
         {
             obj.transform.position = partnerPosition.position - posRight + posY;
         }
