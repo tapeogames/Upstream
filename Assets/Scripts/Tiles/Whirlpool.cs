@@ -14,9 +14,8 @@ public class Whirlpool : Tile
 
     private bool IsPositionOccupied(Vector3 position)
     {
-        // Realiza un raycast para verificar si hay algún objeto en la posición dada.
         RaycastHit hit;
-        return Physics.Raycast(position, Vector3.up, out hit, 1f); // Puedes ajustar la longitud del raycast según tus necesidades.
+        return Physics.Raycast(position, Vector3.up, out hit, 1f); 
     }
 
     public void nextPos(SceneObject obj)
@@ -52,10 +51,12 @@ public class Whirlpool : Tile
             if (IsPositionOccupied(partnerPosition.position - posFront) && IsPositionOccupied(partnerPosition.position + posRight) && IsPositionOccupied(partnerPosition.position + posFront) && IsPositionOccupied(partnerPosition.position - posRight))
             {
                 player.enabled= true;
+                activate = false;
             }
             else
             {
                 nextPos(player);
+                activate = true;
             }
         }
                 
