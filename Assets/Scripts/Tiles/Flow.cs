@@ -10,7 +10,7 @@ public class Flow : Tile
     private bool isMoving = false;
     private float moveSpeed = 5f;
 
-    PlayerController playerAux;
+    SceneObject playerAux;
 
     private void Update()
     {
@@ -20,8 +20,16 @@ public class Flow : Tile
         }
     }
 
+    private bool IsPositionOccupied(Vector3 position)
+    {
+        // Realiza un raycast para verificar si hay algún objeto en la posición dada.
+        RaycastHit hit;
+        return Physics.Raycast(position, Vector3.up, out hit, 1f); // Puedes ajustar la longitud del raycast según tus necesidades.
+    }
+
     private void MoveToNextPosition()
     {
+        
         if (index < partnersPosition.Length)
         {
             Vector3 targetPosition = partnersPosition[index].position + posY;
@@ -34,6 +42,10 @@ public class Flow : Tile
                 isMoving = false;
             }
         }
+        else
+        {
+            isMoving = false;
+        }       
     }
 
     private void OnTriggerStay(Collider other)
@@ -41,6 +53,17 @@ public class Flow : Tile
         if (other.CompareTag("PlayerDetectorCurrent") && !isMoving)
         {
             playerAux = other.GetComponentInParent<PlayerController>();
+            isMoving = true;
+            index++;
+            if (index >= partnersPosition.Length)
+            {
+                index = 0;
+            }
+        }
+        if (other.CompareTag("ObjectDetectorCurrent") && !isMoving && !PlayerController.grabbing)
+        {
+            PushableObjectController pushableObject = other.GetComponentInParent<PushableObjectController>();
+            playerAux = other.GetComponentInParent<PushableObjectController>();
             isMoving = true;
             index++;
             if (index >= partnersPosition.Length)
