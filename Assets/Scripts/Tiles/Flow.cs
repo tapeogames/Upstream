@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Flow : Tile
 {
     public Transform partnersPosition;
     Vector3 posY;
-    private bool isMoving = false;
+    public bool isMoving = false;
     private float moveSpeed = 5f;
-
     SceneObject playerAux;
 
     private void Update()
@@ -17,12 +17,6 @@ public class Flow : Tile
         {
             MoveToNextPosition();
         }
-    }
-
-    private bool IsPositionOccupied(Vector3 position)
-    {
-        RaycastHit hit;
-        return Physics.Raycast(position, Vector3.up, out hit, 1f); 
     }
 
     private void MoveToNextPosition()
@@ -38,25 +32,39 @@ public class Flow : Tile
         }
     }
 
-    private void PushObject()
-    {
-        
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("PlayerDetectorCurrent") && !isMoving)
         {
             posY = new Vector3(0, 0.5f, 0);
             playerAux = other.GetComponentInParent<PlayerController>();
+            if (PlayerController.grabbing)
+            {
+                PushableObjectController obj = playerAux.GetComponentInChildren<PushableObjectController>();
+                PlayerController.grabbing = false;
+                obj.currentTile.activate = false;
+                obj.ReleaseObject();
+                
+            }
             isMoving = true;
         }
         
-        if (other.CompareTag("ObjectDetectorCurrent") && !isMoving && !PlayerController.grabbing)
+
+
+        if (other.CompareTag("ObjectDetectorCurrent") && !isMoving)
         {
             posY = new Vector3(0, 1, 0);
             playerAux = other.GetComponentInParent<PushableObjectController>();
             isMoving = true;
+            if (PlayerController.grabbing)
+            {
+                PushableObjectController obj = (PushableObjectController) playerAux;
+                PlayerController.grabbing = false;
+                obj.currentTile.activate = false;
+                obj.ReleaseObject();
+                
+            }
+            
         }
     }
 }
