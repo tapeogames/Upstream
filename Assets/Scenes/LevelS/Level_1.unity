@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -206,6 +206,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1952042506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &31776349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1283832653397591640, guid: 9a062bf1d87fea549a852b783fb12f7e, type: 3}
+  m_PrefabInstance: {fileID: 949907256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &160453749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,6 +1818,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2164882339460119703, guid: 9a062bf1d87fea549a852b783fb12f7e, type: 3}
+      propertyPath: detectors
+      value: 
+      objectReference: {fileID: 1948060286}
+    - target: {fileID: 2164882339460119703, guid: 9a062bf1d87fea549a852b783fb12f7e, type: 3}
+      propertyPath: playerAvatar
+      value: 
+      objectReference: {fileID: 31776349}
+    - target: {fileID: 2164882339460119703, guid: 9a062bf1d87fea549a852b783fb12f7e, type: 3}
       propertyPath: pushObject.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -3020,6 +3033,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1952042506}
   m_LocalEulerAnglesHint: {x: 0, y: 30.011, z: 180}
+--- !u!1 &1948060286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1549439074002193050, guid: 9a062bf1d87fea549a852b783fb12f7e, type: 3}
+  m_PrefabInstance: {fileID: 949907256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1952042505
 GameObject:
   m_ObjectHideFlags: 0

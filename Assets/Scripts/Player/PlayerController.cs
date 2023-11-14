@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
 
 public class PlayerController : SceneObject
 {
@@ -26,6 +27,7 @@ public class PlayerController : SceneObject
     public Vector3 playerLookAt;
     public float speed;
     public float rotationSpeed;
+    public bool grabbingBool;
     public bool moving;
     public bool rotating;
     public bool rotatingNormal;
@@ -35,16 +37,20 @@ public class PlayerController : SceneObject
 
     Quaternion rotationTarget;
 
+    Vector2 _movement;
+    bool _grab;
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        ReadInput();
+        if (grabbing) { grabbingBool = true; }
+        else if (!grabbing) { grabbingBool = false; }
+        Translate();
         if (moving)
         {
             PerformMovement();
@@ -60,127 +66,112 @@ public class PlayerController : SceneObject
 
     }
 
-
-    void ReadInput()
+    public void OnMove(InputValue input)
     {
+        _movement = input.Get<Vector2>();
+    }
 
+    public void OnGrab(InputValue input)
+    {
+        Grab();
+    }
 
-        if (Input.GetKeyDown(KeyCode.D))
+    void Grab()
+    {
+        if (canGrab)
         {
-            Debug.Log("D");
-            if (!grabbing && leftTile != null && leftTile.activate)
+            Debug.Log("index obj: " + indexObject);
+            if (!pushObject[indexObject].isGrabbed)
             {
-                MoveToPosition(leftTile.GetTilePosition());
+                playerLookAt = playerAvatar.transform.forward;
+                playerLookAt.Normalize();
+                Debug.Log(playerLookAt);
+                pushObject[indexObject].GrabObject();
+                grabbing = true;
+                pushObject[indexObject].currentTile.activate = true;
             }
-            else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null)
+            else
             {
-                if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
-                {
-                    MoveToPosition(leftTile.GetTilePosition());
-                }
-            }
-            else if (leftTile == null || !leftTile.activate)
-            {
-                StartRotation(xNeg);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Debug.Log("A");
-            if (!grabbing && rightTile != null && rightTile.activate)
-            {
-                MoveToPosition(rightTile.GetTilePosition());
-            }
-            else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null)
-            {
-                if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
-                {
-                    MoveToPosition(rightTile.GetTilePosition());
-                }
-            }
-            else if (rightTile == null || !rightTile.activate)
-            {
-                //Debug.Log("ha entrado rigth");
-                StartRotation(xPos);
+                grabbing = false;
+                pushObject[indexObject].ReleaseObject();
+                pushObject[indexObject].currentTile.activate = false;
 
             }
-        }
-
-
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Debug.Log("S");
-            if (!grabbing && forwardTile != null && forwardTile.activate)
-            {
-                MoveToPosition(forwardTile.GetTilePosition());
-            }
-            else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null)
-            {
-                if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
-                {
-                    MoveToPosition(forwardTile.GetTilePosition());
-                }
-            }
-            else if (forwardTile == null || !forwardTile.activate)
-            {
-                //Debug.Log("ha entrado forward");
-                StartRotation(zPos);
-
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Debug.Log("W");
-            if (!grabbing && backwardTile != null && backwardTile.activate)
-            {
-                MoveToPosition(backwardTile.GetTilePosition());
-            }
-            else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null)
-            {
-                if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
-                {
-                    MoveToPosition(backwardTile.GetTilePosition());
-                }
-            }
-            else if (backwardTile == null || !backwardTile.activate)
-            {
-                //Debug.Log("ha entrado backward");
-                StartRotation(zNeg);
-
-            }
-        }
-
-
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("SPACE");
-            if (canGrab)
-            {
-                Debug.Log("index obj: " + indexObject);
-                if (!pushObject[indexObject].isGrabbed)
-                {
-                    playerLookAt = playerAvatar.transform.forward;
-                    playerLookAt.Normalize();
-                    Debug.Log(playerLookAt);
-                    pushObject[indexObject].GrabObject();
-                    grabbing = true;
-                    pushObject[indexObject].currentTile.activate = true;
-                }
-                else
-                {
-                    grabbing = false;
-                    pushObject[indexObject].ReleaseObject();
-                    pushObject[indexObject].currentTile.activate = false;
-
-                }
-            }
-
         }
     }
 
+    Tile SelectTile()
+    {
+        Tile tile;
 
+        if (_movement.x < 0)
+        {
+            return tile = leftTile;
+        }
+        else if (_movement.x > 0)
+        {
+            return tile = rightTile;
+        }
+        else if (_movement.y > 0)
+        {
+            return tile = upTile;
+        }
+        else if (_movement.y < 0)
+        {
+            return tile = downTile;
+        }
+
+        return null;
+    }
+
+    Tile SelectTileHack(PushableObjectController obj)
+    {
+        Tile tile;
+
+        if (_movement.x < 0)
+        {
+            return tile = obj.leftTile;
+        }
+        else if (_movement.x > 0)
+        {
+            return tile = obj.rightTile;
+        }
+        else if (_movement.y > 0)
+        {
+            return tile = obj.upTile;
+        }
+        else if (_movement.y < 0)
+        {
+            return tile = obj.downTile;
+        }
+
+        return null;
+    }
+
+    void Translate()
+    {
+        var tile = SelectTile();
+
+        if (tile == null)
+            return;
+
+        Debug.Log(_movement);
+        if (!grabbing && tile.activate)
+        {
+            MoveToPosition(tile.GetTilePosition());
+        }
+        else if (grabbing && tile.activate && SelectTileHack(pushObject[indexObject]) != null)
+        {
+            //if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
+            //{
+                MoveToPosition(tile.GetTilePosition());
+            //}
+        }
+        else if (tile == null || !tile.activate)
+        {
+            StartRotation(xNeg);
+        }
+    }
 
     void PerformMovement()
     {

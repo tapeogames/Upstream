@@ -9,8 +9,8 @@ public class SceneObject : MonoBehaviour
     public Tile currentTile;
     public Tile leftTile;
     public Tile rightTile;
-    public Tile forwardTile;
-    public Tile backwardTile;
+    public Tile downTile;
+    public Tile upTile;
 
     public void SetLeftTile(Tile tile)
     {
@@ -23,11 +23,11 @@ public class SceneObject : MonoBehaviour
 
     public void SetForwardTile(Tile tile)
     {
-        forwardTile = tile;
+        downTile = tile;
     }
     public void SetBackwardTile(Tile tile)
     {
-        backwardTile = tile;
+        upTile = tile;
     }
     public void SetCurrentTile(Tile tile)
     {
