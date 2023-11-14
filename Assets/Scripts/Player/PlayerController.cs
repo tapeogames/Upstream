@@ -163,7 +163,7 @@ public class PlayerController : SceneObject
                 {
                     playerLookAt = playerAvatar.transform.forward;
                     playerLookAt.Normalize();
-                    Debug.Log(playerLookAt);
+                    //Debug.Log(playerLookAt);
                     pushObject[indexObject].GrabObject();
                     grabbing = true;
                     pushObject[indexObject].currentTile.activate = true;
@@ -175,7 +175,8 @@ public class PlayerController : SceneObject
                     pushObject[indexObject].currentTile.activate = false;
 
                 }
-            }
+
+            } 
 
         }
     }
