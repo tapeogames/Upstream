@@ -255,16 +255,16 @@ Los obstáculos se dividen en dos categorías principales: movibles e inamovible
 
 A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su respectiva categorización:
 
-| Obstáculo       | Categoría         | Observaciones  |
-| :------------- |:-------------:| :------------- |
-| Roca  | inamovible no atravesable | - |
-| Banco de arena  | inamovible atravesable | No atravesable con Darwin renacuajo o renacuajo adulto |
-| Estalagmitas  | inamovible atravesable | - |
-| Rama  | movible | - |
-| Nenúfares  | inamovible atravesable | - |
-| Tronco  | movible | - |
-| Corriente  | inamovible atravesable con objeto | Las corrientes son sólo en una dirección. Una vez se atraviese en dicha dirección, el obstáculo se convertirá en inamovible no atravesable ya que Darwin no podrá ir a contra corriente|
-
+| Obstáculo              |         Categoría         | Observaciones                                                                                                                                                                                                                                                     |
+|:-----------------------|:-------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Roca/Rueda             | inamovible no atravesable | -                                                                                                                                                                                                                                                                 |
+| Banco de arena         |  inamovible atravesable   | No atravesable con Darwin renacuajo o renacuajo adulto                                                                                                                                                                                                            |
+| Estalagmitas/Nenúfares |  inamovible atravesable   | -                                                                                                                                                                                                                                                                 |
+| Rama/Tronco/Botella    |          movible          | -                                                                                                                                                                                                                                                                 |
+| Corriente              |  inamovible atravesable   | Las corrientes son sólo en una dirección. Al posicionar un objeto o a Darwin en la corriente será impulsado hasta el final de esta. Si se intenta ir a contracorriente, o el final de esta está bloqueado el obstáculo se convertirá en inamovible no atravesable |
+| Remolino               |  inamovible atravesable   | Sirven como portales por los que se pueden mandar objetos o usar de paso. Estos se bloquean si sus posiciones contiguas, a las que mandan los objetos, están ocupadas.                                                                                            |
+| Patito                 |          movible          | Patito sí puede atravesar los objetos atravesables junto con Darwin.                                                                                                                                                                                              |
+| Mamá Pato              | inamovible no atravesable | Mamá Pato bloqueará el paso a Darwin, cuando Patito este en una de sus posiciones contiguas, este se subirá encima suya y abrirán el paso.                                                                                                                        |
 <br>
 
 **Pull Mechanic**
@@ -302,6 +302,8 @@ El nivel inicial está diseñado como primer contacto del jugador con los puzzle
 
 Este siguiente nivel aumenta en complejidad e introduce al jugador en una situación más común de la resolución de puzles, la contradicción y el conflicto. El usuario tendrá que pensar el orden de sus acciones para que no supongan un obstáculo más a la hora de encontrar la solución. Además se introduce la arena/suelo para enseñar que no se puede pasar a través de ella, aunque en un futuro cuando Darwin haya crecido sí serán zonas transitables.
 
+**Diseño de nivel 2**
+![Nivel2](..%2FArtUpstream%2FLevelDesign%2Fnivel2.png)
 <br>
 
 # PENSAMIENTO COMPUTACIONAL
