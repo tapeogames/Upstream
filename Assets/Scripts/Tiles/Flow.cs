@@ -1,35 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class Flow : Tile
 {
     public Transform partnersPosition;
-    Vector3 posY;
+    public Vector3 posY;
     public bool isMoving = false;
-    private float moveSpeed = 5f;
-    SceneObject playerAux;
+    public float moveSpeed = 5f;
+    public SceneObject playerAux;
 
     private void Update()
     {
         if (isMoving)
         {
-            MoveToNextPosition();
+            MoveToNextPositionIsMoving(partnersPosition, posY, playerAux);
         }
     }
 
-    private void MoveToNextPosition()
+    public void MoveToNextPositionIsMoving(Transform partner, Vector3 y, SceneObject player)
     {        
-        Vector3 targetPosition = partnersPosition.transform.position + posY;
-        float step = moveSpeed * Time.deltaTime;
-        playerAux.transform.position = Vector3.MoveTowards(playerAux.transform.position, targetPosition, step);
+        Vector3 targetPosition = MoveToNextPosition(partner, y, player);
 
-        if (Vector3.Distance(playerAux.transform.position, targetPosition) < 0.1f)
+        if (Vector3.Distance(player.transform.position, targetPosition) < 0.1f)
         {
-            Debug.Log(partnersPosition.transform.position);
+            Debug.Log(partner.transform.position);
             isMoving = false;
         }
+    }
+
+    public Vector3 MoveToNextPosition(Transform partner, Vector3 y, SceneObject player)
+    {
+        Vector3 targetPosition = partner.transform.position + y;
+        float step = moveSpeed * Time.deltaTime;
+        player.transform.position = Vector3.MoveTowards(player.transform.position, targetPosition, step);
+        return targetPosition;
     }
 
     private void OnTriggerStay(Collider other)
@@ -47,6 +54,7 @@ public class Flow : Tile
                 
             }
             isMoving = true;
+            isInside = true;
         }
         
 
@@ -64,7 +72,13 @@ public class Flow : Tile
                 obj.ReleaseObject();
                 
             }
-            
+            isInside = true;
         }
+
+        if (other.CompareTag("ObjectDetectorCurrent") && isInside)
+        {
+            obj = other.GetComponentInParent<PushableObjectController>();
+        }
+
     }
 }
