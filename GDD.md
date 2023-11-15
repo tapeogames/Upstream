@@ -303,7 +303,7 @@ El nivel inicial está diseñado como primer contacto del jugador con los puzzle
 Este siguiente nivel aumenta en complejidad e introduce al jugador en una situación más común de la resolución de puzles, la contradicción y el conflicto. El usuario tendrá que pensar el orden de sus acciones para que no supongan un obstáculo más a la hora de encontrar la solución. Además se introduce la arena/suelo para enseñar que no se puede pasar a través de ella, aunque en un futuro cuando Darwin haya crecido sí serán zonas transitables.
 
 **Diseño de nivel 2**
-![Nivel2](..%2FArtUpstream%2FLevelDesign%2Fnivel2.png)
+
 <br>
 
 # PENSAMIENTO COMPUTACIONAL
