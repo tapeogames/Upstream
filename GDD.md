@@ -39,7 +39,9 @@
 
 12. Tecnología y Plataforma
 
-13. Modelo de Negocio
+13. Análisis MDA
+
+14. Modelo de Negocio
 
 <br>
 
@@ -253,16 +255,16 @@ Los obstáculos se dividen en dos categorías principales: movibles e inamovible
 
 A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su respectiva categorización:
 
-| Obstáculo       | Categoría         | Observaciones  |
-| :------------- |:-------------:| :------------- |
-| Roca  | inamovible no atravesable | - |
-| Banco de arena  | inamovible atravesable | No atravesable con Darwin renacuajo o renacuajo adulto |
-| Estalagmitas  | inamovible atravesable | - |
-| Rama  | movible | - |
-| Nenúfares  | inamovible atravesable | - |
-| Tronco  | movible | - |
-| Corriente  | inamovible atravesable con objeto | Las corrientes son sólo en una dirección. Una vez se atraviese en dicha dirección, el obstáculo se convertirá en inamovible no atravesable ya que Darwin no podrá ir a contra corriente|
-
+| Obstáculo              |         Categoría         | Observaciones                                                                                                                                                                                                                                                     |
+|:-----------------------|:-------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Roca/Rueda             | inamovible no atravesable | -                                                                                                                                                                                                                                                                 |
+| Banco de arena         |  inamovible atravesable   | No atravesable con Darwin renacuajo o renacuajo adulto                                                                                                                                                                                                            |
+| Estalagmitas/Nenúfares |  inamovible atravesable   | -                                                                                                                                                                                                                                                                 |
+| Rama/Tronco/Botella    |          movible          | -                                                                                                                                                                                                                                                                 |
+| Corriente              |  inamovible atravesable   | Las corrientes son sólo en una dirección. Al posicionar un objeto o a Darwin en la corriente será impulsado hasta el final de esta. Si se intenta ir a contracorriente, o el final de esta está bloqueado el obstáculo se convertirá en inamovible no atravesable |
+| Remolino               |  inamovible atravesable   | Sirven como portales por los que se pueden mandar objetos o usar de paso. Estos se bloquean si sus posiciones contiguas, a las que mandan los objetos, están ocupadas.                                                                                            |
+| Patito                 |          movible          | Patito sí puede atravesar los objetos atravesables junto con Darwin.                                                                                                                                                                                              |
+| Mamá Pato              | inamovible no atravesable | Mamá Pato bloqueará el paso a Darwin, cuando Patito este en una de sus posiciones contiguas, este se subirá encima suya y abrirán el paso.                                                                                                                        |
 <br>
 
 **Pull Mechanic**
@@ -299,6 +301,8 @@ El nivel inicial está diseñado como primer contacto del jugador con los puzzle
 ![Nivel1](https://github.com/tapeogames/Upstream/assets/115087211/18e9d8ed-f3dd-4f1f-8e15-4a0f87138466)
 
 Este siguiente nivel aumenta en complejidad e introduce al jugador en una situación más común de la resolución de puzles, la contradicción y el conflicto. El usuario tendrá que pensar el orden de sus acciones para que no supongan un obstáculo más a la hora de encontrar la solución. Además se introduce la arena/suelo para enseñar que no se puede pasar a través de ella, aunque en un futuro cuando Darwin haya crecido sí serán zonas transitables.
+
+**Diseño de nivel 2**
 
 <br>
 
@@ -354,6 +358,47 @@ Otra de las plataformas serán los dispositivos móviles, en concreto para Andro
 Además de las plataformas de lanzamiento conviene enfatizar la plataforma de distribución por la que se facilitará el acceso y la descarga del juego, Itch.io. De esta forma los jugadores podrán adquirir y descargar el juego directamente lo que proporcionará una experiencia de usuario fluida y sencilla.
 
 Esta estrategia de lanzamiento y distribución se alinea con nuestro objetivo de hacer que el juego esté disponible para una amplia variedad de plataformas, brindando a los jugadores la flexibilidad de elegir dónde y cómo quieren disfrutar de nuestra creación.
+
+<br>
+
+# ANÁLISIS MDA
+
+## Estéticas
+
+### Desafío:
+
+En Upstream, es sobre todo el desafío lo que define la experiencia del jugador. Los puzles de cada nivel se presentan como un reto progresivo donde se van añadiendo nuevos elementos, su resolución no solo es determinante para poder avanzar en el juego, sino que también ofrece una satisfacción intrínseca al superar cada obstáculo. Al ser esto el motor de la progresión, aumenta el sentimiento de reto y superación tratando de mantener la motivación del jugador.
+
+### Sensación:
+
+La estética de la sensación se basa tanto en el apartado visual de cada nivel como en la narrativa y la propia jugabilidad.
+El desafío que presentan los niveles busca provocar que el jugador pueda sentirse abrumado por estos como realizado al encontrar una solución.
+Por otro lado, la narrativa y la ambientación complementan esta estética al tratar de involucrar emocionalmente al jugador al ver y empatizar con Darwin a medida que avanza por los diferentes tramos de su viaje.
+
+### Fantasía:
+
+La elección de un estilo cartoon en Upstream transporta al jugador a una fantasía encantadora donde asume el papel de un ajolote en su vuelta a casa a través de un río repleto de desafíos a resolver.
+
+### Narrativa:
+
+Upstream cuenta con una base narrativa que no solo proporciona contexto a la situación inicial del juego, sino que también da una motivación al viaje de Darwin e incita al jugador a avanzar en el juego al verse más conectado con este.
+
+## Dinámicas
+
+### Desafío y Variedad:
+
+Las dinámicas del juego buscan presentar desafíos diversos en cada nivel donde el jugador se sienta retado. La variedad de elementos y personajes que obstaculizan el progreso no solo añade complejidad, sino que también fomenta la adaptación continua de estrategias por parte del jugador.
+
+### Libertad y Flexibilidad:
+
+La capacidad de movimiento en los niveles no solo es un medio para avanzar, sino una herramienta estratégica. La interacción con elementos, como los troncos o las corrientes, ofrece a los jugadores la libertad de explorar diferentes enfoques y estrategias donde también cabe la posibilidad de complicar los niveles por malos planteamientos, lo que fomenta una reflexión constante y una mejora continua. Esta flexibilidad agrega profundidad a la experiencia de juego, fomentando la experimentación y el descubrimiento con el objetivo de superar el nivel.
+
+### Progresión y Reto Continuo:
+La progresión del juego y el desafío continuo están intrínsecamente conectados. La imposibilidad de avanzar sin superar los niveles anteriores crea una motivación persistente para los jugadores. Cada nivel completado se convierte en un hito significativo, reforzando la sensación de logro y fomentando la determinación para abordar desafíos más complejos.
+
+## Mecánicas
+
+Las mecánicas del juego se centran en elementos del entorno, como troncos, corrientes y remolinos que se interpondrán entre el jugador y la casilla de salida, solo hay una por nivel y se tendrá que alcanzar para superar este con éxito. Cada uno de los elementos presenta comportamientos diferentes que obstaculizan o ayudan en la resolución de los puzles. La comprensión de cómo hacer uso de estos elementos, ya sea de manera individual o en combinación, se convierte en la clave para avanzar de manera efectiva.
 
 <br>
 

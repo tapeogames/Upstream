@@ -62,19 +62,19 @@ public class movimientoretroDM : MonoBehaviour
             if (frente)
             {
                 // Definir la posición de la imagen a un offset del personaje
-                offset = new Vector3(0.27f, 1.6f, 0.3f); // Ajusta el offset como desees
+                offset = new Vector3(0.2f, 3.7f, 2.6f); // Ajusta el offset como desees
             }
             if (derecha)
             {
-                offset = new Vector3(-0.0f, 1.3f, 0.25f);
+                offset = new Vector3(-2.4f, 3.7f, 0.1f);
             }
             if (izquierda)
             {
-                offset = new Vector3(0.05f, 1.3f, 0.25f);
+                offset = new Vector3(2.4f, 3.7f, 0.1f);
             }
             if (atras)
             {
-                offset = new Vector3(-0.23f, 1.4f, 0.2f);
+                offset = new Vector3(-0.2f, 3.7f, -2.2f);
             }
 
 
