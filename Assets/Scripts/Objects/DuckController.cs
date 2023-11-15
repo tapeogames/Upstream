@@ -8,7 +8,7 @@ public class DuckController : MonoBehaviour
     public PushableObjectController duckling;
 
     Vector3 offset = new Vector3 (0, 1, 0);
-    public float speed = 2f;
+    public float speed = 0.2f;
 
     public bool moving = false;
     public Vector3 movingDirection = new Vector3(-7, 0, -7);
@@ -57,11 +57,15 @@ public class DuckController : MonoBehaviour
 
         if (obj != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, obj.transform.position + movingDirection, speed * Time.deltaTime);
+            float distanceBeyondWin = 100.0f; 
+            Vector3 direction = (obj.transform.position - transform.position).normalized;            
+            Vector3 targetPosition = obj.transform.position + direction * distanceBeyondWin;
+            transform.position = Vector3.MoveTowards(transform.position, obj.transform.position , (speed*0.5f) * Time.deltaTime);
 
-            if (transform.position == obj.transform.position + movingDirection)
+            if (transform.position == obj.transform.position )
             {
                 moving = false;
+                Destroy(duck);
             }
         }
     }
