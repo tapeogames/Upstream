@@ -140,7 +140,9 @@ Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño 
 
 En cuanto a la relevancia artística de los entornos, el juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
 
-**Arte conceptual** 
+## Arte conpetual
+
+**Diseño Darwin Renacuajo** 
 <br>
 ![Darwin Character Sheet Evo 1 REDISEÑO](https://github.com/tapeogames/Upstream/assets/81293638/d8c0cf99-65cc-43a8-9ec2-2b75b3d9cedd)
 <br>
@@ -148,12 +150,26 @@ En cuanto a la relevancia artística de los entornos, el juego estará dividido 
 
 Darwin presenta un diseño basado en formas redondeadas, tanto circulares como triangulares, dando un aspecto amigable, inofensivo y dinámico. Su paleta de color cálida con tonos rosados afianza esa sensación de cercanía y simpatía. Al ser un renacuajo en esta primera fase, tiene una proporción del cuerpo de dos cabezas, mostrando su corta edad y entrando en un diseño más estilizado.
 
-Como se ha mencionado antes, los niveles de la primera fase se sitúan en una cueva, teniendo la apariencia de un entorno un tanto hostil. Para ello se utiliza una tenue iluminación para una ambientación más lúgubre acorde con la ubicación, y se hace uso de los contrastes tanto de forma, como de color y tamaño. De esta forma el escenario está compuesto de formas triangulares llenas de ángulos y una paleta monocromática fría, donde Darwin destaca por su forma redonda y color cálido, generando un ambiente más agresivo y oscuro, en el que encontramos a un Darwin solo e indefenso.
+**Diseño Darwin Renacuajo Adulto** 
+![Darwin Young Salamander](..%2F..%2FDarwin%20Young%20Salamander%20CHARACTER%20SHEET.jpg)
 
-**Arte conceptual** 
+**Diseño Darwin Salamandra** 
+![Darwin Salamander](..%2F..%2FDarwin%20Salamander%20CHARACTER%20SHEET.jpg)
+
+**Diseño Mamá Pato y Patito**
+![Duck Mom](..%2FArtUpstream%2FConcept%20Art%2FCharacters%2FDucks%2FDuck%20Mom%20TURN%20AROUND.jpg)
+![Duckling](..%2F..%2FDuckling%20TURN%20AROUND.jpg)
+
+**Diseño escenarios fase 1** 
 <br>
 ![_Escenario1_Upstream](https://github.com/tapeogames/Upstream/assets/81293638/3d67b268-6114-4713-a5e4-862ad70d2a56)
+![Escenario1Proceso](..%2FArtUpstream%2FConcept%20Art%2FEnvironment%2FPhaseOne%2FValueProcess.png)
 
+Como se ha mencionado antes, los niveles de la primera fase se sitúan en una cueva, teniendo la apariencia de un entorno un tanto hostil. Para ello se utiliza una tenue iluminación para una ambientación más lúgubre acorde con la ubicación, y se hace uso de los contrastes tanto de forma, como de color y tamaño. De esta forma el escenario está compuesto de formas triangulares llenas de ángulos y una paleta monocromática fría, donde Darwin destaca por su forma redonda y color cálido, generando un ambiente más agresivo y oscuro, en el que encontramos a un Darwin solo e indefenso.
+
+**Diseño Props**
+![Peperomia](..%2FArtUpstream%2FConcept%20Art%2FProps%2FPeperomia.png)
+![Rocas](..%2FArtUpstream%2FConcept%20Art%2FProps%2FRocas.png)
 
 <br>
 
@@ -257,10 +273,10 @@ A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su r
 
 | Obstáculo              |         Categoría         | Observaciones                                                                                                                                                                                                                                                     |
 |:-----------------------|:-------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Roca/Rueda             | inamovible no atravesable | -                                                                                                                                                                                                                                                                 |
+| Roca/Rueda             | inamovible no atravesable | El aspecto de rueda se utilizará en los niveles de la fase 3                                                                                                                                                                                                      |
 | Banco de arena         |  inamovible atravesable   | No atravesable con Darwin renacuajo o renacuajo adulto                                                                                                                                                                                                            |
-| Estalagmitas/Nenúfares |  inamovible atravesable   | -                                                                                                                                                                                                                                                                 |
-| Rama/Tronco/Botella    |          movible          | -                                                                                                                                                                                                                                                                 |
+| Estalagmitas/Nenúfares |  inamovible atravesable   | El aspecto de nenúfar se utilizará en los niveles de la fase 2 y 3                                                                                                                                                                                                |
+| Rama/Tronco/Botella    |          movible          | El aspecto de botella se utilizará en los niveles de la fase 3                                                                                                                                                                                                    |
 | Corriente              |  inamovible atravesable   | Las corrientes son sólo en una dirección. Al posicionar un objeto o a Darwin en la corriente será impulsado hasta el final de esta. Si se intenta ir a contracorriente, o el final de esta está bloqueado el obstáculo se convertirá en inamovible no atravesable |
 | Remolino               |  inamovible atravesable   | Sirven como portales por los que se pueden mandar objetos o usar de paso. Estos se bloquean si sus posiciones contiguas, a las que mandan los objetos, están ocupadas.                                                                                            |
 | Patito                 |          movible          | Patito sí puede atravesar los objetos atravesables junto con Darwin.                                                                                                                                                                                              |
@@ -292,6 +308,8 @@ En cuanto a los controles del juego, para ordenador, se podrá mover a Darwin co
 
 Los niveles están distribuidos se basan en la resolución de puzles por medio de las diferentes mecánicas que se han expuesto y acorde con la fase de la metamorfosis de Darwin. Estos serán 12 niveles, cuatro por cada una de las etapas ya mencionadas y tendrán una duración de entre 3-5 minutos de media.
 
+### Fase 1
+
 **Diseño de nivel 0**
 ![Nivel0](https://github.com/tapeogames/Upstream/assets/115087211/9117f769-9241-4c82-8933-d8b126285400)
 
@@ -303,7 +321,66 @@ El nivel inicial está diseñado como primer contacto del jugador con los puzzle
 Este siguiente nivel aumenta en complejidad e introduce al jugador en una situación más común de la resolución de puzles, la contradicción y el conflicto. El usuario tendrá que pensar el orden de sus acciones para que no supongan un obstáculo más a la hora de encontrar la solución. Además se introduce la arena/suelo para enseñar que no se puede pasar a través de ella, aunque en un futuro cuando Darwin haya crecido sí serán zonas transitables.
 
 **Diseño de nivel 2**
+![Nivel2](..%2FArtUpstream%2FLevelDesign%2Fnivel2.png)
 
+**Diseño de nivel 3**
+![Nivel3](..%2FArtUpstream%2FLevelDesign%2Fnivel3.png)
+
+### Fase 2
+
+**Diseño de nivel 4**
+![Nivel4](..%2FArtUpstream%2FLevelDesign%2Fnivel4.png)
+
+En este nivel se enseña al jugador por primera vez la mecánica de la corriente.
+
+**Diseño de nivel 5**
+![Nivel5](..%2FArtUpstream%2FLevelDesign%2Fnivel5.png)
+
+**Diseño de nivel 6**
+![Nivel6](..%2FArtUpstream%2FLevelDesign%2Fnivel6.png)
+
+**Diseño de nivel 7**
+![Nivel8](..%2FArtUpstream%2FLevelDesign%2Fnivel7.png)
+
+Este nivel se utiliza para mostrar al jugador como funciona la Mamá Pato y Patito para que lo tenga en cuenta a la hora de resolver el nivel.
+
+**Diseño de nivel 8**
+![Nivel8](..%2FArtUpstream%2FLevelDesign%2Fnivel8.png)
+
+Se mezclan las mecánicas de la corriente y los patos.
+
+### Fase 3
+
+**Diseño de nivel 9**
+![Nivel9](..%2FArtUpstream%2FLevelDesign%2Fnivel9.png)
+
+Introducción de la arena ahora siendo posible camniar por ella.
+
+**Diseño de nivel 10**
+![Nivel10](..%2FArtUpstream%2FLevelDesign%2Fnivel10.png)
+
+Introducción de la función de los remolinos.
+
+**Diseño de nivel 11**
+![Nivel11](..%2FArtUpstream%2FLevelDesign%2Fnivel11.png)
+
+Se mezclan el uso de los remolinos, la corriente y la arena.
+
+**Diseño de nivel 12**
+![Nivel12](..%2FArtUpstream%2FLevelDesign%2Fnivel12sinRana.png)
+
+Unión de los elementos de la arena y los patos.
+
+**Diseño de nivel 13**
+![Nivel13](..%2FArtUpstream%2FLevelDesign%2Fnivel13sinRana.png)
+
+Se une la mecánica de los remolinos junto con la arena y los patos.
+
+**Diseño de niveles desechados**
+![Nivel12Rana](..%2FArtUpstream%2FLevelDesign%2Fnivel12.png)
+![Nivel13Rana](..%2FArtUpstream%2FLevelDesign%2Fnivel13.png)
+
+Los niveles 12 y 13 tuvieron que ser rediseñados a causa de la falta de implementación de la mecánica de la Rana y la mosca debido a una falta de tiempo.
 <br>
 
 # PENSAMIENTO COMPUTACIONAL
