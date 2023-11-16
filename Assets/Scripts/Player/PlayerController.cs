@@ -201,7 +201,7 @@ public class PlayerController : SceneObject
 
     void RotateTowardsDirection()
     {
-        movingDirection.Normalize();
+        //movingDirection.Normalize();
         Quaternion targetRotation = Quaternion.LookRotation(movingDirection);
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, targetRotation);
@@ -211,7 +211,6 @@ public class PlayerController : SceneObject
         }
 
     }
-
 
     void StartRotation(Vector3 v)
     {
