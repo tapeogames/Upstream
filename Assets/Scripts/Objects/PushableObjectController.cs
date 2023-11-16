@@ -62,6 +62,7 @@ public class PushableObjectController : SceneObject
 
             offset = pushableObject.transform.position - playerController.transform.position;
             pushableObject.transform.position = playerController.transform.position + offset;
+            pushableObject.transform.rotation = playerController.transform.rotation;
 
             //obj como hijo del personaje
             pushableObject.transform.parent = playerController.transform;
