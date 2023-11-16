@@ -49,8 +49,8 @@ public class Flow : Tile
             {
                 PushableObjectController obj = playerAux.GetComponentInChildren<PushableObjectController>();
                 PlayerController.grabbing = false;
-                obj.currentTile.activate = false;
                 obj.ReleaseObject();
+                obj.currentTile.activate = false;
                 
             }
             isMoving = true;
@@ -68,8 +68,8 @@ public class Flow : Tile
             {
                 PushableObjectController obj = (PushableObjectController) playerAux;
                 PlayerController.grabbing = false;
-                obj.currentTile.activate = false;
                 obj.ReleaseObject();
+                obj.currentTile.activate = false;
                 
             }
             isInside = true;
