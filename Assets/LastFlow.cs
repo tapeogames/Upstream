@@ -8,27 +8,32 @@ public class LastFlow : Flow
 {
     // Start is called before the first frame update
     public Tile[] pushPositions;
-
+    public static PushableObjectController[] objectAux ;
     private bool[] occupied;
     public static int occupiedNum = 0;
-
-    private void Update()
-    {
-        if (isMoving)
-        {
-            MoveToNextPositionIsMoving(partnersPosition, posY + posY, playerAux);
-        }
-
-        CheckTilesIsInside();
-
-    }
+    Vector3 auxPosY;
     void Start()
     {
+        moveSpeed = 4f;
         tileCenter = GetComponent<BoxCollider>();
         tileCenter.name = "tileCenter";
 
         occupied = new bool[pushPositions.Length];
+        objectAux = new PushableObjectController[pushPositions.Length];
+        for(int i = 0; i < objectAux.Length; i++)
+        {
+            pushPositions[i].index= i;
+        }
     }
+    private void Update()
+    {
+        if (isMoving)
+        {
+            MoveToNextPositionIsMoving(partnersPosition, posY, playerAux);
+            CheckTilesIsInside();
+        }
+    }
+
 
     private bool IsPositionOccupied(Vector3 position)
     {
@@ -38,10 +43,11 @@ public class LastFlow : Flow
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("ObjectDetectorCurrent") && !isInside)
+        if (other.CompareTag("ObjectDetectorCurrent"))
         {
+            auxPosY = posY;
             CheckPosiblePosition();
-            //obj = null;
+            obj = null;
             isInside = false;
             activate = true;
             
@@ -49,7 +55,10 @@ public class LastFlow : Flow
 
         if (other.CompareTag("PlayerDetectorCurrent"))
         {
+            auxPosY = 2 * posY;
             CheckPosiblePosition();
+            isInside = false;
+
         }
 
     }
@@ -66,25 +75,24 @@ public class LastFlow : Flow
         }
     }
 
-    private void FlowPush(int i)
+    private void FlowPush(int i, PushableObjectController aux)
     {
-        Vector3 targetPosition = MoveToNextPosition(pushPositions[i + 1].tileCenter.transform, posY, pushPositions[i].obj);
+        Debug.Log(aux+ " tiene que ir a "+ pushPositions[i + 1].transform.position);
+        Vector3 targetPosition = MoveToNextPosition(pushPositions[i + 1].tileCenter.transform, auxPosY, aux, moveSpeed);
 
-        if (Vector3.Distance(pushPositions[i].obj.transform.position, targetPosition) < 0.1f)
+        if (Vector3.Distance(aux.transform.position, targetPosition) < 0.5f)
         {
-            pushPositions[i].isInside = false;
+            aux.transform.position = pushPositions[i+1].tileCenter.transform.position + auxPosY;
+            
         }
     }
 
     private void CheckTilesIsInside()
     {
         int i = 0;
-        while (occupied[i] && i<pushPositions.Length-1)
+        while (occupied[i] && i < pushPositions.Length-1)
         {
-            if (pushPositions[i].isInside)
-            {
-                FlowPush(i);
-            }
+            FlowPush(i, objectAux[i]);
             i++;
         }
         

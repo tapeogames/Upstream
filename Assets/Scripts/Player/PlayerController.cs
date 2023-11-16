@@ -15,7 +15,6 @@ public class PlayerController : SceneObject
     private Vector3 xPos = new Vector3(1.00f, 0.00f, 0.00f);
     private Vector3 xNeg = new Vector3(-1.00f, 0.00f, 0.00f);
 
-    //public PushableObjectController pushObjectx[indexObject];
     public PushableObjectController[] pushObject;
     private SphereCollider forward;
 

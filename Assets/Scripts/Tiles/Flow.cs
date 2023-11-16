@@ -9,8 +9,13 @@ public class Flow : Tile
     public Transform partnersPosition;
     public Vector3 posY;
     public bool isMoving = false;
-    public float moveSpeed = 5f;
+    public float moveSpeed;
     public SceneObject playerAux;
+
+    private void Start()
+    {
+        moveSpeed = 4f;
+    }
 
     private void Update()
     {
@@ -21,20 +26,25 @@ public class Flow : Tile
     }
 
     public void MoveToNextPositionIsMoving(Transform partner, Vector3 y, SceneObject player)
-    {        
-        Vector3 targetPosition = MoveToNextPosition(partner, y, player);
+    { 
+        Vector3 targetPosition = MoveToNextPosition(partner, y, player, moveSpeed);
 
+        if(Vector3.Distance(player.transform.position, targetPosition) < 0.2f)
+        {
+            player.transform.position = partner.transform.position + y;
+        }
         if (Vector3.Distance(player.transform.position, targetPosition) < 0.1f)
         {
-            Debug.Log(partner.transform.position);
+            //Debug.Log(partner.transform.position);
+            
             isMoving = false;
         }
     }
 
-    public Vector3 MoveToNextPosition(Transform partner, Vector3 y, SceneObject player)
+    public Vector3 MoveToNextPosition(Transform partner, Vector3 y, SceneObject player, float speed)
     {
         Vector3 targetPosition = partner.transform.position + y;
-        float step = moveSpeed * Time.deltaTime;
+        float step = speed * Time.deltaTime;
         player.transform.position = Vector3.MoveTowards(player.transform.position, targetPosition, step);
         return targetPosition;
     }
@@ -75,9 +85,20 @@ public class Flow : Tile
             isInside = true;
         }
 
-        if (other.CompareTag("ObjectDetectorCurrent") && isInside)
+        if(other.CompareTag("PlayerDetectorCurrent"))
+        {
+            isInside = true;
+        }
+
+        if (other.CompareTag("ObjectDetectorCurrent"))
+        {
+            isInside = true;
+        }
+
+        if (other.CompareTag("ObjectDetectorCurrent"))
         {
             obj = other.GetComponentInParent<PushableObjectController>();
+            LastFlow.objectAux[index] = obj;
         }
 
     }
