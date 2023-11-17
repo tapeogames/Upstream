@@ -937,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076c523409b29304383d19ef0beb6b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numeroEscena: 6
 --- !u!4 &780502654
 Transform:
   m_ObjectHideFlags: 0
@@ -2451,6 +2452,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2114207896376010122, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -148
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152773793869485893, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 284
+      objectReference: {fileID: 0}
     - target: {fileID: 2723730235809302214, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2458,6 +2467,14 @@ PrefabInstance:
     - target: {fileID: 2723730235809302214, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3311432082323090248, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748567812953590795, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6748567812953590795, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2470,6 +2487,10 @@ PrefabInstance:
     - target: {fileID: 6748567812953590795, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: VictoryMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748567812953590795, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8625978184481312221, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
       propertyPath: m_Name
@@ -3344,7 +3365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2957618436924805284, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2957618436924805284, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode

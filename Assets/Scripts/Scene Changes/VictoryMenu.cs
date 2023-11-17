@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class VictoryMenu : MonoBehaviour
 {
+    public int numeroEscena;
     public void Exit()
     {
         SceneManager.LoadScene(3);
     }
-    public void SiguienteNivel()
+    public void SiguienteNivel(int numEscena)
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(numEscena+1);
     }
 }

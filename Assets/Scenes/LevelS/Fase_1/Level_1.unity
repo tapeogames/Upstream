@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -534,6 +534,22 @@ PrefabInstance:
     - target: {fileID: 1287902404758714989, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748567812953590795, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748567812953590795, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1899233349}
+    - target: {fileID: 6748567812953590795, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SiguienteNivel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748567812953590795, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8625978184481312221, guid: 816b29fbde6992b43b036ad7cfb498c5, type: 3}
       propertyPath: m_Name
@@ -3196,6 +3212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076c523409b29304383d19ef0beb6b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numeroEscena: 7
 --- !u!4 &1899233350
 Transform:
   m_ObjectHideFlags: 0
