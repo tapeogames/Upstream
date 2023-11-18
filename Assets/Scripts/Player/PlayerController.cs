@@ -52,7 +52,7 @@ public class PlayerController : SceneObject
         {
             MoveToPosition(leftTile.GetTilePosition());
         }
-        else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null)
+        else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null && pushObject[indexObject].leftTile.activate)
         {
             if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
             {
@@ -67,13 +67,12 @@ public class PlayerController : SceneObject
 
     public void OnClickA()
     {
-
         Debug.Log("A");
         if (!grabbing && rightTile != null && rightTile.activate)
         {
             MoveToPosition(rightTile.GetTilePosition());
         }
-        else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null)
+        else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null && pushObject[indexObject].rightTile.activate)
         {
             if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
             {
@@ -94,7 +93,7 @@ public class PlayerController : SceneObject
         {
             MoveToPosition(forwardTile.GetTilePosition());
         }
-        else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null)
+        else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null && pushObject[indexObject].forwardTile.activate)
         {
             if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
             {
@@ -116,7 +115,7 @@ public class PlayerController : SceneObject
         {
             MoveToPosition(backwardTile.GetTilePosition());
         }
-        else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null)
+        else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null && pushObject[indexObject].backwardTile.activate)
         {
             if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
             {
@@ -133,28 +132,24 @@ public class PlayerController : SceneObject
 
     public void OnClickSpace()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        Debug.Log("SPACE");
+        if (canGrab)
         {
-            Debug.Log("SPACE");
-            if (canGrab)
+            Debug.Log("index obj: " + indexObject);
+            if (!pushObject[indexObject].isGrabbed)
             {
-                Debug.Log("index obj: " + indexObject);
-                if (!pushObject[indexObject].isGrabbed)
-                {
-                    playerLookAt = playerAvatar.transform.forward;
-                    playerLookAt.Normalize();
-                    //Debug.Log(playerLookAt);
-                    pushObject[indexObject].GrabObject();
-                    grabbing = true;
-                    pushObject[indexObject].currentTile.activate = true;
-                }
-                else
-                {
-                    grabbing = false;
-                    pushObject[indexObject].ReleaseObject();
-                    pushObject[indexObject].currentTile.activate = false;
-
-                }
+                playerLookAt = playerAvatar.transform.forward;
+                playerLookAt.Normalize();
+                //Debug.Log(playerLookAt);
+                pushObject[indexObject].GrabObject();
+                grabbing = true;
+                pushObject[indexObject].currentTile.activate = true;
+            }
+            else
+            {
+                grabbing = false;
+                pushObject[indexObject].ReleaseObject();
+                pushObject[indexObject].currentTile.activate = false;
 
             }
 
@@ -207,7 +202,7 @@ public class PlayerController : SceneObject
             {
                 MoveToPosition(leftTile.GetTilePosition());
             }
-            else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null)
+            else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null && pushObject[indexObject].leftTile.activate)
             {
                 if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
                 {
@@ -219,14 +214,14 @@ public class PlayerController : SceneObject
                 StartRotation(xNeg);
             }
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKeyDown(KeyCode.A))
         {
             Debug.Log("A");
             if (!grabbing && rightTile != null && rightTile.activate)
             {
                 MoveToPosition(rightTile.GetTilePosition());
             }
-            else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null)
+            else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null && pushObject[indexObject].rightTile.activate)
             {
                 if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
                 {
@@ -243,14 +238,14 @@ public class PlayerController : SceneObject
 
 
 
-        if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.S))
         {
             Debug.Log("S");
             if (!grabbing && forwardTile != null && forwardTile.activate)
             {
                 MoveToPosition(forwardTile.GetTilePosition());
             }
-            else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null)
+            else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null && pushObject[indexObject].forwardTile.activate)
             {
                 if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
                 {
@@ -264,14 +259,14 @@ public class PlayerController : SceneObject
 
             }
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        else if (Input.GetKeyDown(KeyCode.W))
         {
             Debug.Log("W");
             if (!grabbing && backwardTile != null && backwardTile.activate)
             {
                 MoveToPosition(backwardTile.GetTilePosition());
             }
-            else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null)
+            else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null && pushObject[indexObject].backwardTile.activate)
             {
                 if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
                 {
@@ -288,7 +283,7 @@ public class PlayerController : SceneObject
 
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("SPACE");
             if (canGrab)

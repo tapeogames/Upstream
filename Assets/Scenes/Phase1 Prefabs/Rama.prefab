@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8014375522187127776}
   - component: {fileID: 4351909526290804125}
-  - component: {fileID: 640217002363119791}
+  - component: {fileID: 3365699134987670427}
   m_Layer: 0
   m_Name: Rama
   m_TagString: Untagged
@@ -63,8 +63,9 @@ MonoBehaviour:
   movingDirection: {x: 0, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   distanceToTarget: 0
---- !u!136 &640217002363119791
-CapsuleCollider:
+  tutorial0: {fileID: 0}
+--- !u!135 &3365699134987670427
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -81,10 +82,8 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5420084
-  m_Height: 1.0840168
-  m_Direction: 0
+  serializedVersion: 3
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0.55, z: 0}
 --- !u!1001 &2800848788649599120
 PrefabInstance:
