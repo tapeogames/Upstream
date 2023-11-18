@@ -7,9 +7,8 @@ public class Tile : MonoBehaviour
 {
     public bool activate = true;
     public BoxCollider tileCenter;
-    public PushableObjectController obj;
     public bool isInside = false;
-    public int index;
+
     
 
     void Start()
@@ -26,21 +25,17 @@ public class Tile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
         if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing)
         {
             //Debug.Log("HA ENTRADO");
             activate = false;
         }
-        
-
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("ObjectDetectorCurrent"))
         {
-            obj = null; 
             isInside = false;
             activate = true;
         }
@@ -61,14 +56,5 @@ public class Tile : MonoBehaviour
         {
             isInside = true;
         }
-
-        if (other.CompareTag("ObjectDetectorCurrent"))
-        {
-            obj = other.GetComponentInParent<PushableObjectController>();
-            LastFlow.objectAux[index] = obj;
-        }
-
-
-
     }
 }

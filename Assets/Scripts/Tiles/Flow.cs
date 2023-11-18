@@ -21,29 +21,28 @@ public class Flow : Tile
     {
         if (isMoving)
         {
-            MoveToNextPositionIsMoving(partnersPosition, posY, playerAux);
+            MoveToNextPositionIsMoving(partnersPosition, playerAux);
         }
+        DeactivateFlow();
     }
 
-    public void MoveToNextPositionIsMoving(Transform partner, Vector3 y, SceneObject player)
-    { 
-        Vector3 targetPosition = MoveToNextPosition(partner, y, player, moveSpeed);
+    public void MoveToNextPositionIsMoving(Transform partner, SceneObject player)
+    {
+        Vector3 partnerDef = partner.position + posY;
+        Vector3 targetPosition = MoveToNextPosition(partnerDef, player, moveSpeed);
+        float distance = Vector3.Distance(player.transform.position, targetPosition);
 
-        if(Vector3.Distance(player.transform.position, targetPosition) < 0.2f)
+        if (distance < 0.1f)
         {
-            player.transform.position = partner.transform.position + y;
-        }
-        if (Vector3.Distance(player.transform.position, targetPosition) < 0.1f)
-        {
-            //Debug.Log(partner.transform.position);
-            
+            player.transform.position = partnerDef;
             isMoving = false;
         }
+
     }
 
-    public Vector3 MoveToNextPosition(Transform partner, Vector3 y, SceneObject player, float speed)
+    public Vector3 MoveToNextPosition(Vector3 partner, SceneObject player, float speed)
     {
-        Vector3 targetPosition = partner.transform.position + y;
+        Vector3 targetPosition = partner;
         float step = speed * Time.deltaTime;
         player.transform.position = Vector3.MoveTowards(player.transform.position, targetPosition, step);
         return targetPosition;
@@ -59,47 +58,49 @@ public class Flow : Tile
             {
                 PushableObjectController obj = playerAux.GetComponentInChildren<PushableObjectController>();
                 PlayerController.grabbing = false;
+                if (obj.currentTile != null)
+                {
+                    obj.currentTile.activate = false;
+                }
                 obj.ReleaseObject();
-                obj.currentTile.activate = false;
-                
+
             }
             isMoving = true;
             isInside = true;
         }
         
-
-
         if (other.CompareTag("ObjectDetectorCurrent") && !isMoving)
         {
             posY = new Vector3(0, 1, 0);
             playerAux = other.GetComponentInParent<PushableObjectController>();
-            isMoving = true;
             if (PlayerController.grabbing)
             {
                 PushableObjectController obj = (PushableObjectController) playerAux;
                 PlayerController.grabbing = false;
+                if (obj.currentTile != null)
+                {
+                    obj.currentTile.activate = false;
+                }
                 obj.ReleaseObject();
-                obj.currentTile.activate = false;
-                
             }
+            isMoving = true;
             isInside = true;
         }
+    }
 
-        if(other.CompareTag("PlayerDetectorCurrent"))
+    public void DeactivateFlow()
+    {
+        int max = LastFlow.maxOccupied;
+        int occuped = LastFlow.occupiedNum;
+        Debug.Log("maximo es: " + max + " numero de ocupados: " + occuped);
+
+        if(max == occuped)
         {
-            isInside = true;
+            activate = false;
         }
-
-        if (other.CompareTag("ObjectDetectorCurrent"))
+        else
         {
-            isInside = true;
+            activate = true;
         }
-
-        if (other.CompareTag("ObjectDetectorCurrent"))
-        {
-            obj = other.GetComponentInParent<PushableObjectController>();
-            LastFlow.objectAux[index] = obj;
-        }
-
     }
 }

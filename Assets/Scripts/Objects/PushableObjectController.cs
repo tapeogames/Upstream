@@ -32,7 +32,7 @@ public class PushableObjectController : SceneObject
         {
             isTriggered = true;
         }
-        if (other.CompareTag("ForwardPlayer"))
+        if (other.CompareTag("ForwardPlayer") && !PlayerController.grabbing)
         {
             PlayerController.indexObject = index;
             PlayerController.canGrab = true;
