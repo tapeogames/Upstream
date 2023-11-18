@@ -57,10 +57,12 @@ public class DuckController : MonoBehaviour
 
         if (obj != null)
         {
-            Vector3 targetPosition = obj.transform.position + new Vector3(0, 0.8f, 0);
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, (speed*0.5f) * Time.deltaTime);
+            float distanceBeyondWin = 100.0f; 
+            Vector3 direction = (obj.transform.position - transform.position).normalized;            
+            Vector3 targetPosition = obj.transform.position + direction * distanceBeyondWin;
+            transform.position = Vector3.MoveTowards(transform.position, obj.transform.position , (speed*0.5f) * Time.deltaTime);
 
-            if (transform.position == targetPosition)
+            if (transform.position == obj.transform.position )
             {
                 moving = false;
                 Destroy(duck);

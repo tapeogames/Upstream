@@ -11,7 +11,7 @@ public class Cinematic : MonoBehaviour
     void Start()
     {
         Invoke("CinematicAnimation",1);
-        Invoke("ActivateSceneChange", 32);
+        Invoke("ActivateSceneChange", 31);
     }
 
     public void CinematicAnimation()
