@@ -32,31 +32,16 @@ public class PlayerController : SceneObject
     public Vector3 movingDirection;
     public Vector3 targetPosition;
     public float distanceToTarget;
+    public GameObject normal;
+    public GameObject retroalimentacion;
+    public GameObject imagen;
+    public bool estado = true;
 
     Quaternion rotationTarget;
 
 
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        ReadInput();
-        if (moving)
-        {
-            PerformMovement();
-        }
-        if (rotating && !grabbing)
-        {
-            RotateTowardsDirection();
-        }
-        if (!moving && !rotating && rotatingNormal)
-        {
-            NormalRotateTowardsDirection();
-        }
 
     }
 
@@ -102,7 +87,6 @@ public class PlayerController : SceneObject
 
         }
     }
-
     public void OnClickS()
     {
         Debug.Log("S");
@@ -176,6 +160,41 @@ public class PlayerController : SceneObject
 
         }
     }
+
+
+    void Update()
+    {
+        ReadInput();
+        if (moving)
+        {
+            PerformMovement();
+        }
+        if (rotating && !grabbing)
+        {
+            RotateTowardsDirection();
+        }
+        if (!moving && !rotating && rotatingNormal)
+        {
+            NormalRotateTowardsDirection();
+        }
+
+        if (grabbing && estado == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            normal.SetActive(false);
+            retroalimentacion.SetActive(true);
+            imagen.SetActive(true);
+            estado = false;
+        }
+        else if (!grabbing && estado == false && Input.GetKeyDown(KeyCode.Space))
+        {
+            normal.SetActive(true);
+            retroalimentacion.SetActive(false);
+            imagen.SetActive(false);
+            estado = true;
+        }
+
+    }
+
 
     void ReadInput()
     {
@@ -292,7 +311,7 @@ public class PlayerController : SceneObject
 
                 }
 
-            } 
+            }
 
         }
     }

@@ -17,6 +17,7 @@ public class PushableObjectController : SceneObject
     public Vector3 movingDirection;
     public Vector3 targetPosition;
     public float distanceToTarget;
+    public GameObject tutorial0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class PushableObjectController : SceneObject
 
     private void OnTriggerEnter(Collider other)
     {
-        
+
         if (other.CompareTag("Player"))
         {
             isTriggered = true;
@@ -35,6 +36,7 @@ public class PushableObjectController : SceneObject
         {
             PlayerController.indexObject = index;
             PlayerController.canGrab = true;
+            tutorial0.SetActive(true);
         }
     }
 
@@ -48,6 +50,7 @@ public class PushableObjectController : SceneObject
         if (other.CompareTag("ForwardPlayer"))
         {
             PlayerController.canGrab = false;
+            tutorial0.SetActive(false);
         }
 
     }
@@ -56,7 +59,7 @@ public class PushableObjectController : SceneObject
     public void GrabObject()
     {
 
-        if(isTriggered)
+        if (isTriggered)
         {
             isGrabbed = true;
 
@@ -67,7 +70,7 @@ public class PushableObjectController : SceneObject
             //obj como hijo del personaje
             pushableObject.transform.parent = playerController.transform;
 
-        }               
+        }
 
     }
 
@@ -75,7 +78,7 @@ public class PushableObjectController : SceneObject
     {
         if (isGrabbed)
         {
-            
+
             isGrabbed = false;
 
             //resetea padre
