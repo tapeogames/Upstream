@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    [SerializeField] private AudioMixer audioMixer;
+    //[SerializeField] private AudioMixer audioMixer;
     private void Start()
     {
         Time.timeScale = 1.0f;
@@ -18,7 +18,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void CambiarVolumen(float volumen)
     {
-        audioMixer.SetFloat("Volumen", volumen);
+       // audioMixer.SetFloat("Volumen", volumen);
     }
 
     public void Pausa()
