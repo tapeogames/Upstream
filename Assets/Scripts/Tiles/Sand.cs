@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Sand : Tile
 {
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing)
@@ -35,5 +34,7 @@ public class Sand : Tile
             }
         }
     }
+
+    
 
 }

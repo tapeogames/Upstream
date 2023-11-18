@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3012436415263486525, guid: d679eeb2071409843a1d3aa7142303c1, type: 3}
+      propertyPath: arenita
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4678143464701488981, guid: d679eeb2071409843a1d3aa7142303c1, type: 3}
       propertyPath: m_Name
       value: Sand
@@ -1445,6 +1449,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3012436415263486525, guid: d679eeb2071409843a1d3aa7142303c1, type: 3}
+      propertyPath: arenita
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4678143464701488981, guid: d679eeb2071409843a1d3aa7142303c1, type: 3}
       propertyPath: m_Name
       value: Sand
@@ -1866,6 +1874,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4136045671573304682, guid: 4cb7e5870feaa5242911aec791fa1737, type: 3}
+      propertyPath: tutorial0
+      value: 
+      objectReference: {fileID: 1076198289}
+    - target: {fileID: 4136045671573304682, guid: 4cb7e5870feaa5242911aec791fa1737, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 926466044}
@@ -2164,6 +2176,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4136045671573304682, guid: 4cb7e5870feaa5242911aec791fa1737, type: 3}
+      propertyPath: tutorial0
+      value: 
+      objectReference: {fileID: 1076198289}
+    - target: {fileID: 4136045671573304682, guid: 4cb7e5870feaa5242911aec791fa1737, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 926466044}
@@ -2242,6 +2258,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1049540687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049540681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25a7ae36c5bfc842a12fa2c78bae723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  dentroArena: {fileID: 0}
 --- !u!1001 &1053787940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2316,6 +2346,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 82f9b014747c8cf47940f01235b0d229, type: 3}
   m_PrefabInstance: {fileID: 1053787940}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1076198289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1076198290}
+  m_Layer: 0
+  m_Name: tronco
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1076198290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076198289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.918272, y: -31.554432, z: -9.552439}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1103092117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2448,6 +2509,10 @@ PrefabInstance:
     - target: {fileID: 1155504429898298991, guid: d679eeb2071409843a1d3aa7142303c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012436415263486525, guid: d679eeb2071409843a1d3aa7142303c1, type: 3}
+      propertyPath: arenita
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4678143464701488981, guid: d679eeb2071409843a1d3aa7142303c1, type: 3}
       propertyPath: m_Name
@@ -4910,6 +4975,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8216864478063987809, guid: 70243868be2e8ac4f81bb6d5127f9191, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1049540683}
+    - targetCorrespondingSourceObject: {fileID: 8216864478063987809, guid: 70243868be2e8ac4f81bb6d5127f9191, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049540687}
   m_SourcePrefab: {fileID: 100100000, guid: 70243868be2e8ac4f81bb6d5127f9191, type: 3}
 --- !u!4 &672038452192700153
 Transform:
@@ -5773,6 +5841,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4136045671573304682, guid: 4cb7e5870feaa5242911aec791fa1737, type: 3}
+      propertyPath: tutorial0
+      value: 
+      objectReference: {fileID: 1076198289}
     - target: {fileID: 4136045671573304682, guid: 4cb7e5870feaa5242911aec791fa1737, type: 3}
       propertyPath: playerController
       value: 
@@ -6829,3 +6901,4 @@ SceneRoots:
   - {fileID: 4760910984184849823}
   - {fileID: 1015012689}
   - {fileID: 910384964}
+  - {fileID: 1076198290}
