@@ -32,6 +32,10 @@ public class PlayerController : SceneObject
     public Vector3 movingDirection;
     public Vector3 targetPosition;
     public float distanceToTarget;
+    public GameObject normal;
+    public GameObject retroalimentacion;
+    public GameObject imagen; 
+    public bool estado = true;
 
     Quaternion rotationTarget;
 
@@ -56,6 +60,21 @@ public class PlayerController : SceneObject
         if (!moving && !rotating && rotatingNormal)
         {
             NormalRotateTowardsDirection();
+        }
+
+        if (grabbing && estado == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            normal.SetActive(false);
+            retroalimentacion.SetActive(true);
+            imagen.SetActive(true);
+            estado = false;
+        }
+        else if (!grabbing && estado == false && Input.GetKeyDown(KeyCode.Space))
+        {
+            normal.SetActive(true);
+            retroalimentacion.SetActive(false);
+            imagen.SetActive(false);
+            estado = true;
         }
 
     }

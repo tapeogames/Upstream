@@ -5,21 +5,19 @@ using UnityEngine;
 public class movimientoretro : MonoBehaviour
 {
     public GameObject personaje; // Asigna el GameObject del personaje desde el Inspector
-    public GameObject imagen; // Asigna el GameObject de la imagen desde el Inspector
     public bool frente = true;
     public bool derecha = false;
     public bool izquierda = false;
     public bool atras = false;
-    bool imagenVisible = false;
     Vector3 offset;
+    public GameObject referencia;
 
     void Update()
     {
         // Controlar la aparición de la imagen al presionar la barra espaciadora
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (referencia.activeInHierarchy)
         {
-            imagenVisible = !imagenVisible;
-            imagen.SetActive(imagenVisible);
+            
         }
 
         if (Input.GetKeyDown(KeyCode.W))
@@ -54,7 +52,7 @@ public class movimientoretro : MonoBehaviour
             izquierda = true;
         }
 
-        if (personaje != null && imagen != null && imagenVisible)
+        if (personaje != null && referencia.activeInHierarchy)
         {
             // Obtener la posición del personaje
             Vector3 posicionPersonaje = personaje.transform.position;
@@ -62,24 +60,25 @@ public class movimientoretro : MonoBehaviour
             if (frente)
             {
                 // Definir la posición de la imagen a un offset del personaje
-                offset = new Vector3(0.26f, 0.45f, -0.4f); // Ajusta el offset como desees
+                offset = new Vector3(0.2f, 0.6f, 0.4f); // Ajusta el offset como desees
             }
             if (derecha)
             {
-                offset = new Vector3(0.5f, 0.45f, 0.4f);
+                offset = new Vector3(0.0f, 0.45f, 0.4f);
             }
             if (izquierda)
             {
-                offset = new Vector3(-0.5f, 0.45f, 0.4f);
+                offset = new Vector3(-0.0f, 0.45f, 0.4f);
             }
             if (atras)
             {
-                offset = new Vector3(-0.26f, 0.45f, 0.4f);
+                offset = new Vector3(0.2f, 0.6f, 0.4f);
             }
 
+            
 
             // Asignar la posición de la imagen en relación al personaje
-            imagen.transform.position = posicionPersonaje + offset;
+            referencia.transform.position = posicionPersonaje + offset;
         }
     }
 }

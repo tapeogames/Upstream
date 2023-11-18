@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-//using static UnityEditor.Experimental.GraphView.GraphView;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Whirlpool : Tile
 {
     public Transform partnerPosition;
-    Vector3 posY = new Vector3(0, 1, 0);
+    Vector3 posY;
 
     public BoxCollider front;
     public BoxCollider back;
@@ -21,24 +21,24 @@ public class Whirlpool : Tile
     {
         // Realiza un raycast para verificar si hay algún objeto en la posición dada.
         RaycastHit hit;
-        return Physics.Raycast(position, Vector3.up, out hit, 1f); // Puedes ajustar la longitud del raycast según tus necesidades.
+        return Physics.Raycast(position, Vector3.up, out hit, 5f);
     }
 
     public void nextPos(SceneObject obj)
     {
-        if (!IsPositionOccupied(partnerPosition.position - posFront))
+        if (!IsPositionOccupied(partnerPosition.position - posFront) )
         {
             obj.transform.position = partnerPosition.position - posFront + posY;
         } 
-        if(!IsPositionOccupied(partnerPosition.position + posRight))
+        else if(!IsPositionOccupied(partnerPosition.position + posRight) )
         {
             obj.transform.position = partnerPosition.position + posRight + posY;
         }
-        if (!IsPositionOccupied(partnerPosition.position + posFront))
+        else if (!IsPositionOccupied(partnerPosition.position + posFront) )
         {
             obj.transform.position = partnerPosition.position + posFront + posY;
         }
-        if (!IsPositionOccupied(partnerPosition.position - posRight))
+        else if (!IsPositionOccupied(partnerPosition.position - posRight))
         {
             obj.transform.position = partnerPosition.position - posRight + posY;
         }
@@ -52,7 +52,7 @@ public class Whirlpool : Tile
         {
             PlayerController player = other.GetComponentInParent<PlayerController>();
             player.enabled= false;
-
+            posY = new Vector3(0, 1, 0);
 
             if (IsPositionOccupied(partnerPosition.position - posFront) && IsPositionOccupied(partnerPosition.position + posRight) && IsPositionOccupied(partnerPosition.position + posFront) && IsPositionOccupied(partnerPosition.position - posRight))
             {
@@ -66,6 +66,7 @@ public class Whirlpool : Tile
                 
         if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing )
         {
+            posY = new Vector3(0, 0.5f, 0);
             PushableObjectController obj = other.GetComponentInParent<PushableObjectController>();
             obj.transform.position = partnerPosition.transform.position + posY;
             nextPos(obj);
@@ -78,6 +79,11 @@ public class Whirlpool : Tile
         {
             PlayerController player = other.GetComponentInParent<PlayerController>();
             player.enabled = true;
+            activate = true;
+        }
+        if (other.CompareTag("ObjectDetectorCurrent") && !PlayerController.grabbing)
+        {
+            activate = true;
         }
     }
 }
