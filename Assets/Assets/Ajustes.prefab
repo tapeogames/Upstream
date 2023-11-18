@@ -266,6 +266,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6016432550534693057}
   - {fileID: 8564016242371801368}
   - {fileID: 4980627607757417198}
   - {fileID: 4816912377707076637}
@@ -745,6 +746,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6676670850693029378}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1312,6 +1325,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6676670850693029378}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1890,3 +1915,70 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &6947394063993720119
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5241256792908190095}
+    m_Modifications:
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 255.49043
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 53.988266
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 126.6897
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966563754156481924, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+      propertyPath: m_Name
+      value: AudioBoton
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+--- !u!4 &6016432550534693057 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3680764229187997174, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+  m_PrefabInstance: {fileID: 6947394063993720119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &6676670850693029378 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4378157256336970549, guid: e9047486873461c499e8af68aea08fdd, type: 3}
+  m_PrefabInstance: {fileID: 6947394063993720119}
+  m_PrefabAsset: {fileID: 0}
