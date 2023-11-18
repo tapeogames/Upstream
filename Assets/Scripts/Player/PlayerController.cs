@@ -60,6 +60,122 @@ public class PlayerController : SceneObject
 
     }
 
+    public void OnClickD()
+    {
+        Debug.Log("D");
+        if (!grabbing && leftTile != null && leftTile.activate)
+        {
+            MoveToPosition(leftTile.GetTilePosition());
+        }
+        else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null)
+        {
+            if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
+            {
+                MoveToPosition(leftTile.GetTilePosition());
+            }
+        }
+        else if (leftTile == null || !leftTile.activate)
+        {
+            StartRotation(xNeg);
+        }
+    }
+
+    public void OnClickA()
+    {
+
+        Debug.Log("A");
+        if (!grabbing && rightTile != null && rightTile.activate)
+        {
+            MoveToPosition(rightTile.GetTilePosition());
+        }
+        else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null)
+        {
+            if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
+            {
+                MoveToPosition(rightTile.GetTilePosition());
+            }
+        }
+        else if (rightTile == null || !rightTile.activate)
+        {
+            //Debug.Log("ha entrado rigth");
+            StartRotation(xPos);
+
+        }
+    }
+
+    public void OnClickS()
+    {
+        Debug.Log("S");
+        if (!grabbing && forwardTile != null && forwardTile.activate)
+        {
+            MoveToPosition(forwardTile.GetTilePosition());
+        }
+        else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null)
+        {
+            if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
+            {
+                MoveToPosition(forwardTile.GetTilePosition());
+            }
+        }
+        else if (forwardTile == null || !forwardTile.activate)
+        {
+            //Debug.Log("ha entrado forward");
+            StartRotation(zPos);
+
+        }
+    }
+
+    public void OnClickW()
+    {
+        Debug.Log("W");
+        if (!grabbing && backwardTile != null && backwardTile.activate)
+        {
+            MoveToPosition(backwardTile.GetTilePosition());
+        }
+        else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null)
+        {
+            if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
+            {
+                MoveToPosition(backwardTile.GetTilePosition());
+            }
+        }
+        else if (backwardTile == null || !backwardTile.activate)
+        {
+            //Debug.Log("ha entrado backward");
+            StartRotation(zNeg);
+
+        }
+    }
+
+    public void OnClickSpace()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("SPACE");
+            if (canGrab)
+            {
+                Debug.Log("index obj: " + indexObject);
+                if (!pushObject[indexObject].isGrabbed)
+                {
+                    playerLookAt = playerAvatar.transform.forward;
+                    playerLookAt.Normalize();
+                    //Debug.Log(playerLookAt);
+                    pushObject[indexObject].GrabObject();
+                    grabbing = true;
+                    pushObject[indexObject].currentTile.activate = true;
+                }
+                else
+                {
+                    grabbing = false;
+                    pushObject[indexObject].ReleaseObject();
+                    pushObject[indexObject].currentTile.activate = false;
+
+                }
+
+            }
+
+        }
+    }
 
     void ReadInput()
     {
