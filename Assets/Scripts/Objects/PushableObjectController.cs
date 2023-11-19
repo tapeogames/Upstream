@@ -78,7 +78,10 @@ public class PushableObjectController : SceneObject
     {
         if (isGrabbed)
         {
-            AproximateTile();
+            if(pushableObject.tag != ("DucklingDetector"))
+            {
+                AproximateTile();
+            }
             isGrabbed = false;
 
             //resetea padre
@@ -87,7 +90,7 @@ public class PushableObjectController : SceneObject
     }
 
     public void AproximateTile()
-    {
+    {        
         Debug.Log("APROXIMADO");
         pushableObject.transform.position = new Vector3( 
             currentTile.transform.position.x,
