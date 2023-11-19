@@ -175,7 +175,7 @@ Como se ha mencionado antes, los niveles de la primera fase se sitúan en una cu
 
 # MÚSICA Y SONIDO
 
-**Música:**
+## Música
 
 La música desempeña un papel vital en la experiencia de juego y la inmersión de los niños en nuestro juego de puzles. A continuación, se detallan las directrices relacionadas con la música:
 
@@ -187,7 +187,15 @@ La música desempeña un papel vital en la experiencia de juego y la inmersión 
 
 - **Loops Continuos:** Todas las pistas de música se diseñarán como loops para garantizar una transición fluida y sin interrupciones durante el juego.
 
-**Efectos de Sonido:**
+**Música provisional utilizada**
+
+- **Niveles Fase 1:** https://pixabay.com/es/music/titulo-principal-cave-of-light-13566/
+
+- **Niveles Fase 2:** https://pixabay.com/es/music/ambiente-a-fond-memory-116759/
+
+- **Niveles Fase 3:** https://pixabay.com/es/music/pop-indie-in-the-forest-piano-version-175229/
+
+## Efectos de Sonido
 
 Los efectos de sonido son fundamentales para brindar retroalimentación y vida al mundo del juego. Aquí están las directrices para los efectos de sonido:
 
@@ -202,6 +210,18 @@ Los efectos de sonido son fundamentales para brindar retroalimentación y vida a
 - **Ajustes de Volumen:** Se proporcionará la opción de ajustar el volumen de música y efectos de sonido en el menú de configuración del juego para garantizar la comodidad de los jugadores.
 
 La música y los efectos de sonido serán diseñados específicamente para asegurar que contribuyan a una experiencia de juego divertida y apropiada para los niños, manteniendo un ambiente alegre y amigable en todo momento.
+
+**Efectos provisionales utilizados**
+
+- **Niveles Fase 1:** https://pixabay.com/es/sound-effects/relaxing-mountains-rivers-streams-running-water-18178/
+
+- **Niveles Fase 2:** https://pixabay.com/es/sound-effects/nature-sounds-water-forest-crickets-calm-river-hq2496-chakongaudio-172342/
+
+- **Niveles Fase 3:** https://pixabay.com/es/sound-effects/birds-singing-calm-river-nature-ambient-sound-127411/
+
+- **Interfaces:** https://pixabay.com/es/sound-effects/nature-sounds-water-forest-crickets-calm-river-hq2496-chakongaudio-172342/
+
+- **Botones:** https://pixabay.com/es/sound-effects/click-for-game-menu-131903/
 
 <br>
 
