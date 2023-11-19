@@ -15,6 +15,12 @@ public class LastFlow : Flow
     public bool push = false;
 
     //Vector3 auxPosY = new Vector3(0, 0.5f, 0);
+
+    public void restart()
+    {
+        this.activate = true;
+    }
+
     void Start()
     {
         moveSpeed = 4f;

@@ -9,8 +9,10 @@ public class Tile : MonoBehaviour
     public BoxCollider tileCenter;
     public bool isInside = false;
 
-    
-
+    public void restart()
+    {
+        activate = true;
+    }
     void Start()
     {
         tileCenter = GetComponent<BoxCollider>();

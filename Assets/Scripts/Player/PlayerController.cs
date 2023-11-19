@@ -156,6 +156,14 @@ public class PlayerController : SceneObject
         }
     }
 
+    public void restartGame()
+    {
+        moving = false;
+        grabbing = false;
+        estado = true;
+        rotating = false;
+        rotatingNormal = false;
+    }
 
     void Update()
     {

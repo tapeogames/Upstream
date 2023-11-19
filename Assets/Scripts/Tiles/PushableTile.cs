@@ -8,6 +8,12 @@ public class PushableTile : Tile
     public PushableObjectController obj;
     public int index;
     // Start is called before the first frame update
+
+    public void restart()
+    {
+        this.activate = true;
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("ObjectDetectorCurrent"))
