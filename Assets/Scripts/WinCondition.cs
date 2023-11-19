@@ -5,6 +5,7 @@ using UnityEngine;
 public class WinCondition : MonoBehaviour
 {
     public GameObject win;
+    public GameObject pauseButton;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class WinCondition : MonoBehaviour
         if (other.CompareTag("ForwardPlayer"))
         {
             win.SetActive(true);
+            pauseButton.SetActive(false);
         }
     }
 

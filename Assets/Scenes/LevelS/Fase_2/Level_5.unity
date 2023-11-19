@@ -653,6 +653,10 @@ PrefabInstance:
       propertyPath: win
       value: 
       objectReference: {fileID: 1002654277}
+    - target: {fileID: 3191197228354988711, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1002654278}
     - target: {fileID: 4923708127925097797, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
       propertyPath: m_Name
       value: WinCondition
@@ -1862,6 +1866,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53747267978538052, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1799044450}
+    - target: {fileID: 53747267978538052, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
+      objectReference: {fileID: 0}
     - target: {fileID: 925787330443538460, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2102,6 +2114,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 8849105541346902616, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_Name
+      value: Layout Pausa
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2110,6 +2126,11 @@ PrefabInstance:
 --- !u!1 &1002654277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4331928105009450215, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+  m_PrefabInstance: {fileID: 1002654276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1002654278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8849105541346902616, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
   m_PrefabInstance: {fileID: 1002654276}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1005707590

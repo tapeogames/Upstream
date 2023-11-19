@@ -282,9 +282,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53747267978538052, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1208570547}
+    - target: {fileID: 53747267978538052, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
+      objectReference: {fileID: 0}
     - target: {fileID: 667370656143193919, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 925787330443538460, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_AnchorMax.y
@@ -530,6 +538,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 8849105541346902616, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_Name
+      value: Layout Pausa
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -541,6 +553,11 @@ PrefabInstance:
       addedObject: {fileID: 1380046401}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+--- !u!1 &184334272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8849105541346902616, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+  m_PrefabInstance: {fileID: 184334271}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &211778757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2833704268782635959, guid: 2dc3601fd02f17f40b5ee884e02f3cc5, type: 3}
@@ -2977,6 +2994,10 @@ PrefabInstance:
       propertyPath: win
       value: 
       objectReference: {fileID: 1292456126}
+    - target: {fileID: 3191197228354988711, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 184334272}
     - target: {fileID: 4923708127925097797, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
       propertyPath: m_Name
       value: WinCondition
