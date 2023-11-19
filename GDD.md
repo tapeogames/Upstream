@@ -151,25 +151,27 @@ En cuanto a la relevancia artística de los entornos, el juego estará dividido 
 Darwin presenta un diseño basado en formas redondeadas, tanto circulares como triangulares, dando un aspecto amigable, inofensivo y dinámico. Su paleta de color cálida con tonos rosados afianza esa sensación de cercanía y simpatía. Al ser un renacuajo en esta primera fase, tiene una proporción del cuerpo de dos cabezas, mostrando su corta edad y entrando en un diseño más estilizado.
 
 **Diseño Darwin Renacuajo Adulto** 
-![Darwin Young Salamander](..%2F..%2FDarwin%20Young%20Salamander%20CHARACTER%20SHEET.jpg)
+![Darwin Young Salamander ](https://github.com/tapeogames/Upstream/assets/82976203/f1fca6f0-653a-49db-8043-6080968a5ea9)
 
 **Diseño Darwin Salamandra** 
-![Darwin Salamander](..%2F..%2FDarwin%20Salamander%20CHARACTER%20SHEET.jpg)
+![Darwin Salamander](https://github.com/tapeogames/Upstream/assets/82976203/6be0e778-ee44-44dd-bf50-ceb6683e70aa)
 
 **Diseño Mamá Pato y Patito**
-![Duck Mom](..%2FArtUpstream%2FConcept%20Art%2FCharacters%2FDucks%2FDuck%20Mom%20TURN%20AROUND.jpg)
-![Duckling](..%2F..%2FDuckling%20TURN%20AROUND.jpg)
+![Duck Mom TURN AROUND](https://github.com/tapeogames/Upstream/assets/82976203/8b7c3220-0bbe-42cc-a655-2c93ead20aa8)
+![Duckling](https://github.com/tapeogames/Upstream/assets/82976203/28527900-4e1a-43c5-be0e-38cc1a2979c4)
 
 **Diseño escenarios fase 1** 
 <br>
 ![_Escenario1_Upstream](https://github.com/tapeogames/Upstream/assets/81293638/3d67b268-6114-4713-a5e4-862ad70d2a56)
-![Escenario1Proceso](..%2FArtUpstream%2FConcept%20Art%2FEnvironment%2FPhaseOne%2FValueProcess.png)
+![Escenario1Process](https://github.com/tapeogames/Upstream/assets/82976203/a6919dba-d5ab-47b7-b10d-25944c7a83f8)
+
 
 Como se ha mencionado antes, los niveles de la primera fase se sitúan en una cueva, teniendo la apariencia de un entorno un tanto hostil. Para ello se utiliza una tenue iluminación para una ambientación más lúgubre acorde con la ubicación, y se hace uso de los contrastes tanto de forma, como de color y tamaño. De esta forma el escenario está compuesto de formas triangulares llenas de ángulos y una paleta monocromática fría, donde Darwin destaca por su forma redonda y color cálido, generando un ambiente más agresivo y oscuro, en el que encontramos a un Darwin solo e indefenso.
 
 **Diseño Props**
-![Peperomia](..%2FArtUpstream%2FConcept%20Art%2FProps%2FPeperomia.png)
-![Rocas](..%2FArtUpstream%2FConcept%20Art%2FProps%2FRocas.png)
+![Peperomia](https://github.com/tapeogames/Upstream/assets/82976203/63b33f98-bbbc-4221-bf53-b02cf6e2af1f)
+![Rocas](https://github.com/tapeogames/Upstream/assets/82976203/c2c7fb1a-30cf-4c8c-b116-2d8914e96987)
+
 
 <br>
 
@@ -341,64 +343,64 @@ El nivel inicial está diseñado como primer contacto del jugador con los puzzle
 Este siguiente nivel aumenta en complejidad e introduce al jugador en una situación más común de la resolución de puzles, la contradicción y el conflicto. El usuario tendrá que pensar el orden de sus acciones para que no supongan un obstáculo más a la hora de encontrar la solución. Además se introduce la arena/suelo para enseñar que no se puede pasar a través de ella, aunque en un futuro cuando Darwin haya crecido sí serán zonas transitables.
 
 **Diseño de nivel 2**
-![Nivel2](..%2FArtUpstream%2FLevelDesign%2Fnivel2.png)
+![nivel2](https://github.com/tapeogames/Upstream/assets/82976203/2502b561-e412-4eda-bc33-881ca064d59b)
 
 **Diseño de nivel 3**
-![Nivel3](..%2FArtUpstream%2FLevelDesign%2Fnivel3.png)
+![nivel3](https://github.com/tapeogames/Upstream/assets/82976203/0962d760-dfea-4594-8ad8-74d8ef58b23b)
 
 ### Fase 2
 
 **Diseño de nivel 4**
-![Nivel4](..%2FArtUpstream%2FLevelDesign%2Fnivel4.png)
+![nivel4](https://github.com/tapeogames/Upstream/assets/82976203/e2b0df6f-40eb-4cf7-9a65-0b3627351132)
 
 En este nivel se enseña al jugador por primera vez la mecánica de la corriente.
 
 **Diseño de nivel 5**
-![Nivel5](..%2FArtUpstream%2FLevelDesign%2Fnivel5.png)
+![nivel5](https://github.com/tapeogames/Upstream/assets/82976203/4c0f10ca-fac0-441b-be1f-54cb18986ecd)
 
 **Diseño de nivel 6**
-![Nivel6](..%2FArtUpstream%2FLevelDesign%2Fnivel6.png)
+![nivel6](https://github.com/tapeogames/Upstream/assets/82976203/4f7fd3d3-0978-45eb-bfb1-9af3bdb9cf24)
 
 **Diseño de nivel 7**
-![Nivel8](..%2FArtUpstream%2FLevelDesign%2Fnivel7.png)
+![nivel7](https://github.com/tapeogames/Upstream/assets/82976203/8488f407-d7d9-48dc-92a0-506f4e8d862b)
 
 Este nivel se utiliza para mostrar al jugador como funciona la Mamá Pato y Patito para que lo tenga en cuenta a la hora de resolver el nivel.
 
 **Diseño de nivel 8**
-![Nivel8](..%2FArtUpstream%2FLevelDesign%2Fnivel8.png)
+![nivel8](https://github.com/tapeogames/Upstream/assets/82976203/5490ed4c-3be2-4e19-a4f4-2fce7a74b51d)
 
 Se mezclan las mecánicas de la corriente y los patos.
 
 ### Fase 3
 
 **Diseño de nivel 9**
-![Nivel9](..%2FArtUpstream%2FLevelDesign%2Fnivel9.png)
+![nivel9](https://github.com/tapeogames/Upstream/assets/82976203/2e550388-0703-43a3-83cd-6522fd53fa97)
 
 Introducción de la arena ahora siendo posible camniar por ella.
 
 **Diseño de nivel 10**
-![Nivel10](..%2FArtUpstream%2FLevelDesign%2Fnivel10.png)
+![nivel10](https://github.com/tapeogames/Upstream/assets/82976203/64070132-0fb8-4f96-9a86-3d58a6e69930)
 
 Introducción de la función de los remolinos.
 
 **Diseño de nivel 11**
-![Nivel11](..%2FArtUpstream%2FLevelDesign%2Fnivel11.png)
+![nivel11](https://github.com/tapeogames/Upstream/assets/82976203/00e16bdc-a588-4638-b507-49b532455993)
 
 Se mezclan el uso de los remolinos, la corriente y la arena.
 
 **Diseño de nivel 12**
-![Nivel12](..%2FArtUpstream%2FLevelDesign%2Fnivel12sinRana.png)
+![nivel12](https://github.com/tapeogames/Upstream/assets/82976203/2a64ed2f-9d05-4ae9-8852-249f344e9027)
 
 Unión de los elementos de la arena y los patos.
 
 **Diseño de nivel 13**
-![Nivel13](..%2FArtUpstream%2FLevelDesign%2Fnivel13sinRana.png)
+![nivel13](https://github.com/tapeogames/Upstream/assets/82976203/6ddcf7b6-04ba-4b2f-9ffa-9d53e7fbfd0b)
 
 Se une la mecánica de los remolinos junto con la arena y los patos.
 
 **Diseño de niveles desechados**
-![Nivel12Rana](..%2FArtUpstream%2FLevelDesign%2Fnivel12.png)
-![Nivel13Rana](..%2FArtUpstream%2FLevelDesign%2Fnivel13.png)
+![nivel12Rana](https://github.com/tapeogames/Upstream/assets/82976203/dd0efc0c-563d-499b-8767-f7799cfb7a90)
+![nivel13Rana](https://github.com/tapeogames/Upstream/assets/82976203/bb2d93cd-abd9-46e5-89f7-e32ea1191b63)
 
 Los niveles 12 y 13 tuvieron que ser rediseñados a causa de la falta de implementación de la mecánica de la Rana y la mosca debido a una falta de tiempo.
 <br>
