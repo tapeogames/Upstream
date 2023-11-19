@@ -92,10 +92,12 @@ public class PushableObjectController : SceneObject
     public void AproximateTile()
     {        
         Debug.Log("APROXIMADO");
-        pushableObject.transform.position = new Vector3( 
-            currentTile.transform.position.x,
-            pushableObject.transform.position.y, 
-            currentTile.transform.position.z);
+        pushableObject.transform.position = new Vector3(
+        currentTile.transform.position.x,
+        pushableObject.transform.position.y,
+        currentTile.transform.position.z);
+
+        
     }
 
 }

@@ -286,6 +286,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 925787330443538460, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 925787330443538460, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 925787330443538460, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 925787330443538460, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2227768056020702942, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -764,11 +780,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303532623}
   m_Mesh: {fileID: -5495902117074765545, guid: 0e60138d9c77eae45bff03283b3e5e4c, type: 3}
---- !u!65 &390505522 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 2467562631888330119, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
-  m_PrefabInstance: {fileID: 2040724956}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &395997276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,6 +1597,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4578622320741439102, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
+      propertyPath: activate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8148050186313030070, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -1744,6 +1759,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447292846661484684, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578622320741439102, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
+      propertyPath: activate
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8148050186313030070, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
@@ -2596,11 +2615,11 @@ PrefabInstance:
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: left
       value: 
-      objectReference: {fileID: 1575083844}
+      objectReference: {fileID: 0}
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: front
       value: 
-      objectReference: {fileID: 1050405420}
+      objectReference: {fileID: 0}
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: right
       value: 
@@ -2952,11 +2971,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
---- !u!65 &1050405420 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 1818158427266307854, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
-  m_PrefabInstance: {fileID: 952241374}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1062476920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3466,6 +3480,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4578622320741439102, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
+      propertyPath: activate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8148050186313030070, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -3712,6 +3730,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447292846661484684, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578622320741439102, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
+      propertyPath: activate
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8148050186313030070, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
@@ -4932,11 +4954,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574180591}
   m_Mesh: {fileID: -5495902117074765545, guid: 0e60138d9c77eae45bff03283b3e5e4c, type: 3}
---- !u!65 &1575083844 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 6538750616686263969, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
-  m_PrefabInstance: {fileID: 952241374}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1576583656 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2833704268782635959, guid: 2dc3601fd02f17f40b5ee884e02f3cc5, type: 3}
@@ -5503,11 +5520,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7738316071791891610, guid: c51902ccfc03bea4b8328c0fe9db9d71, type: 3}
   m_PrefabInstance: {fileID: 1462850227}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1812991509 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 4101776657333174015, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
-  m_PrefabInstance: {fileID: 2040724956}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1818150037
 PrefabInstance:
@@ -6335,7 +6347,7 @@ PrefabInstance:
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: back
       value: 
-      objectReference: {fileID: 390505522}
+      objectReference: {fileID: 0}
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: left
       value: 
@@ -6347,7 +6359,7 @@ PrefabInstance:
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: right
       value: 
-      objectReference: {fileID: 1812991509}
+      objectReference: {fileID: 0}
     - target: {fileID: 1047404101059935618, guid: 1ba521e93a11f1b479d7f382f2e1afa9, type: 3}
       propertyPath: tileCenter
       value: 
