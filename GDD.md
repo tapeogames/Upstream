@@ -90,7 +90,7 @@ Mientras es un renacuajo, se verá abrumado por la situación y se sentirá en u
 
 En su siguiente fase, ya posee más experiencia y comenzará a ver las cosas de manera diferente, donde no todo son obstáculos de gran peligro. Los ambientes se iluminarán con colores más cálidos, evocando un amanecer, las formas serán más redondeadas, aunque se mantendrán elementos de la estética anterior. Darwin ha salido de la cueva y empieza a descubrir la naturaleza exterior del riachuelo.
 
-Finalmente, al comienzo de su etapa adulta, Darwin ya tiene más conocimiento y percibe su entorno, peligros y dificultades de forma más realista. Por ello los escenarios adquirirán una apariencia más acogedora, con una iluminación diurna, colores más naturales y las formas amigables prevalecerán sobre las agresivas.
+Finalmente, al comienzo de su etapa adulta, Darwin ya tiene más conocimiento y percibe su entorno, peligros y dificultades de forma más realista. Por ello los escenarios adquirirán una apariencia más acogedora, con una iluminación diurna, colores más naturales y las formas amigables prevalecerán sobre las agresivas. Además empezará a encontrarse con elementos humanos a lo largo del río, indicando lo que ha avanzado en su viaje.
 
 <br>
 
@@ -112,6 +112,7 @@ Pese a que el único personaje al que puede controlar el jugador es Darwin, se p
 
 En algunos niveles, una de las casillas estará ocupada por una mamá pato y otra, notablemente alejada de la anterior, por un patito. Se mostrará visiblemente cómo la mamá pato llora por no tener a su cría con ella, por lo que el jugador deberá conseguir llegar a la cría y arrastrarla o empujarla hasta la madre. Una vez los patos se hayan reunido, se recompensará al jugador, ya sea permitiéndole paso directamente a la salida del nivel o ayudándole con otra tarea.
 
+**NPCs descartados**
 - Sapos:
 
 El jugador se encontrará con ellos en ciertos niveles en los que un sapo ocupará una casilla y estará croando, provocando vibraciones en el agua que no permitirán pasar a Darwin. Sin embargo, este obstáculo se puede sobrepasar si Darwin le lleva una mosca al sapo, el cual al empezar a comérsela, dejará de croar.
@@ -124,9 +125,9 @@ La principal característica del entorno de juego es que este está diseñado pa
 
 Los niveles tendrán su espacio de juego transitable y por otra parte, zonas por las que el jugador no podrá transitar. Siendo acorde a la narrativa, los primeros niveles a los que se enfrentará el jugador, correspondiente a su primera fase evolutiva, son dentro de una cueva oscura y sombría, donde la zona transitable sólo será el agua y los lugares por donde no podrá pasar serán rocas. Poco a poco se irán introduciendo distintos elementos que dan a entender que Darwin está saliendo al exterior, que es la siguiente fase del videojuego.
 
-En la segunda fase se mezclarán elementos del exterior como plantas o troncos con rocas y zonas más oscuras, aunque como en la fase anterior, poco a poco se introducirán elementos que den pie a la siguiente fase. La zona transitable será ahora tanto el agua como algunas zonas de tierra o roca, por las que Darwin se podrá deslizar, pero no caminar y además tampoco podrá escalar superficies.
+En la segunda fase se mezclarán elementos del exterior como plantas o troncos con rocas y zonas más oscuras, aunque como en la fase anterior, poco a poco se introducirán elementos que den pie a la siguiente fase. La zona transitable será el agua y las corrientes de agua que se irá encontrando.
 
-En la última fase, Darwin ha salido al exterior y se encontrará con elementos tanto naturales como hechos por el hombre, como pueden ser botellas de plástico, neumáticos o barriles. La ambientación al ser en el exterior consta de colores más vibrantes y saturados.Las zonas transitables serán agua y tierra, sumandole la verticalidad ya que podrá escalar, pero Darin no podrá moverse por casillas que estén contaminadas o donde haya depredadores que le puedan comer.
+En la última fase, Darwin ha salido al exterior y se encontrará con elementos tanto naturales como hechos por el hombre, como pueden ser botellas de plástico, neumáticos o barriles. La ambientación al ser en el exterior consta de colores más vibrantes y saturados. Además podra transitar tambíen por los tréboles estancados en el agua.
 
 Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño será acorde al espacio de juego del nivel, es decir, se podrá encontrar con aves en la tercera fase, desarrollada en el exterior, pero no en la primera ya que está en la cueva. Además, la complejidad de los escenarios y de sus puzzles se irá complicando a lo largo de los niveles, haciendo así que el jugador se enfrente a nuevos retos.
 
@@ -140,7 +141,7 @@ Durante las diversas fases el jugador se irá encontrando con NPCs cuyo diseño 
 
 En cuanto a la relevancia artística de los entornos, el juego estará dividido en niveles individuales donde, a medida que Darwin avance por el riachuelo, la ambientación cambiará adecuándose a este progreso. Además, como se ha explicado anteriormente, la atmósfera de los escenarios irá cambiando con el objetivo de transmitir los sentimientos y el punto de vista de Darwin durante su proceso de crecimiento.
 
-## Arte conpetual
+## Arte conceptual
 
 **Diseño Darwin Renacuajo** 
 <br>
@@ -296,7 +297,7 @@ A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su r
 | Obstáculo              |         Categoría         | Observaciones                                                                                                                                                                                                                                                     |
 |:-----------------------|:-------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Roca/Rueda             | inamovible no atravesable | El aspecto de rueda se utilizará en los niveles de la fase 3                                                                                                                                                                                                      |
-| Banco de arena         |  inamovible atravesable   | No atravesable con Darwin renacuajo o renacuajo adulto                                                                                                                                                                                                            |
+| Arena/Tréboles         |  inamovible atravesable   | No atravesable con Darwin renacuajo o renacuajo adulto, los troncos pueden empujarse sobre ellos y hacia fuera, pero no se pueden volver a meter. Finalmente su aspecto es de tréboles con flores                                                                                                                                                                                                            |
 | Estalagmitas/Nenúfares |  inamovible atravesable   | El aspecto de nenúfar se utilizará en los niveles de la fase 2 y 3                                                                                                                                                                                                |
 | Rama/Tronco/Botella    |          movible          | El aspecto de botella se utilizará en los niveles de la fase 3                                                                                                                                                                                                    |
 | Corriente              |  inamovible atravesable   | Las corrientes son sólo en una dirección. Al posicionar un objeto o a Darwin en la corriente será impulsado hasta el final de esta. Si se intenta ir a contracorriente, o el final de esta está bloqueado el obstáculo se convertirá en inamovible no atravesable |
@@ -316,13 +317,13 @@ A continuación, se muestra una tabla con algunos ejemplos de obstáculos y su r
 
 El personaje contará con un sistema de progresión de mecánicas que irá relacionado con la etapa evolutiva en la que se encuentra el personaje, estas serán tres:
 
-- **Renacuajo**: en esta etapa Darwin solo podrá ir por el agua ya que sus patas son demasiado pequeñas como para poder salir del agua, la única mecánica que destaca es la del movimiento, que en este caso no tendrá verticalidad.
+- **Renacuajo**: en esta etapa Darwin solo podrá ir por el agua ya que sus patas son demasiado pequeñas como para abrirse paso por la vegetanción estancada, también podrá tirar y empujar de las ramitas que se encuentre como obstáculos.
 
-- **Renacuajo adulto**: durante esta etapa el personaje podrá nadar por el agua y además podrá salir a la tierra y deslizarse por ciertos bloques, pero no podrá caminar porque sus patas no son suficientemente fuertes. También podrá empujar cosas pequeñas por el agua, como palos, hojas etc…
+- **Renacuajo adulto**: durante esta etapa el personaje se encontrará con troncos que podrá mover y con corrientes que podra utilizar para desplazarse y mover objetos.
 
-- **Salamandra**: en esta etapa Darwin habrá alcanzado su estado de evolución completo por lo que podrá moverse por todos los terrenos y además podrá escalar por ciertas zonas. También podrá mover objetos tanto pequeños como grandes.
+- **Salamandra**: en esta etapa Darwin habrá alcanzado su estado de evolución completo por lo que podrá moverse y arrastrar objetos también por encima de los tréboles estancados en el agua, se enontrará con otros animales y utilizará remolinos para teletransportarse.
 
-En cuanto a los controles del juego, para ordenador, se podrá mover a Darwin con WASD y para interactuar con un objeto y arrastrarlo, habrá que pulsar y mantener el espacio. Para movil (pendiente consulta por dificultad de implementación)
+En cuanto a los controles del juego, para ordenador, se podrá mover a Darwin con WASD y para interactuar con un objeto y arrastrarlo, habrá que pulsar y mantener el espacio. Para móvil se implementarán cuatro botones para el movimiento y uno para la interacción con objetos.
 
 <br>
 
@@ -415,7 +416,7 @@ Una de las características primordiales del pensamiento computacional que Upstr
 
 La descomposición es otro pilar que se fortalece a medida que los jugadores abordan los puzles de Upstream. El juego plantea desafíos que con frecuencia requieren la descomposición de un problema en componentes más pequeños y manejables. Este enfoque en la resolución de problemas es una competencia fundamental en la informática y también en la vida en general, dado que permite enfrentar problemas complejos de manera sistemática y ordenada.  Por ejemplo, para poder pasar al final del nivel, el jugador necesitará ir quitando obstáculos y situandolos en otras zonas, siempre buscando no entorpecer el camino hasta otra zona donde puede haber elementos que resulten útiles al jugador posteriormente.
 
-La generalización constituye el tercer elemento central del pensamiento computacional que Upstream busca promover. A lo largo del juego, los jugadores se encuentran con diversos desafíos, cada uno con sus propias reglas y dinámicas. Con el avance en el juego, se espera que generalicen principios y estrategias previamente adquiridos para su aplicación efectiva en nuevos contextos. Esta capacidad de extrapolar conocimiento es de gran utilidad tanto en la programación como en la toma de decisiones cotidianas, donde se afrontan situaciones inesperadas. Aunque en Upstream existe una curva de dificultad progresiva, se ha buscado diseñar los niveles para que el usuario sea capaz de reconocer ciertas situaciones y que una vez que haya superado unos cuantos niveles, sepa reconocer peligros, ayudas y atajos para poder llegar a la casilla final, este sería el caso de corrientes, obstáculos, personajes peligrosos, paredes escalables o teletransportes.
+La generalización constituye el tercer elemento central del pensamiento computacional que Upstream busca promover. A lo largo del juego, los jugadores se encuentran con diversos desafíos, cada uno con sus propias reglas y dinámicas. Con el avance en el juego, se espera que generalicen principios y estrategias previamente adquiridos para su aplicación efectiva en nuevos contextos. Esta capacidad de extrapolar conocimiento es de gran utilidad tanto en la programación como en la toma de decisiones cotidianas, donde se afrontan situaciones inesperadas. Aunque en Upstream existe una curva de dificultad progresiva, se ha buscado diseñar los niveles para que el usuario sea capaz de reconocer ciertas situaciones y que una vez que haya superado unos cuantos niveles, sepa reconocer peligros, ayudas y atajos para poder llegar a la casilla final, este sería el caso de corrientes, obstáculos, personajes o teletransportes.
 
 En resumen, Upstream trasciende del entretenimiento y busca posicionarse como una herramienta educativa de vanguardia que promueve habilidades de pensamiento computacional. A través de la aplicación de conceptos como la abstracción, la descomposición y la generalización, el juego busca desafiar a los jugadores para que estos adquieran destrezas fundamentales para afrontar problemas de la era digital, y de la propia vida cotidiana.
 
