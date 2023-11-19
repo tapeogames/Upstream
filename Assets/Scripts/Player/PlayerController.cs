@@ -173,14 +173,14 @@ public class PlayerController : SceneObject
             NormalRotateTowardsDirection();
         }
 
-        if (grabbing && estado == true && Input.GetKeyDown(KeyCode.Space))
+        if (grabbing && estado)
         {
             normal.SetActive(false);
             retroalimentacion.SetActive(true);
             imagen.SetActive(true);
             estado = false;
         }
-        else if (!grabbing && estado == false && Input.GetKeyDown(KeyCode.Space))
+        else if (!grabbing && !estado)
         {
             normal.SetActive(true);
             retroalimentacion.SetActive(false);
