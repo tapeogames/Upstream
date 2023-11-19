@@ -78,12 +78,21 @@ public class PushableObjectController : SceneObject
     {
         if (isGrabbed)
         {
-
+            AproximateTile();
             isGrabbed = false;
 
             //resetea padre
             pushableObject.transform.parent = null;
         }
+    }
+
+    public void AproximateTile()
+    {
+        Debug.Log("APROXIMADO");
+        pushableObject.transform.position = new Vector3( 
+            currentTile.transform.position.x,
+            pushableObject.transform.position.y, 
+            currentTile.transform.position.z);
     }
 
 }

@@ -51,10 +51,10 @@ PrefabInstance:
     - target: {fileID: 6834907643880295357, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e3acc8d83ed1e7146b0a7228b0a5ed73, type: 2}
+      objectReference: {fileID: 2100000, guid: 221d62a191fbce4429459fde0fdb08d4, type: 2}
     - target: {fileID: 8148050186313030070, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
       propertyPath: m_Name
-      value: Remolino
+      value: Corriente
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4578622320741439102, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
@@ -63,14 +63,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6530039866512826648, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1047404101059935618}
+      addedObject: {fileID: 1990232730038344051}
   m_SourcePrefab: {fileID: 100100000, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
 --- !u!1 &2858888209638631765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6530039866512826648, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
   m_PrefabInstance: {fileID: 9021716127309547597}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1047404101059935618
+--- !u!114 &1990232730038344051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,14 +79,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2858888209638631765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a9e4933d9b39034bbdb1d4cd9227fee, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bd3d2e1bd9eed84da6da13329e7bc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activate: 1
   tileCenter: {fileID: 0}
-  isInside: 0
-  partnerPosition: {fileID: 0}
-  front: {fileID: 0}
-  back: {fileID: 0}
-  right: {fileID: 0}
-  left: {fileID: 0}
+  partnersPosition: []
+  index: 0
