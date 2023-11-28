@@ -38,7 +38,6 @@ public class PlayerController : SceneObject
     Quaternion rotationTarget;
 
     Vector2 _movement;
-    bool _grab;
 
     void Start()
     {
@@ -63,8 +62,8 @@ public class PlayerController : SceneObject
         {
             NormalRotateTowardsDirection();
         }
-
     }
+
 
     public void OnMove(InputValue input)
     {
@@ -104,11 +103,11 @@ public class PlayerController : SceneObject
     {
         Tile tile;
 
-        if (_movement.x < 0)
+        if (_movement.x > 0)
         {
             return tile = leftTile;
         }
-        else if (_movement.x > 0)
+        else if (_movement.x < 0)
         {
             return tile = rightTile;
         }
@@ -128,11 +127,11 @@ public class PlayerController : SceneObject
     {
         Tile tile;
 
-        if (_movement.x < 0)
+        if (_movement.x > 0)
         {
             return tile = obj.leftTile;
         }
-        else if (_movement.x > 0)
+        else if (_movement.x < 0)
         {
             return tile = obj.rightTile;
         }
@@ -160,17 +159,18 @@ public class PlayerController : SceneObject
         {
             MoveToPosition(tile.GetTilePosition());
         }
-        else if (grabbing && tile.activate && SelectTileHack(pushObject[indexObject]) != null)
+        else if (grabbing && tile.activate && SelectTileHack(pushObject[indexObject]) != null && SelectTileHack(pushObject[indexObject]).activate)
         {
-            //if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
-            //{
-                MoveToPosition(tile.GetTilePosition());
-            //}
+            MoveToPosition(tile.GetTilePosition());
         }
-        else if (tile == null || !tile.activate)
+        else if (!grabbing && !tile.activate)
         {
-            StartRotation(xNeg);
+            Debug.Log("entra");
+            Vector3 turn = new Vector3(-_movement.x, 0, -_movement.y);
+            Debug.Log(turn);
+            StartRotation(turn);
         }
+
     }
 
     void PerformMovement()

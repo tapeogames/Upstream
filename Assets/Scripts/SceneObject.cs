@@ -21,11 +21,11 @@ public class SceneObject : MonoBehaviour
         rightTile = tile;
     }
 
-    public void SetForwardTile(Tile tile)
+    public void SetDownTile(Tile tile)
     {
         downTile = tile;
     }
-    public void SetBackwardTile(Tile tile)
+    public void SetUpTile(Tile tile)
     {
         upTile = tile;
     }

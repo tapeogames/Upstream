@@ -47,13 +47,13 @@ public class TileDetectorObject : MonoBehaviour
                     case TileDetectorType.Forward:
                         if (tile is not Stalagmite && tile is not Sand || (tile is Sand && isInside))
                         {
-                            someObject.SetForwardTile(tile);
+                            someObject.SetDownTile(tile);
                         }
                         break;
                     case TileDetectorType.Backward:
                         if (tile is not Stalagmite && tile is not Sand || (tile is Sand && isInside))
                         {
-                            someObject.SetBackwardTile(tile);
+                            someObject.SetUpTile(tile);
                         }
                         break;
                     case TileDetectorType.Floor:
@@ -77,10 +77,10 @@ public class TileDetectorObject : MonoBehaviour
                     someObject.SetRightTile(null);
                     break;
                 case TileDetectorType.Forward:
-                    someObject.SetForwardTile(null);
+                    someObject.SetDownTile(null);
                     break;
                 case TileDetectorType.Backward:
-                    someObject.SetBackwardTile(null);
+                    someObject.SetUpTile(null);
                     break;
                 case TileDetectorType.Floor:
                     someObject.SetCurrentTile(null);
