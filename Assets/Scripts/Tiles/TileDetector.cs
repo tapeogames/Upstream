@@ -8,8 +8,8 @@ public class TileDetector : MonoBehaviour
     {
         Left,
         Right,
-        Forward,
-        Backward,
+        Down,
+        Up,
         Floor
     }
 
@@ -35,10 +35,10 @@ public class TileDetector : MonoBehaviour
                 case TileDetectorType.Right:                    
                     someObject.SetRightTile(tile);                    
                     break;
-                case TileDetectorType.Forward:                    
+                case TileDetectorType.Down:                    
                     someObject.SetDownTile(tile);                    
                     break;
-                case TileDetectorType.Backward:
+                case TileDetectorType.Up:
                    someObject.SetUpTile(tile);                    
                     break;
                 case TileDetectorType.Floor:
@@ -62,10 +62,10 @@ public class TileDetector : MonoBehaviour
                 case TileDetectorType.Right:
                     someObject.SetRightTile(null);
                     break;
-                case TileDetectorType.Forward:
+                case TileDetectorType.Down:
                     someObject.SetDownTile(null);
                     break;
-                case TileDetectorType.Backward:
+                case TileDetectorType.Up:
                     someObject.SetUpTile(null);
                     break;
                 case TileDetectorType.Floor:

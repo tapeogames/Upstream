@@ -4,17 +4,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
+using System;
 
 public class PlayerController : SceneObject
 {
     public GameObject playerAvatar;
     public GameObject detectors;
     public float distance;
-
-    private Vector3 zPos = new Vector3(0.00f, 0.00f, 1.00f);
-    private Vector3 zNeg = new Vector3(0.00f, 0.00f, -1.00f);
-    private Vector3 xPos = new Vector3(1.00f, 0.00f, 0.00f);
-    private Vector3 xNeg = new Vector3(-1.00f, 0.00f, 0.00f);
 
     //public PushableObjectController pushObjectx[indexObject];
     public PushableObjectController[] pushObject;
@@ -47,6 +43,7 @@ public class PlayerController : SceneObject
     // Update is called once per frame
     void Update()
     {
+
         if (grabbing) { grabbingBool = true; }
         else if (!grabbing) { grabbingBool = false; }
         Translate();
@@ -58,10 +55,11 @@ public class PlayerController : SceneObject
         {
             RotateTowardsDirection();
         }
-        if (!moving && !rotating && rotatingNormal)
+        if (!moving && !grabbing && !rotating && rotatingNormal)
         {
             NormalRotateTowardsDirection();
         }
+
     }
 
 
@@ -73,6 +71,7 @@ public class PlayerController : SceneObject
     public void OnGrab(InputValue input)
     {
         Grab();
+
     }
 
     void Grab()
@@ -82,9 +81,9 @@ public class PlayerController : SceneObject
             Debug.Log("index obj: " + indexObject);
             if (!pushObject[indexObject].isGrabbed)
             {
+                
                 playerLookAt = playerAvatar.transform.forward;
                 playerLookAt.Normalize();
-                Debug.Log(playerLookAt);
                 pushObject[indexObject].GrabObject();
                 grabbing = true;
                 pushObject[indexObject].currentTile.activate = true;
@@ -94,34 +93,69 @@ public class PlayerController : SceneObject
                 grabbing = false;
                 pushObject[indexObject].ReleaseObject();
                 pushObject[indexObject].currentTile.activate = false;
-
+                rotating = false;
             }
         }
     }
 
     Tile SelectTile()
     {
+
         Tile tile;
-
-        if (_movement.x > 0)
+        if (!grabbing)
         {
-            return tile = leftTile;
+            if (_movement.x > 0)
+            {
+                return tile = leftTile;
+            }
+            else if (_movement.x < 0)
+            {
+                return tile = rightTile;
+            }
+            else if (_movement.y > 0)
+            {
+                return tile = upTile;
+            }
+            else if (_movement.y < 0)
+            {
+                return tile = downTile;
+            }
+            
+            return null;
         }
-        else if (_movement.x < 0)
+        else
         {
-            return tile = rightTile;
+            Debug.Log("lookat: " + playerLookAt);
+            
+            if (Math.Abs(playerLookAt.x)>Math.Abs(playerLookAt.z))
+            {
+                Debug.Log("lookatX: " + playerLookAt);
+                if (_movement.x > 0)
+                {
+                    return tile = leftTile;
+                }
+                else if (_movement.x < 0)
+                {
+                    return tile = rightTile;
+                }
+            }
+            else 
+            {
+                Debug.Log("lookatZ: " + playerLookAt);
+                if (_movement.y > 0)
+                {
+                    return tile = upTile;
+                }
+                else if (_movement.y < 0)
+                {
+                    return tile = downTile;
+                }
+            }
+            return null;
         }
-        else if (_movement.y > 0)
-        {
-            return tile = upTile;
-        }
-        else if (_movement.y < 0)
-        {
-            return tile = downTile;
-        }
-
-        return null;
+        
     }
+
 
     Tile SelectTileHack(PushableObjectController obj)
     {
@@ -157,6 +191,7 @@ public class PlayerController : SceneObject
         Debug.Log(_movement);
         if (!grabbing && tile.activate)
         {
+            
             MoveToPosition(tile.GetTilePosition());
         }
         else if (grabbing && tile.activate && SelectTileHack(pushObject[indexObject]) != null && SelectTileHack(pushObject[indexObject]).activate)
@@ -198,6 +233,7 @@ public class PlayerController : SceneObject
         if (angleDifference < 0.1f)
         {
             rotating = false;
+            rotatingNormal = false;
         }
 
     }
@@ -205,6 +241,7 @@ public class PlayerController : SceneObject
 
     void StartRotation(Vector3 v)
     {
+        Debug.Log("se ejecuta v: " + v);
         Quaternion targetRotation = Quaternion.LookRotation(v);
         rotationTarget = targetRotation;
         rotatingNormal = true;
@@ -218,6 +255,7 @@ public class PlayerController : SceneObject
 
         if (angleDifference < 0.1f)
         {
+            rotating = false;
             rotatingNormal = false;
         }
     }
@@ -230,7 +268,6 @@ public class PlayerController : SceneObject
         movingDirection = movingDirection.normalized;
         rotating = true;
         moving = true;
-
     }
 
 
