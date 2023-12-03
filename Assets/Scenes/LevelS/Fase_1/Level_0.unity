@@ -1552,11 +1552,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeActivate1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4578622320741439102, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6530039866512826648, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 798198882}
   m_SourcePrefab: {fileID: 100100000, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
+--- !u!1 &798198881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6530039866512826648, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
+  m_PrefabInstance: {fileID: 798198880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &798198882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798198881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c119625b2167f246a5351daa1570df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activate: 1
+  tileCenter: {fileID: 0}
+  isInside: 0
 --- !u!1 &829715022
 GameObject:
   m_ObjectHideFlags: 0
