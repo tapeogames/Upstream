@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
+using System;
+using UnityEngine.InputSystem;
 
 public class PlayerController : SceneObject
 {
@@ -10,12 +12,6 @@ public class PlayerController : SceneObject
     public GameObject detectors;
     public float distance;
 
-    private Vector3 zPos = new Vector3(0.00f, 0.00f, 1.00f);
-    private Vector3 zNeg = new Vector3(0.00f, 0.00f, -1.00f);
-    private Vector3 xPos = new Vector3(1.00f, 0.00f, 0.00f);
-    private Vector3 xNeg = new Vector3(-1.00f, 0.00f, 0.00f);
-
-    //public PushableObjectController pushObjectx[indexObject];
     public PushableObjectController[] pushObject;
     private SphereCollider forward;
 
@@ -26,6 +22,7 @@ public class PlayerController : SceneObject
     public Vector3 playerLookAt;
     public float speed;
     public float rotationSpeed;
+    public bool grabbingBool;
     public bool moving;
     public bool rotating;
     public bool rotatingNormal;
@@ -38,14 +35,14 @@ public class PlayerController : SceneObject
     public bool estado = true;
 
     Quaternion rotationTarget;
-
+    Vector2 _movement;
 
     void Start()
     {
 
     }
 
-    public void OnClickD()
+    /*public void OnClickD()
     {
         Debug.Log("D");
         if (!grabbing && leftTile != null && leftTile.activate)
@@ -89,18 +86,18 @@ public class PlayerController : SceneObject
     public void OnClickS()
     {
         Debug.Log("S");
-        if (!grabbing && forwardTile != null && forwardTile.activate)
+        if (!grabbing && downTile != null && downTile.activate)
         {
-            MoveToPosition(forwardTile.GetTilePosition());
+            MoveToPosition(downTile.GetTilePosition());
         }
-        else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null && pushObject[indexObject].forwardTile.activate)
+        else if (grabbing && downTile.activate && pushObject[indexObject].downTile != null && pushObject[indexObject].downTile.activate)
         {
             if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
             {
-                MoveToPosition(forwardTile.GetTilePosition());
+                MoveToPosition(downTile.GetTilePosition());
             }
         }
-        else if (forwardTile == null || !forwardTile.activate)
+        else if (downTile == null || !downTile.activate)
         {
             //Debug.Log("ha entrado forward");
             StartRotation(zPos);
@@ -111,18 +108,18 @@ public class PlayerController : SceneObject
     public void OnClickW()
     {
         Debug.Log("W");
-        if (!grabbing && backwardTile != null && backwardTile.activate)
+        if (!grabbing && upTile != null && upTile.activate)
         {
-            MoveToPosition(backwardTile.GetTilePosition());
+            MoveToPosition(upTile.GetTilePosition());
         }
-        else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null && pushObject[indexObject].backwardTile.activate)
+        else if (grabbing && upTile.activate && pushObject[indexObject].upTile != null && pushObject[indexObject].upTile.activate)
         {
             if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
             {
-                MoveToPosition(backwardTile.GetTilePosition());
+                MoveToPosition(upTile.GetTilePosition());
             }
         }
-        else if (backwardTile == null || !backwardTile.activate)
+        else if (upTile == null || !upTile.activate)
         {
             //Debug.Log("ha entrado backward");
             StartRotation(zNeg);
@@ -154,7 +151,7 @@ public class PlayerController : SceneObject
             }
 
         }
-    }
+    }*/
 
     public void restartGame()
     {
@@ -167,7 +164,9 @@ public class PlayerController : SceneObject
 
     void Update()
     {
-        ReadInput();
+        if (grabbing) { grabbingBool = true; }
+        else if (!grabbing) { grabbingBool = false; }
+        Translate();
         if (moving)
         {
             PerformMovement();
@@ -176,7 +175,7 @@ public class PlayerController : SceneObject
         {
             RotateTowardsDirection();
         }
-        if (!moving && !rotating && rotatingNormal)
+        if (!moving && !grabbing && !rotating && rotatingNormal)
         {
             NormalRotateTowardsDirection();
         }
@@ -198,124 +197,148 @@ public class PlayerController : SceneObject
 
     }
 
+    public void OnMove(InputValue input)
+    {
+        _movement = input.Get<Vector2>();
+    }
 
-    void ReadInput()
+    public void OnGrab(InputValue input)
+    {
+        Grab();
+
+    }
+
+
+    void Grab()
+    {
+        if (canGrab)
+        {
+            Debug.Log("index obj: " + indexObject);
+            if (!pushObject[indexObject].isGrabbed)
+            {
+
+                playerLookAt = playerAvatar.transform.forward;
+                playerLookAt.Normalize();
+                pushObject[indexObject].GrabObject();
+                grabbing = true;
+                pushObject[indexObject].currentTile.activate = true;
+            }
+            else
+            {
+                grabbing = false;
+                pushObject[indexObject].ReleaseObject();
+                pushObject[indexObject].currentTile.activate = false;
+                rotating = false;
+            }
+        }
+    }
+
+    Tile SelectTile()
     {
 
-
-        if (Input.GetKeyDown(KeyCode.D))
+        Tile tile;
+        if (!grabbing)
         {
-            Debug.Log("D");
-            if (!grabbing && leftTile != null && leftTile.activate)
+            if (_movement.x > 0)
             {
-                MoveToPosition(leftTile.GetTilePosition());
+                return tile = leftTile;
             }
-            else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null && pushObject[indexObject].leftTile.activate)
+            else if (_movement.x < 0)
             {
-                if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
-                {
-                    MoveToPosition(leftTile.GetTilePosition());
-                }
+                return tile = rightTile;
             }
-            else if (leftTile == null || !leftTile.activate)
+            else if (_movement.y > 0)
             {
-                StartRotation(xNeg);
+                return tile = upTile;
             }
+            else if (_movement.y < 0)
+            {
+                return tile = downTile;
+            }
+
+            return null;
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else
         {
-            Debug.Log("A");
-            if (!grabbing && rightTile != null && rightTile.activate)
+            Debug.Log("lookat: " + playerLookAt);
+
+            if (Math.Abs(playerLookAt.x) > Math.Abs(playerLookAt.z))
             {
-                MoveToPosition(rightTile.GetTilePosition());
-            }
-            else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null && pushObject[indexObject].rightTile.activate)
-            {
-                if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
+                Debug.Log("lookatX: " + playerLookAt);
+                if (_movement.x > 0)
                 {
-                    MoveToPosition(rightTile.GetTilePosition());
+                    return tile = leftTile;
+                }
+                else if (_movement.x < 0)
+                {
+                    return tile = rightTile;
                 }
             }
-            else if (rightTile == null || !rightTile.activate)
+            else
             {
-                //Debug.Log("ha entrado rigth");
-                StartRotation(xPos);
-
-            }
-        }
-
-
-
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            Debug.Log("S");
-            if (!grabbing && forwardTile != null && forwardTile.activate)
-            {
-                MoveToPosition(forwardTile.GetTilePosition());
-            }
-            else if (grabbing && forwardTile.activate && pushObject[indexObject].forwardTile != null && pushObject[indexObject].forwardTile.activate)
-            {
-                if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
+                Debug.Log("lookatZ: " + playerLookAt);
+                if (_movement.y > 0)
                 {
-                    MoveToPosition(forwardTile.GetTilePosition());
+                    return tile = upTile;
+                }
+                else if (_movement.y < 0)
+                {
+                    return tile = downTile;
                 }
             }
-            else if (forwardTile == null || !forwardTile.activate)
-            {
-                //Debug.Log("ha entrado forward");
-                StartRotation(zPos);
-
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.W))
-        {
-            Debug.Log("W");
-            if (!grabbing && backwardTile != null && backwardTile.activate)
-            {
-                MoveToPosition(backwardTile.GetTilePosition());
-            }
-            else if (grabbing && backwardTile.activate && pushObject[indexObject].backwardTile != null && pushObject[indexObject].backwardTile.activate)
-            {
-                if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
-                {
-                    MoveToPosition(backwardTile.GetTilePosition());
-                }
-            }
-            else if (backwardTile == null || !backwardTile.activate)
-            {
-                //Debug.Log("ha entrado backward");
-                StartRotation(zNeg);
-
-            }
+            return null;
         }
 
+    }
 
+    Tile SelectTileHack(PushableObjectController obj)
+    {
+        Tile tile;
 
-        else if (Input.GetKeyDown(KeyCode.Space))
+        if (_movement.x > 0)
         {
-            Debug.Log("SPACE");
-            if (canGrab)
-            {
-                Debug.Log("index obj: " + indexObject);
-                if (!pushObject[indexObject].isGrabbed)
-                {
-                    playerLookAt = playerAvatar.transform.forward;
-                    playerLookAt.Normalize();
-                    //Debug.Log(playerLookAt);
-                    pushObject[indexObject].GrabObject();
-                    grabbing = true;
-                    pushObject[indexObject].currentTile.activate = true;
-                }
-                else
-                {
-                    grabbing = false;
-                    pushObject[indexObject].ReleaseObject();
-                    pushObject[indexObject].currentTile.activate = false;
+            return tile = obj.leftTile;
+        }
+        else if (_movement.x < 0)
+        {
+            return tile = obj.rightTile;
+        }
+        else if (_movement.y > 0)
+        {
+            return tile = obj.upTile;
+        }
+        else if (_movement.y < 0)
+        {
+            return tile = obj.downTile;
+        }
 
-                }
+        return null;
+    }
 
-            }
+    void Translate()
+    {
 
+        var tile = SelectTile();
+
+        if (tile == null)
+            return;
+
+        Debug.Log(_movement);
+        if (!grabbing && tile.activate)
+        {
+
+            MoveToPosition(tile.GetTilePosition());
+        }
+        else if (grabbing && tile.activate && SelectTileHack(pushObject[indexObject]) != null && SelectTileHack(pushObject[indexObject]).activate)
+        {
+            MoveToPosition(tile.GetTilePosition());
+        }
+        else if (!grabbing && !tile.activate)
+        {
+            Debug.Log("entra");
+            Vector3 turn = new Vector3(-_movement.x, 0, -_movement.y);
+            Debug.Log(turn);
+            StartRotation(turn);
         }
     }
 
@@ -339,19 +362,21 @@ public class PlayerController : SceneObject
 
     void RotateTowardsDirection()
     {
-        //movingDirection.Normalize();
+        movingDirection.Normalize();
         Quaternion targetRotation = Quaternion.LookRotation(movingDirection);
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, targetRotation);
         if (angleDifference < 0.1f)
         {
             rotating = false;
+            rotatingNormal = false;
         }
 
     }
 
     void StartRotation(Vector3 v)
     {
+        Debug.Log("se ejecuta v: " + v);
         Quaternion targetRotation = Quaternion.LookRotation(v);
         rotationTarget = targetRotation;
         rotatingNormal = true;
@@ -365,6 +390,7 @@ public class PlayerController : SceneObject
 
         if (angleDifference < 0.1f)
         {
+            rotating = false;
             rotatingNormal = false;
         }
     }
