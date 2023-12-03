@@ -165,8 +165,8 @@ public class PlayerController : SceneObject
 
     void Update()
     {
-        if (grabbing) { grabbingBool = true; }
-        else if (!grabbing) { grabbingBool = false; }
+        if (grabbing) { grabbingBool = true; canDrop = true; }
+        else if (!grabbing) { grabbingBool = false; canDrop = false; }
         Translate();
         if (moving)
         {
