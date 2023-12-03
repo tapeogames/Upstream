@@ -17,6 +17,7 @@ public class PlayerController : SceneObject
 
     public static bool grabbing;
     public static bool canGrab;
+    public bool canDrop = false;
     public static int indexObject;
 
     public Vector3 playerLookAt;
@@ -213,6 +214,7 @@ public class PlayerController : SceneObject
     {
         if (canGrab)
         {
+            Debug.Log("ha agarrado");                      
             Debug.Log("index obj: " + indexObject);
             if (!pushObject[indexObject].isGrabbed)
             {
@@ -223,12 +225,18 @@ public class PlayerController : SceneObject
                 grabbing = true;
                 pushObject[indexObject].currentTile.activate = true;
             }
-            else
+            
+        } 
+
+        if (canDrop)
+        {
+            if (pushObject[indexObject].isGrabbed)
             {
                 grabbing = false;
                 pushObject[indexObject].ReleaseObject();
                 pushObject[indexObject].currentTile.activate = false;
                 rotating = false;
+                canDrop= false;
             }
         }
     }
@@ -350,11 +358,20 @@ public class PlayerController : SceneObject
 
         if (distanceToTarget < currentDistance)
         {
+            if (grabbing)
+            {
+                Debug.Log("can drop");
+                canDrop = true;
+            }
             moving = false;
             transform.position = targetPosition;
         }
         else
         {
+            if (grabbing)
+            {
+                canDrop = false;
+            }
             distanceToTarget = currentDistance;
             transform.position += movingDirection * speed * Time.deltaTime;
         }
@@ -366,7 +383,8 @@ public class PlayerController : SceneObject
         Quaternion targetRotation = Quaternion.LookRotation(movingDirection);
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, targetRotation);
-        if (angleDifference < 0.1f)
+
+        if (angleDifference < 5f)
         {
             rotating = false;
             rotatingNormal = false;
@@ -388,7 +406,7 @@ public class PlayerController : SceneObject
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, rotationTarget, step);
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, rotationTarget);
 
-        if (angleDifference < 0.1f)
+        if (angleDifference < 5f)
         {
             rotating = false;
             rotatingNormal = false;
