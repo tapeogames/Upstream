@@ -80,8 +80,11 @@ public class Flow : Tile
             if (PlayerController.grabbing)
             {
                 PushableObjectController obj = (PushableObjectController) playerAux;
-                
+
+                if (obj.currentTile != null)
+                {
                     obj.currentTile.activate = false;
+                }
                 
                 obj.ReleaseObject();
                 PlayerController.grabbing = false;

@@ -136,7 +136,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5326586136355320980, guid: f729493643522da42b81cec5891f3a4c, type: 3}
       insertIndex: 0
       addedObject: {fileID: 8738102690065143515}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1775392561844335943, guid: f729493643522da42b81cec5891f3a4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6494415848836811109}
   m_SourcePrefab: {fileID: 100100000, guid: f729493643522da42b81cec5891f3a4c, type: 3}
 --- !u!4 &2162353316986151511 stripped
 Transform:
@@ -148,6 +151,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1775392561844335943, guid: f729493643522da42b81cec5891f3a4c, type: 3}
   m_PrefabInstance: {fileID: 6334855192879716035}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6494415848836811109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713549625772237700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 72416dc8fc06cca4da82dc457ebff9aa, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &7120031558846469150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3829893422466925277, guid: f729493643522da42b81cec5891f3a4c, type: 3}

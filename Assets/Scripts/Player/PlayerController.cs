@@ -384,7 +384,7 @@ public class PlayerController : SceneObject
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, targetRotation);
 
-        if (angleDifference < 5f)
+        if (angleDifference < 0.1f)
         {
             rotating = false;
             rotatingNormal = false;
@@ -406,7 +406,7 @@ public class PlayerController : SceneObject
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, rotationTarget, step);
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, rotationTarget);
 
-        if (angleDifference < 5f)
+        if (angleDifference < 0.1f)
         {
             rotating = false;
             rotatingNormal = false;

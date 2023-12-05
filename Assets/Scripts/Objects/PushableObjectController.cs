@@ -59,16 +59,20 @@ public class PushableObjectController : SceneObject
         
         if (other.CompareTag("ForwardPlayer"))
         {
-            Vector2 tPos = new Vector2(playerController.currentTile.GetTilePosition().x, playerController.currentTile.GetTilePosition().z);
-            Debug.Log("tPos: " + tPos);
-            Vector2 pPos = new Vector2(playerController.transform.position.x, playerController.transform.position.z);
-            Debug.Log("pPos: " + pPos);
-
-            if (tPos==pPos && !playerController.rotating && !playerController.rotatingNormal)
+            if(playerController.currentTile != null)
             {
-                Debug.Log("tPos=pPos");
-                PlayerController.canGrab = true;
+                Vector2 tPos = new Vector2(playerController.currentTile.GetTilePosition().x, playerController.currentTile.GetTilePosition().z);
+                Debug.Log("tPos: " + tPos);
+                Vector2 pPos = new Vector2(playerController.transform.position.x, playerController.transform.position.z);
+                Debug.Log("pPos: " + pPos);
+
+                if (tPos == pPos && !playerController.rotating && !playerController.rotatingNormal)
+                {
+                    Debug.Log("tPos=pPos");
+                    PlayerController.canGrab = true;
+                }
             }
+            
             
         }
         
@@ -111,10 +115,14 @@ public class PushableObjectController : SceneObject
     public void AproximateTile()
     {        
         Debug.Log("APROXIMADO");
-        pushableObject.transform.position = new Vector3(
+        if (currentTile != null)
+        {
+            pushableObject.transform.position = new Vector3(
         currentTile.transform.position.x,
         pushableObject.transform.position.y,
         currentTile.transform.position.z);
+        }
+        
 
         
     }
