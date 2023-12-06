@@ -1538,6 +1538,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1446011892}
     m_Modifications:
     - target: {fileID: 4044358772408557333, guid: f9e1b1698bc5bce488bb4249358a8364, type: 3}
+      propertyPath: current
+      value: 
+      objectReference: {fileID: 1495152958}
+    - target: {fileID: 4044358772408557333, guid: f9e1b1698bc5bce488bb4249358a8364, type: 3}
       propertyPath: duckling
       value: 
       objectReference: {fileID: 857512317}
@@ -7121,6 +7125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinCondition
       objectReference: {fileID: 0}
+    - target: {fileID: 4923708127925097797, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
+      propertyPath: m_TagString
+      value: Win
+      objectReference: {fileID: 0}
     - target: {fileID: 6112535496922055881, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.24
@@ -10546,6 +10554,17 @@ Transform:
   - {fileID: 738785225}
   m_Father: {fileID: 506013727}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1495152958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4578622320741439102, guid: 933267d8d92a44e469c51807149e1be4, type: 3}
+  m_PrefabInstance: {fileID: 152168784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29777a88b3fcd2c4f860e56015831dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1497192817
 GameObject:
   m_ObjectHideFlags: 0

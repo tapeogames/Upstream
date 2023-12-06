@@ -6,11 +6,17 @@ public class DuckController : MonoBehaviour
 {
     public GameObject duck;
     public PushableObjectController duckling;
+    public Tile current;
 
     Vector3 offset = new Vector3(0, -0.5f, 0);
     public float speed = 0.2f;
 
     public bool moving = false;
+
+    private void Start()
+    {
+        current.activate = false;
+    }
 
     private void Update()
     {
@@ -49,6 +55,7 @@ public class DuckController : MonoBehaviour
     public void LeaveScene()
     {
         moving = true;
+        current.activate = true;
     }
     void MoveTowardsWin()
     {

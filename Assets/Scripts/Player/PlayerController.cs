@@ -212,7 +212,7 @@ public class PlayerController : SceneObject
 
     void Grab()
     {
-        if (canGrab)
+        if (canGrab && !moving)
         {
             Debug.Log("ha agarrado");                      
             Debug.Log("index obj: " + indexObject);
@@ -228,7 +228,7 @@ public class PlayerController : SceneObject
             
         } 
 
-        if (canDrop)
+        if (canDrop && !moving)
         {
             if (pushObject[indexObject].isGrabbed)
             {
