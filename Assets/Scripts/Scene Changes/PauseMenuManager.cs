@@ -13,6 +13,13 @@ public class PauseMenuManager : MonoBehaviour
     }
     public void Exit()
     {
+        StartCoroutine(DelayedExit());
+    }
+
+    private IEnumerator DelayedExit()
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds((float)0.3);
         SceneManager.LoadScene(3);
     }
 
