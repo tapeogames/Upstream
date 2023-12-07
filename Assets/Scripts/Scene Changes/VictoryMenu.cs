@@ -8,10 +8,21 @@ public class VictoryMenu : MonoBehaviour
     public int numeroEscena;
     public void Exit()
     {
-        SceneManager.LoadScene(3);
+        StartCoroutine(DelayedExit());
     }
     public void SiguienteNivel(int numEscena)
     {
-        SceneManager.LoadScene(numEscena+1);
+        StartCoroutine(DelayedSiguienteNivel(numEscena));
+    }
+
+    private IEnumerator DelayedExit()
+    {
+        yield return new WaitForSeconds((float)0.3);
+        SceneManager.LoadScene(3);
+    }
+    private IEnumerator DelayedSiguienteNivel(int numEscena)
+    {
+        yield return new WaitForSeconds((float)0.3);
+        SceneManager.LoadScene(numEscena + 1);
     }
 }

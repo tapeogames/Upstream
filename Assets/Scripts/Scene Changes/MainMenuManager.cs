@@ -9,6 +9,12 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private AudioMixer audioMixer;
     public void Play()
     {
+        StartCoroutine(DelayedPlay());
+    }
+
+    private IEnumerator DelayedPlay()
+    {
+        yield return new WaitForSeconds((float)0.3);
         SceneManager.LoadScene(3);
     }
 
