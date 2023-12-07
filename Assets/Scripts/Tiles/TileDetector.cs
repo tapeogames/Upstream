@@ -16,10 +16,7 @@ public class TileDetector : MonoBehaviour
     public TileDetectorType detectorType;
     public SceneObject someObject;
 
-    void Start()
-    {
-        
-    }
+
 
 
     private void OnTriggerStay(Collider other)

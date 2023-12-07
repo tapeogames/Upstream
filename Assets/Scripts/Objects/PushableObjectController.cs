@@ -20,7 +20,7 @@ public class PushableObjectController : SceneObject
     public GameObject tutorial0;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         pushableObject = sceneObject;
     }

@@ -9,11 +9,13 @@ public class Tile : MonoBehaviour
     public BoxCollider tileCenter;
     public bool isInside = false;
 
+    //quitar restart
     public void restart()
     {
         activate = true;
     }
-    void Start()
+
+    void Awake()
     {
         tileCenter = GetComponent<BoxCollider>();
         tileCenter.name = "tileCenter";

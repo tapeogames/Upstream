@@ -19,10 +19,6 @@ public class TileDetectorObject : MonoBehaviour
 
     public static bool isInside = false;
 
-    void Start()
-    {
-        
-    }
 
     private void OnTriggerStay(Collider other)
     {

@@ -12,12 +12,8 @@ public class Flow : Tile
     public float moveSpeed;
     public SceneObject playerAux;
 
-    public void restart()
-    {
-        this.activate = true;
-    }
 
-    private void Start()
+    private void Awake()
     {
         moveSpeed = 4f;
         tileCenter = GetComponent<BoxCollider>();

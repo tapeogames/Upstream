@@ -13,7 +13,7 @@ public class DuckController : MonoBehaviour
 
     public bool moving = false;
 
-    private void Start()
+    private void Awake()
     {
         current.activate = false;
     }

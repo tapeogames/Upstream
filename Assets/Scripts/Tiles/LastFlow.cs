@@ -10,19 +10,17 @@ public class LastFlow : Flow
     public PushableTile[] pushPositions;
     public static PushableObjectController[] objectAux ;
     private bool[] occupied;
-    public static int occupiedNum = 0;
+    public int occupiedNumTiles; 
+    public static int occupiedNum;
     public static int maxOccupied;
     public bool push = false;
 
     //Vector3 auxPosY = new Vector3(0, 0.5f, 0);
 
-    public void restart()
-    {
-        this.activate = true;
-    }
 
-    void Start()
+    void Awake()
     {
+        occupiedNum = 0;
         moveSpeed = 4f;
         tileCenter = GetComponent<BoxCollider>();
         tileCenter.name = "tileCenter";
@@ -31,8 +29,10 @@ public class LastFlow : Flow
         objectAux = new PushableObjectController[pushPositions.Length];
         maxOccupied = pushPositions.Length;
     }
+
     private void Update()
     {
+        occupiedNumTiles = occupiedNum;
         if (isMoving)
         {
             MoveToNextPositionIsMoving(partnersPosition, playerAux);

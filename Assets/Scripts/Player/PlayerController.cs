@@ -38,121 +38,7 @@ public class PlayerController : SceneObject
     Quaternion rotationTarget;
     Vector2 _movement;
 
-    void Start()
-    {
 
-    }
-
-    /*public void OnClickD()
-    {
-        Debug.Log("D");
-        if (!grabbing && leftTile != null && leftTile.activate)
-        {
-            MoveToPosition(leftTile.GetTilePosition());
-        }
-        else if (grabbing && leftTile.activate && pushObject[indexObject].leftTile != null && pushObject[indexObject].leftTile.activate)
-        {
-            if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
-            {
-                MoveToPosition(leftTile.GetTilePosition());
-            }
-        }
-        else if (leftTile == null || !leftTile.activate)
-        {
-            StartRotation(xNeg);
-        }
-    }
-
-    public void OnClickA()
-    {
-        Debug.Log("A");
-        if (!grabbing && rightTile != null && rightTile.activate)
-        {
-            MoveToPosition(rightTile.GetTilePosition());
-        }
-        else if (grabbing && rightTile.activate && pushObject[indexObject].rightTile != null && pushObject[indexObject].rightTile.activate)
-        {
-            if (Vector3.Distance(playerLookAt, xNeg) < 0.05f || Vector3.Distance(playerLookAt, xPos) < 0.05f)
-            {
-                MoveToPosition(rightTile.GetTilePosition());
-            }
-        }
-        else if (rightTile == null || !rightTile.activate)
-        {
-            //Debug.Log("ha entrado rigth");
-            StartRotation(xPos);
-
-        }
-    }
-    public void OnClickS()
-    {
-        Debug.Log("S");
-        if (!grabbing && downTile != null && downTile.activate)
-        {
-            MoveToPosition(downTile.GetTilePosition());
-        }
-        else if (grabbing && downTile.activate && pushObject[indexObject].downTile != null && pushObject[indexObject].downTile.activate)
-        {
-            if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
-            {
-                MoveToPosition(downTile.GetTilePosition());
-            }
-        }
-        else if (downTile == null || !downTile.activate)
-        {
-            //Debug.Log("ha entrado forward");
-            StartRotation(zPos);
-
-        }
-    }
-
-    public void OnClickW()
-    {
-        Debug.Log("W");
-        if (!grabbing && upTile != null && upTile.activate)
-        {
-            MoveToPosition(upTile.GetTilePosition());
-        }
-        else if (grabbing && upTile.activate && pushObject[indexObject].upTile != null && pushObject[indexObject].upTile.activate)
-        {
-            if (Vector3.Distance(playerLookAt, zNeg) < 0.05f || Vector3.Distance(playerLookAt, zPos) < 0.05f)
-            {
-                MoveToPosition(upTile.GetTilePosition());
-            }
-        }
-        else if (upTile == null || !upTile.activate)
-        {
-            //Debug.Log("ha entrado backward");
-            StartRotation(zNeg);
-
-        }
-    }
-
-    public void OnClickSpace()
-    {
-        Debug.Log("SPACE");
-        if (canGrab)
-        {
-            Debug.Log("index obj: " + indexObject);
-            if (!pushObject[indexObject].isGrabbed)
-            {
-                playerLookAt = playerAvatar.transform.forward;
-                playerLookAt.Normalize();
-                //Debug.Log(playerLookAt);
-                pushObject[indexObject].GrabObject();
-                grabbing = true;
-                pushObject[indexObject].currentTile.activate = true;
-            }
-            else
-            {
-                grabbing = false;
-                pushObject[indexObject].ReleaseObject();
-                pushObject[indexObject].currentTile.activate = false;
-
-            }
-
-        }
-    }*/
 
     public void restartGame()
     {
@@ -379,15 +265,28 @@ public class PlayerController : SceneObject
 
     void RotateTowardsDirection()
     {
+        Debug.Log("moving direction: "+ movingDirection);
         movingDirection.Normalize();
         Quaternion targetRotation = Quaternion.LookRotation(movingDirection);
+        Debug.Log("target rotation "+ targetRotation);
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                
+
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, targetRotation);
+        Debug.Log("angulo: " + angleDifference);
+        
+        if (angleDifference < 30f)
+        {
+            //playerAvatar.transform.rotation = targetRotation;
+            rotationSpeed = 25;
+            
+        }
 
         if (angleDifference < 0.1f)
         {
             rotating = false;
             rotatingNormal = false;
+            rotationSpeed = 4;
         }
 
     }
@@ -406,10 +305,17 @@ public class PlayerController : SceneObject
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, rotationTarget, step);
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, rotationTarget);
 
+        if (angleDifference < 15f)
+        {
+            //playerAvatar.transform.rotation = targetRotation;
+            rotationSpeed = 25;
+
+        }
         if (angleDifference < 0.1f)
         {
             rotating = false;
             rotatingNormal = false;
+            rotationSpeed = 5;
         }
     }
 
