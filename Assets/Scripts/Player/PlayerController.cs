@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 public class PlayerController : SceneObject
 {
@@ -20,6 +21,7 @@ public class PlayerController : SceneObject
     public bool canDrop = false;
     public static int indexObject;
 
+    public bool canMove;
     public Vector3 playerLookAt;
     public float speed;
     public float rotationSpeed;
@@ -87,11 +89,15 @@ public class PlayerController : SceneObject
 
     public void OnMove(InputValue input)
     {
+
         _movement = input.Get<Vector2>();
+        //Translate();
+
     }
 
     public void OnGrab(InputValue input)
     {
+
         Grab();
 
     }
@@ -223,10 +229,12 @@ public class PlayerController : SceneObject
         {
 
             MoveToPosition(tile.GetTilePosition());
+            //canMove = false;
         }
         else if (grabbing && tile.activate && SelectTileHack(pushObject[indexObject]) != null && SelectTileHack(pushObject[indexObject]).activate)
         {
             MoveToPosition(tile.GetTilePosition());
+            //canMove = false;
         }
         else if (!grabbing && !tile.activate)
         {
@@ -252,6 +260,7 @@ public class PlayerController : SceneObject
             }
             moving = false;
             transform.position = targetPosition;
+            canMove = true;
         }
         else
         {
