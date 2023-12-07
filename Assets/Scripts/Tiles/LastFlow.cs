@@ -94,7 +94,10 @@ public class LastFlow : Flow
             if (PlayerController.grabbing)
             {
                 PushableObjectController obj = playerAux.GetComponentInChildren<PushableObjectController>();
-                obj.currentTile.activate = false;
+                if (obj.currentTile != null)
+                {
+                    obj.currentTile.activate = false;
+                }
                 obj.ReleaseObject();
                 PlayerController.grabbing = false;
             }

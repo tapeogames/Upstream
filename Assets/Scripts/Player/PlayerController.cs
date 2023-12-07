@@ -84,6 +84,7 @@ public class PlayerController : SceneObject
 
     }
 
+
     public void OnMove(InputValue input)
     {
         _movement = input.Get<Vector2>();
@@ -305,7 +306,7 @@ public class PlayerController : SceneObject
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, rotationTarget, step);
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, rotationTarget);
 
-        if (angleDifference < 15f)
+        if (angleDifference < 30f)
         {
             //playerAvatar.transform.rotation = targetRotation;
             rotationSpeed = 25;
