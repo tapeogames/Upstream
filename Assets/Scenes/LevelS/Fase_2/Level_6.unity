@@ -185,6 +185,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 83362440069948949, guid: 407228c586394a640a4449cd6039d7cb, type: 3}
   m_PrefabInstance: {fileID: 797139}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5121717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1399280946894476818, guid: 552739248bda49b41a6f47c8a5ee8ccb, type: 3}
+  m_PrefabInstance: {fileID: 1231639910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &39472653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -326,6 +331,10 @@ PrefabInstance:
     - target: {fileID: 9102289267843731241, guid: 8358abb5d7efb284ba4292a29b980089, type: 3}
       propertyPath: m_Name
       value: Tronco (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102289267843731241, guid: 8358abb5d7efb284ba4292a29b980089, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4219,6 +4228,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4079452910886718785, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4239020544395814602, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4359,6 +4372,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClickSpace
       objectReference: {fileID: 0}
+    - target: {fileID: 6933668844738019036, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_Name
+      value: Victoria2
+      objectReference: {fileID: 0}
     - target: {fileID: 7955356866962130940, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4372,7 +4389,9 @@ PrefabInstance:
       value: Layout Pausa
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1582407339781571, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+    - {fileID: 6933668844738019036, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
@@ -10275,7 +10294,7 @@ PrefabInstance:
     - target: {fileID: 1600066828014471739, guid: 257314917e7d8ce41a48be18795575fe, type: 3}
       propertyPath: imagen
       value: 
-      objectReference: {fileID: 839061774}
+      objectReference: {fileID: 5121717}
     - target: {fileID: 1600066828014471739, guid: 257314917e7d8ce41a48be18795575fe, type: 3}
       propertyPath: normal
       value: 
@@ -10315,6 +10334,10 @@ PrefabInstance:
     - target: {fileID: 4506912371042986992, guid: 257314917e7d8ce41a48be18795575fe, type: 3}
       propertyPath: m_Name
       value: Player Phase2 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064732725504638356, guid: 257314917e7d8ce41a48be18795575fe, type: 3}
+      propertyPath: m_Name
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8053393886996081187, guid: 257314917e7d8ce41a48be18795575fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10357,7 +10380,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6064732725504638356, guid: 257314917e7d8ce41a48be18795575fe, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5132922951360989185, guid: 257314917e7d8ce41a48be18795575fe, type: 3}
       insertIndex: 0
