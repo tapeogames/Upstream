@@ -21,6 +21,8 @@ public class PlayerController : SceneObject
     public bool canDrop = false;
     public static int indexObject;
 
+    public int movementCont = 0;
+    public int inputCont= 0;
     public bool canMove;
     public Vector3 playerLookAt;
     public float speed;
@@ -55,7 +57,7 @@ public class PlayerController : SceneObject
     {
         if (grabbing) { grabbingBool = true; canDrop = true; }
         else if (!grabbing) { grabbingBool = false; canDrop = false; }
-        Translate();
+        //Translate();
         if (moving)
         {
             PerformMovement();
@@ -83,16 +85,59 @@ public class PlayerController : SceneObject
             imagen.SetActive(false);
             estado = true;
         }
-
+        
+        //Comprobaciones de teclado
+        ReadInputDown();
+        ReadInputUp();
     }
 
+    public void ReadInputDown()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            inputCont++;
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            inputCont++;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            inputCont++;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            inputCont++;
+        }
+    }
+
+    public void ReadInputUp()
+    {
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            inputCont--;
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            inputCont--;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            inputCont--;
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            inputCont--;
+        }
+    }
 
     public void OnMove(InputValue input)
     {
-
-        _movement = input.Get<Vector2>();
-        //Translate();
-
+        if (inputCont == 0)
+        {
+            _movement = input.Get<Vector2>();
+            Translate();
+        }
     }
 
     public void OnGrab(InputValue input)
@@ -107,8 +152,8 @@ public class PlayerController : SceneObject
     {
         if (canGrab && !moving)
         {
-            Debug.Log("ha agarrado");                      
-            Debug.Log("index obj: " + indexObject);
+            //Debug.Log("ha agarrado");                      
+            //Debug.Log("index obj: " + indexObject);
             if (!pushObject[indexObject].isGrabbed)
             {
 
@@ -161,11 +206,11 @@ public class PlayerController : SceneObject
         }
         else
         {
-            Debug.Log("lookat: " + playerLookAt);
+            //Debug.Log("lookat: " + playerLookAt);
 
             if (Math.Abs(playerLookAt.x) > Math.Abs(playerLookAt.z))
             {
-                Debug.Log("lookatX: " + playerLookAt);
+                //Debug.Log("lookatX: " + playerLookAt);
                 if (_movement.x > 0)
                 {
                     return tile = leftTile;
@@ -177,7 +222,7 @@ public class PlayerController : SceneObject
             }
             else
             {
-                Debug.Log("lookatZ: " + playerLookAt);
+                //Debug.Log("lookatZ: " + playerLookAt);
                 if (_movement.y > 0)
                 {
                     return tile = upTile;
@@ -224,25 +269,28 @@ public class PlayerController : SceneObject
         if (tile == null)
             return;
 
-        Debug.Log(_movement);
+        //Debug.Log(_movement);
         if (!grabbing && tile.activate)
         {
-
             MoveToPosition(tile.GetTilePosition());
-            //canMove = false;
+            canMove = false;
+            movementCont++;
         }
         else if (grabbing && tile.activate && SelectTileHack(pushObject[indexObject]) != null && SelectTileHack(pushObject[indexObject]).activate)
         {
             MoveToPosition(tile.GetTilePosition());
-            //canMove = false;
+            canMove = false;
+            movementCont++;
         }
         else if (!grabbing && !tile.activate)
         {
-            Debug.Log("entra");
+            //Debug.Log("entra");
             Vector3 turn = new Vector3(-_movement.x, 0, -_movement.y);
             Debug.Log(turn);
             StartRotation(turn);
+            movementCont++;
         }
+        Debug.Log("cont: " + movementCont);
     }
 
 
@@ -255,7 +303,7 @@ public class PlayerController : SceneObject
         {
             if (grabbing)
             {
-                Debug.Log("can drop");
+                //Debug.Log("can drop");
                 canDrop = true;
             }
             moving = false;
@@ -275,15 +323,15 @@ public class PlayerController : SceneObject
 
     void RotateTowardsDirection()
     {
-        Debug.Log("moving direction: "+ movingDirection);
+        //Debug.Log("moving direction: "+ movingDirection);
         movingDirection.Normalize();
         Quaternion targetRotation = Quaternion.LookRotation(movingDirection);
-        Debug.Log("target rotation "+ targetRotation);
+        //Debug.Log("target rotation "+ targetRotation);
         playerAvatar.transform.rotation = Quaternion.Slerp(playerAvatar.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
                 
 
         float angleDifference = Quaternion.Angle(playerAvatar.transform.rotation, targetRotation);
-        Debug.Log("angulo: " + angleDifference);
+        //Debug.Log("angulo: " + angleDifference);
         
         if (angleDifference < 30f)
         {
@@ -303,7 +351,7 @@ public class PlayerController : SceneObject
 
     void StartRotation(Vector3 v)
     {
-        Debug.Log("se ejecuta v: " + v);
+        //Debug.Log("se ejecuta v: " + v);
         Quaternion targetRotation = Quaternion.LookRotation(v);
         rotationTarget = targetRotation;
         rotatingNormal = true;
@@ -337,7 +385,6 @@ public class PlayerController : SceneObject
         movingDirection = movingDirection.normalized;
         rotating = true;
         moving = true;
-
     }
 
 
