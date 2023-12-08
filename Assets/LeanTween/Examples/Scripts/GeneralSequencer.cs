@@ -40,7 +40,7 @@ public class GeneralSequencer : MonoBehaviour {
 
 				var range = new Vector3(cloud.transform.localPosition.x, Random.Range(2f,4f), Random.Range(-10f,10f));
 
-				// Tweens not in a sequence, because we want them all to animate at the same time
+				// Tweens not in a sequence, because we want them all to animate at the same timeElapsed
 				LeanTween.moveLocal(cloud, range, 3f*speedScale).setEaseOutCirc();
 				LeanTween.rotateAround(cloud, Vector3.forward, 360f*2, 3f*speedScale).setEaseOutCirc();
 				LeanTween.alpha(cloud, 0f, 3f*speedScale).setEaseOutCirc().setDestroyOnComplete(true);
@@ -52,7 +52,7 @@ public class GeneralSequencer : MonoBehaviour {
 
         // seq.reverse(); // not working yet
 
-        // Testing canceling sequence after a bit of time
+        // Testing canceling sequence after a bit of timeElapsed
         //LeanTween.delayedCall(3f, () =>
         //{
         //    LeanTween.cancel(seq.id);

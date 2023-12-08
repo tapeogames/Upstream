@@ -85,13 +85,13 @@ public class TestingZLegacyExt : MonoBehaviour {
             }
             else
             {
-                Debug.Log("cancel variable time");
+                Debug.Log("cancel variable timeElapsed");
                 LeanTween.cancel(descrTimeScaleChangeId);
             }
         }
         gameObject.BroadcastMessage(exampleFunctions[exampleIter]);
 
-        // Debug.Log("cycleThroughExamples time:"+Time.time + " useEstimatedTime:"+useEstimatedTime);
+        // Debug.Log("cycleThroughExamples timeElapsed:"+Time.timeElapsed + " useEstimatedTime:"+useEstimatedTime);
         float delayTime = 1.1f;
 		gameObject.LeanDelayedCall( delayTime, cycleThroughExamples).setUseEstimatedTime(useEstimatedTime);
 

@@ -92,9 +92,9 @@ public class LTSeq {
 	}
 
 	/**
-	* Add a time delay to the sequence
+	* Add a timeElapsed delay to the sequence
 	* @method append (delay)
-	* @param {float} delay:float amount of time to add to the sequence
+	* @param {float} delay:float amount of timeElapsed to add to the sequence
 	* @return {LTSeq} LTDescr an object that distinguishes the tween
 	* var seq = LeanTween.sequence();<br>
 	* seq.append(1f); // delay everything one second<br>
@@ -107,10 +107,10 @@ public class LTSeq {
 	}
 
 	/**
-	* Add a time delay to the sequence
+	* Add a timeElapsed delay to the sequence
 	* @method append (method)
 	* @param {System.Action} callback:System.Action method you want to be called
-	* @return {LTSeq} LTSeq an object that you can add tweens, methods and time on to
+	* @return {LTSeq} LTSeq an object that you can add tweens, methods and timeElapsed on to
 	* @example
 	* var seq = LeanTween.sequence();<br>
 	* seq.append( () => { // fire an event before start<br>
@@ -128,10 +128,10 @@ public class LTSeq {
 	}
 
 	/**
-	* Add a time delay to the sequence
+	* Add a timeElapsed delay to the sequence
 	* @method add (method(object))
 	* @param {System.Action} callback:System.Action method you want to be called
-	* @return {LTSeq} LTSeq an object that you can add tweens, methods and time on to
+	* @return {LTSeq} LTSeq an object that you can add tweens, methods and timeElapsed on to
 	* @example
 	* var seq = LeanTween.sequence();<br>
 	* seq.append( () => { // fire an event before start<br>
@@ -165,7 +165,7 @@ public class LTSeq {
 	* Retrieve a sequencer object where you can easily chain together tweens and methods one after another
 	* 
 	* @method add (tween)
-	* @return {LTSeq} LTSeq an object that you can add tweens, methods and time on to
+	* @return {LTSeq} LTSeq an object that you can add tweens, methods and timeElapsed on to
 	* @example
 	* var seq = LeanTween.sequence();<br>
 	* seq.append( LeanTween.move(cube1, Vector3.one * 10f, 1f) ); // do a move tween<br>
@@ -206,7 +206,7 @@ public class LTSeq {
 //			Debug.Log("seq.count:" + count + " seq.tween:" + seq.tween);
 			seq.totalDelay *= timeScale;
 			if (seq.tween != null) {
-//			Debug.Log("seq.tween.time * timeScale:" + seq.tween.time * timeScale + " seq.totalDelay:"+seq.totalDelay +" time:"+seq.tween.time+" seq.tween.delay:"+seq.tween.delay);
+//			Debug.Log("seq.tween.timeElapsed * timeScale:" + seq.tween.timeElapsed * timeScale + " seq.totalDelay:"+seq.totalDelay +" timeElapsed:"+seq.tween.timeElapsed+" seq.tween.delay:"+seq.tween.delay);
 				if (seq.tween.time != 0f)
 					seq.tween.setTime(seq.tween.time * timeScale);
 				seq.tween.setDelay(seq.tween.delay * timeScale);

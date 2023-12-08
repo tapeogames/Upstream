@@ -107,7 +107,7 @@ public class LeanAudio : object {
 			}
 
 			
-			// Debug.Log("i:"+i+" f:"+f+" passed:"+passed+" height:"+height+" time:"+time);
+			// Debug.Log("i:"+i+" f:"+f+" passed:"+passed+" height:"+height+" timeElapsed:"+timeElapsed);
 			if(passed + 0.5f*f>=time)
 				break;
 			if(listLength >= PROCESSING_ITERATIONS_MAX-1){

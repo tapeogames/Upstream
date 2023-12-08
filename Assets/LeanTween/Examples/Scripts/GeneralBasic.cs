@@ -28,7 +28,7 @@ public class GeneralBasic : MonoBehaviour {
 		// Chain properties (delay, easing with a set repeating of type ping pong)
 		LeanTween.scale( avatarScale, new Vector3(0.2f, 0.2f, 0.2f), 1f).setDelay(7f).setEase(LeanTweenType.easeInOutCirc).setLoopPingPong( 3 );
 	
-		// Call methods after a certain time period
+		// Call methods after a certain timeElapsed period
 		LeanTween.delayedCall(gameObject, 0.2f, advancedExamples);
 
 	}

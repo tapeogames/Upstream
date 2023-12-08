@@ -149,7 +149,7 @@ namespace DentedPixel.LTExamples
                 LeanTest.expect(Vector3.Distance(new Vector3(1f, 0f, 1f), cubeSpline.transform.position) < 0.01f, "SPLINE WITH TWO POINTS SUCCEEDS");
             });
 
-            // This test works when it is positioned last in the test queue (probably worth fixing when you have time)
+            // This test works when it is positioned last in the test queue (probably worth fixing when you have timeElapsed)
             GameObject jumpCube = cubeNamed("jumpTime");
             jumpCube.transform.position = new Vector3(100f, 0f, 0f);
             jumpCube.transform.localScale *= 100f;
@@ -166,7 +166,7 @@ namespace DentedPixel.LTExamples
                 });
             });
 
-            // Tween with time of zero is needs to be set to it's final value
+            // Tween with timeElapsed of zero is needs to be set to it's final value
             GameObject zeroCube = cubeNamed("zeroCube");
             LeanTween.moveX(zeroCube, 10f, 0f).setOnComplete(() => {
                 LeanTest.expect(zeroCube.transform.position.x == 10f, "ZERO TIME FINSHES CORRECTLY", "final x:" + zeroCube.transform.position.x);
@@ -210,7 +210,7 @@ namespace DentedPixel.LTExamples
             float onStartTime = -1f;
             LeanTween.color(cubeAlpha2, Color.cyan, 0.3f).setOnComplete(() => {
                 LeanTest.expect(cubeAlpha2.GetComponent<Renderer>().material.color == Color.cyan, "COLOR");
-                LeanTest.expect(onStartTime >= 0f && onStartTime < Time.time, "ON START", "onStartTime:" + onStartTime + " time:" + Time.time);
+                LeanTest.expect(onStartTime >= 0f && onStartTime < Time.time, "ON START", "onStartTime:" + onStartTime + " timeElapsed:" + Time.time);
             }).setOnStart(() => {
                 onStartTime = Time.time;
             });
@@ -296,7 +296,7 @@ namespace DentedPixel.LTExamples
             yield return new WaitForEndOfFrame();
 
             GameObject cubeNormal = cubeNamed("normalTimeScale");
-            // float timeElapsedNormal = Time.time;
+            // float timeElapsedNormal = Time.timeElapsed;
             LeanTween.moveX(cubeNormal, 12f, 1.5f).setIgnoreTimeScale(false).setOnComplete(() => {
                 timeElapsedNormalTimeScale = Time.time;
             });

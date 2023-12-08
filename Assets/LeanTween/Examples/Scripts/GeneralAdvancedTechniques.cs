@@ -48,7 +48,7 @@ public class GeneralAdvancedTechniques : MonoBehaviour {
 
 		// move objects at a constant speed
 		for(int i = 0; i < avatarSpeed.Length; i++)
-			LeanTween.moveLocalZ( avatarSpeed[i], (i+1)*5f, 1f).setSpeed(6f).setEase(LeanTweenType.easeInOutExpo).setLoopPingPong(); // any time you set the speed it overrides the time value
+			LeanTween.moveLocalZ( avatarSpeed[i], (i+1)*5f, 1f).setSpeed(6f).setEase(LeanTweenType.easeInOutExpo).setLoopPingPong(); // any timeElapsed you set the speed it overrides the timeElapsed value
 	
 		// move around a circle at a constant speed
 		for(int i = 0; i < avatarSpeed2.Length; i++){

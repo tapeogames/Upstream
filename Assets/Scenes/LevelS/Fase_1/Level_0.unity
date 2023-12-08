@@ -334,6 +334,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2447292846661484684, guid: 741581920ddf5504b9e3822f352e73bd, type: 3}
   m_PrefabInstance: {fileID: 1199798052}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &144205645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6116477010370761870, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+  m_PrefabInstance: {fileID: 183498819}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db61372030a9bfd4f88f62e107e90fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &183498819
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1854770441509093019, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_Name
+      value: Time
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.13087535
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.13456464
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.4623284
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795954530644028977, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bde83aaca72562f43a66ab4a55b6056f, type: 3}
 --- !u!1 &194842047
 GameObject:
   m_ObjectHideFlags: 0
@@ -4290,6 +4358,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 407228c586394a640a4449cd6039d7cb, type: 3}
+--- !u!114 &1857186204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3191197228354988711, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
+  m_PrefabInstance: {fileID: 3866953264616121783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376280ab0d9c6a14cae071df6429d288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1860346244
 GameObject:
   m_ObjectHideFlags: 0
@@ -5483,6 +5562,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 920774373}
     - target: {fileID: 3191197228354988711, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 144205645}
+    - target: {fileID: 3191197228354988711, guid: 5edb16d2fdcd9a84d890239464c80f25, type: 3}
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 4271452607154632839}
@@ -5755,6 +5838,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3723520913973421764, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: actionButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723520913973421764, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: movementButtons
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4077823974901101698, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5907,6 +5998,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5369963382675179569, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369963382675179569, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6218213794733479551, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5927,6 +6026,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6707973435510440870, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
+      propertyPath: winCondition
+      value: 
+      objectReference: {fileID: 1857186204}
     - target: {fileID: 6933668844738019036, guid: b420a11d6dc9bec4dbe7dbad360a8582, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -6716,3 +6819,4 @@ SceneRoots:
   - {fileID: 1656689501}
   - {fileID: 1347791235}
   - {fileID: 1232300464}
+  - {fileID: 183498819}

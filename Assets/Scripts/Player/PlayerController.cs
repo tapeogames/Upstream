@@ -18,11 +18,11 @@ public class PlayerController : SceneObject
 
     public static bool grabbing;
     public static bool canGrab;
-    public bool canDrop = false;
     public static int indexObject;
 
-    public int movementCont = 0;
-    public int inputCont= 0;
+    public int movementCont;
+    public int inputCont;
+    public bool canDrop = false;
     public bool canMove;
     public Vector3 playerLookAt;
     public float speed;
@@ -43,7 +43,11 @@ public class PlayerController : SceneObject
     Vector2 _movement;
 
 
-
+    public void Awake()
+    {
+        movementCont = 0;
+        inputCont = 0;
+    }
     public void restartGame()
     {
         moving = false;
@@ -95,18 +99,23 @@ public class PlayerController : SceneObject
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
+
             inputCont++;
+            
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            inputCont++;
+
+            inputCont++;   
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
+
             inputCont++;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
+
             inputCont++;
         }
     }
@@ -115,18 +124,22 @@ public class PlayerController : SceneObject
     {
         if (Input.GetKeyUp(KeyCode.A))
         {
+
             inputCont--;
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
+
             inputCont--;
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
+
             inputCont--;
         }
         if (Input.GetKeyUp(KeyCode.D))
         {
+
             inputCont--;
         }
     }
@@ -138,6 +151,7 @@ public class PlayerController : SceneObject
             _movement = input.Get<Vector2>();
             Translate();
         }
+
     }
 
     public void OnGrab(InputValue input)
@@ -274,13 +288,13 @@ public class PlayerController : SceneObject
         {
             MoveToPosition(tile.GetTilePosition());
             canMove = false;
-            movementCont++;
+
         }
         else if (grabbing && tile.activate && SelectTileHack(pushObject[indexObject]) != null && SelectTileHack(pushObject[indexObject]).activate)
         {
             MoveToPosition(tile.GetTilePosition());
             canMove = false;
-            movementCont++;
+
         }
         else if (!grabbing && !tile.activate)
         {
@@ -288,9 +302,9 @@ public class PlayerController : SceneObject
             Vector3 turn = new Vector3(-_movement.x, 0, -_movement.y);
             Debug.Log(turn);
             StartRotation(turn);
-            movementCont++;
         }
-        Debug.Log("cont: " + movementCont);
+
+
     }
 
 
@@ -309,6 +323,7 @@ public class PlayerController : SceneObject
             moving = false;
             transform.position = targetPosition;
             canMove = true;
+            movementCont++;
         }
         else
         {

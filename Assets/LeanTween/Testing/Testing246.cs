@@ -15,9 +15,9 @@ public class Testing246 : MonoBehaviour {
  //   }
     
 	//void Update () {
- //       if (Time.time >= nextElapsed)
+ //       if (Time.timeElapsed >= nextElapsed)
  //       {
- //           nextElapsed = Time.time + 0.1f;
+ //           nextElapsed = Time.timeElapsed + 0.1f;
  //           GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
  //           float randRad = Random.Range(0f, 2f * Mathf.PI);

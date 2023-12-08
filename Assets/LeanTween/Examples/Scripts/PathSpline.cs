@@ -24,7 +24,7 @@ public class ExampleSpline : MonoBehaviour {
 	private float iter;
 	void Update () {
 		// Iterating over path
-		ltLogo.transform.position = spline.point( iter /*(Time.time*1000)%1000 * 1.0 / 1000.0 */);
+		ltLogo.transform.position = spline.point( iter /*(Time.timeElapsed*1000)%1000 * 1.0 / 1000.0 */);
 
 		iter += Time.deltaTime*0.1f;
 		if(iter>1.0f)

@@ -12,7 +12,7 @@ using UnityEngine;
 * &nbsp;&nbsp;LeanTween.moveX( gameObject, 1f, 1f).setEase( <a href="LeanTweenType.html">LeanTweenType</a>.easeInQuad ).setDelay(1f);<br>
 * <br>
 * You can pass the optional parameters in any order, and chain on as many as you wish.<br>
-* You can also <strong>pass parameters at a later time</strong> by saving a reference to what is returned.<br>
+* You can also <strong>pass parameters at a later timeElapsed</strong> by saving a reference to what is returned.<br>
 * <br>
 * Retrieve a <strong>unique id</strong> for the tween by using the "id" property. You can pass this to LeanTween.pause, LeanTween.resume, LeanTween.cancel, LeanTween.isTweening methods<br>
 * <br>
@@ -98,7 +98,7 @@ public class LTDescr
 	public LTDescrOptional _optional = new LTDescrOptional();
 
 	public override string ToString(){
-		return (trans!=null ? "name:"+trans.gameObject.name : "gameObject:null")+" toggle:"+toggle+" passed:"+passed+" time:"+time+" delay:"+delay+" direction:"+direction+" from:"+from+" to:"+to+" diff:"+diff+" type:"+type+" ease:"+easeType+" useEstimatedTime:"+useEstimatedTime+" id:"+id+" hasInitiliazed:"+hasInitiliazed;
+		return (trans!=null ? "name:"+trans.gameObject.name : "gameObject:null")+" toggle:"+toggle+" passed:"+passed+" timeElapsed:"+time+" delay:"+delay+" direction:"+direction+" from:"+from+" to:"+to+" diff:"+diff+" type:"+type+" ease:"+easeType+" useEstimatedTime:"+useEstimatedTime+" id:"+id+" hasInitiliazed:"+hasInitiliazed;
 	}
 
 	public LTDescr(){
@@ -1225,7 +1225,7 @@ public class LTDescr
 	* Delay the start of a tween
 	* 
 	* @method setDelay
-	* @param {float} float time The time to complete the tween in
+	* @param {float} float timeElapsed The timeElapsed to complete the tween in
 	* @return {LTDescr} LTDescr an object that distinguishes the tween
 	* @example
 	* LeanTween.moveX(gameObject, 5f, 2.0f ).setDelay( 1.5f );
@@ -1768,9 +1768,9 @@ public class LTDescr
 	}
 
 	/**
-	* Set the point of time the tween will start in
+	* Set the point of timeElapsed the tween will start in
 	* @method setPassed
-	* @param {float} passedTime:float the length of time in seconds the tween will start in
+	* @param {float} passedTime:float the length of timeElapsed in seconds the tween will start in
 	* @return {LTDescr} LTDescr an object that distinguishes the tween
 	* @example
 	* int tweenId = LeanTween.moveX(gameObject, 5f, 2.0f ).id;<br>
@@ -1784,9 +1784,9 @@ public class LTDescr
 	}
 
 	/**
-	* Set the finish time of the tween
+	* Set the finish timeElapsed of the tween
 	* @method setTime
-	* @param {float} finishTime:float the length of time in seconds you wish the tween to complete in
+	* @param {float} finishTime:float the length of timeElapsed in seconds you wish the tween to complete in
 	* @return {LTDescr} LTDescr an object that distinguishes the tween
 	* @example
 	* int tweenId = LeanTween.moveX(gameObject, 5f, 2.0f ).id;<br>
@@ -1802,12 +1802,12 @@ public class LTDescr
 	}
 
 	/**
-	* Set the finish time of the tween
+	* Set the finish timeElapsed of the tween
 	* @method setSpeed
-	* @param {float} speed:float the speed in unity units per second you wish the object to travel (overrides the given time)
+	* @param {float} speed:float the speed in unity units per second you wish the object to travel (overrides the given timeElapsed)
 	* @return {LTDescr} LTDescr an object that distinguishes the tween
 	* @example
-	* LeanTween.moveLocalZ( gameObject, 10f, 1f).setSpeed(0.2f) // the given time is ignored when speed is set<br>
+	* LeanTween.moveLocalZ( gameObject, 10f, 1f).setSpeed(0.2f) // the given timeElapsed is ignored when speed is set<br>
 	*/
 	public LTDescr setSpeed( float speed ){
 		this.speed = speed;
@@ -1847,9 +1847,9 @@ public class LTDescr
 	}
 
 	/**
-	* Set ignore time scale when tweening an object when you want the animation to be time-scale independent (ignores the Time.timeScale value). Great for pause screens, when you want all other action to be stopped (or slowed down)
+	* Set ignore timeElapsed scale when tweening an object when you want the animation to be timeElapsed-scale independent (ignores the Time.timeScale value). Great for pause screens, when you want all other action to be stopped (or slowed down)
 	* @method setIgnoreTimeScale
-	* @param {bool} useUnScaledTime:bool whether to use the unscaled time or not
+	* @param {bool} useUnScaledTime:bool whether to use the unscaled timeElapsed or not
 	* @return {LTDescr} LTDescr an object that distinguishes the tween
 	* @example
 	* LeanTween.moveX(gameObject, 5f, 2.0f ).setRepeat( 2 ).setIgnoreTimeScale( true );
@@ -1861,9 +1861,9 @@ public class LTDescr
 	}
 
 	/**
-	* Use frames when tweening an object, when you don't want the animation to be time-frame independent...
+	* Use frames when tweening an object, when you don't want the animation to be timeElapsed-frame independent...
 	* @method setUseFrames
-	* @param {bool} useFrames:bool whether to use estimated time or not
+	* @param {bool} useFrames:bool whether to use estimated timeElapsed or not
 	* @return {LTDescr} LTDescr an object that distinguishes the tween
 	* @example
 	* LeanTween.moveX(gameObject, 5f, 2.0f ).setRepeat( 2 ).setUseFrames( true );
@@ -2282,7 +2282,7 @@ public class LTDescr
 				}else if(this._optional.spline!=null){
 					this._optional.spline = new LTSpline( LTUtility.reverse( this._optional.spline.pts ) );
 				}
-				// this.passed = this.time - this.passed;
+				// this.passed = this.timeElapsed - this.passed;
 			}
 		}
 
