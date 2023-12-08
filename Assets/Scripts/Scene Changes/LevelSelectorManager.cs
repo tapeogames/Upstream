@@ -2,9 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelSelectorManager : MonoBehaviour
 {
+
+    public Button[] levelButtons;
+
+    private void Start()
+    {
+        int levelReached = PlayerPrefs.GetInt("levelReached",0);
+        for (int i = 0; i < levelButtons.Length; i++) //desactiver los niveles para activarlos a medida que se completan
+        {
+            if (i > levelReached)
+            {
+                levelButtons[i].interactable = false;
+            }
+            
+        }
+    }
     //inician las corutinas para dar tiempo al sonido del boton antes de cambiar de escena
     public void Return()
     {

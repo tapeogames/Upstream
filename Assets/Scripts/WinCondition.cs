@@ -6,6 +6,7 @@ public class WinCondition : MonoBehaviour
 {
     public GameObject win;
     public GameObject pauseButton;
+    public int levelToUnlock;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class WinCondition : MonoBehaviour
         {
             win.SetActive(true);
             pauseButton.SetActive(false);
+            PlayerPrefs.SetInt("levelReached",levelToUnlock);
         }
     }
 
