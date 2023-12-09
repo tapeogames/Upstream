@@ -62,13 +62,13 @@ public class PushableObjectController : SceneObject
             if(playerController.currentTile != null)
             {
                 Vector2 tPos = new Vector2(playerController.currentTile.GetTilePosition().x, playerController.currentTile.GetTilePosition().z);
-                Debug.Log("tPos: " + tPos);
+                //Debug.Log("tPos: " + tPos);
                 Vector2 pPos = new Vector2(playerController.transform.position.x, playerController.transform.position.z);
-                Debug.Log("pPos: " + pPos);
+                //Debug.Log("pPos: " + pPos);
 
                 if (tPos == pPos && !playerController.rotating && !playerController.rotatingNormal)
                 {
-                    Debug.Log("tPos=pPos");
+                    //Debug.Log("tPos=pPos");
                     PlayerController.canGrab = true;
                 }
             }
