@@ -7,6 +7,6 @@ public class QuestionsSceneActivator : MonoBehaviour
 {
     void OnEnable()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }
