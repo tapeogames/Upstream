@@ -146,7 +146,7 @@ public class LastFlow : Flow
         float distance = Vector3.Distance(currentPosition, targetPosition);
 
         //aux.transform.position = targetPosition;
-        if (distance > 0.2f)
+        if (distance > 0.4f)//ese float es una distancia que lo que hace es aproximar el objeto dentro del tile
         {
             Vector3 newPosition = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
             aux.transform.position = newPosition;

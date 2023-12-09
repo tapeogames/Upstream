@@ -101,7 +101,7 @@ public class PushableObjectController : SceneObject
     {
         if (isGrabbed)
         {
-            if(pushableObject.tag != ("DucklingDetector"))
+            if(pushableObject.tag != "DucklingDetector")
             {
                 AproximateTile();
             }

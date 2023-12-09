@@ -64,7 +64,12 @@ public class Flow : Tile
                 {
                     obj.currentTile.activate = false;
                 }
-                obj.ReleaseObject();
+                if (playerAux.currentTile.transform.position == tileCenter.transform.position)
+                {
+                    Debug.Log("centro del tile");
+                    obj.ReleaseObject();
+                }
+                
                 PlayerController.grabbing = false;
 
             }
@@ -84,7 +89,7 @@ public class Flow : Tile
                 {
                     obj.currentTile.activate = false;
                 }
-                
+
                 obj.ReleaseObject();
                 PlayerController.grabbing = false;
             }
