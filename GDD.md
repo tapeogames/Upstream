@@ -359,8 +359,16 @@ En este nivel se enseña al jugador por primera vez la mecánica de la corriente
 **Diseño de nivel 5**
 ![nivel5](https://github.com/tapeogames/Upstream/assets/82976203/4c0f10ca-fac0-441b-be1f-54cb18986ecd)
 
+A causa de que el jugador podría llegar a quedarse atascado en el nivel sin poder llegar a la solución, este tuvo que rediseñarse.
+
+![nivel5Rediseño](https://github.com/tapeogames/Upstream/assets/82976203/e666095b-9fa9-48a5-89e8-417a493fc67d)
+
 **Diseño de nivel 6**
 ![nivel6](https://github.com/tapeogames/Upstream/assets/82976203/4f7fd3d3-0978-45eb-bfb1-9af3bdb9cf24)
+
+A causa de que el jugador podría llegar a quedarse atascado en el nivel sin poder llegar a la solución, este tuvo que rediseñarse.
+
+![nivel6Rediseño](https://github.com/tapeogames/Upstream/assets/82976203/8dbef63c-58bb-424b-9d2f-14da2049f994)
 
 **Diseño de nivel 7**
 ![nivel7](https://github.com/tapeogames/Upstream/assets/82976203/8488f407-d7d9-48dc-92a0-506f4e8d862b)
@@ -371,6 +379,9 @@ Este nivel se utiliza para mostrar al jugador como funciona la Mamá Pato y Pati
 ![nivel8](https://github.com/tapeogames/Upstream/assets/82976203/5490ed4c-3be2-4e19-a4f4-2fce7a74b51d)
 
 Se mezclan las mecánicas de la corriente y los patos.
+A causa de que el jugador podría llegar a quedarse atascado en el nivel sin poder llegar a la solución, este tuvo que rediseñarse.
+
+![Nivel8Rediseño](https://github.com/tapeogames/Upstream/assets/82976203/cdf1e393-b42d-48b1-a743-caa23a63398d)
 
 ### Fase 3
 
@@ -388,6 +399,9 @@ Introducción de la función de los remolinos.
 ![nivel11](https://github.com/tapeogames/Upstream/assets/82976203/00e16bdc-a588-4638-b507-49b532455993)
 
 Se mezclan el uso de los remolinos, la corriente y la arena.
+A causa de que el jugador podría llegar a quedarse atascado en el nivel sin poder llegar a la solución, este tuvo que rediseñarse.
+
+![nivel11Rediseño](https://github.com/tapeogames/Upstream/assets/82976203/87982dfb-a762-4c5b-9eec-d173943b0d53)
 
 **Diseño de nivel 12**
 ![nivel12](https://github.com/tapeogames/Upstream/assets/82976203/2a64ed2f-9d05-4ae9-8852-249f344e9027)
