@@ -38,11 +38,11 @@ public class WinCondition : MonoBehaviour
         if (other.CompareTag("ForwardPlayer"))
         {
             //tiempo final del nivel
-            
+
             time.stop = false;
             minutes = (int)(time.timeElapsed / 60f);
             seconds = (int)(time.timeElapsed - minutes * 60f);
-            cents = (int)((time.timeElapsed - (int) time.timeElapsed) * 100f);
+            cents = (int)((time.timeElapsed - (int)time.timeElapsed) * 100f);
             timeString = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, cents);
 
             //movimientos finales del nivel
@@ -54,7 +54,11 @@ public class WinCondition : MonoBehaviour
 
             win.SetActive(true);
             pauseButton.SetActive(false);
-            PlayerPrefs.SetInt("levelReached",levelToUnlock);
+           int lastLevel = PlayerPrefs.GetInt("levelReached");
+            if (levelToUnlock > lastLevel) { 
+            PlayerPrefs.SetInt("levelReached", levelToUnlock);
+            }
+           
         }
     }
 
