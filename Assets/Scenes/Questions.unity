@@ -508,7 +508,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -654,7 +654,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: 1f3509467f3bf9b459bb7ad270f2e37b, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 3516967a3d645364a883752095e7a2ec, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 3516967a3d645364a883752095e7a2ec, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 65d8a6eafdb98f74c80a51916b02645a, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -948,6 +948,18 @@ MonoBehaviour:
       - m_Target: {fileID: 66295543}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1217288108}
+        m_TargetAssemblyTypeName: QuestionsMenuManager, Assembly-CSharp
+        m_MethodName: Female
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1453,6 +1465,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1217288108}
+        m_TargetAssemblyTypeName: QuestionsMenuManager, Assembly-CSharp
+        m_MethodName: Male
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &407143026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1683,7 +1707,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2527,6 +2551,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   age: {fileID: 1161357349}
+  continueButton: {fileID: 185302337}
+  chico: {fileID: 407143025}
+  chica: {fileID: 228571188}
+  otro: {fileID: 1756750871}
+  pressed: {fileID: 21300000, guid: 6e5804008e488d94f9dc62d0576cac4b, type: 3}
+  normal: {fileID: 21300000, guid: a2496fafc397b8b4db8566d76619ff7f, type: 3}
 --- !u!4 &1217288109
 Transform:
   m_ObjectHideFlags: 0
@@ -3327,6 +3357,18 @@ MonoBehaviour:
       - m_Target: {fileID: 66295543}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1217288108}
+        m_TargetAssemblyTypeName: QuestionsMenuManager, Assembly-CSharp
+        m_MethodName: Other
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
