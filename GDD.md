@@ -169,9 +169,21 @@ Darwin presenta un diseño basado en formas redondeadas, tanto circulares como t
 
 Como se ha mencionado antes, los niveles de la primera fase se sitúan en una cueva, teniendo la apariencia de un entorno un tanto hostil. Para ello se utiliza una tenue iluminación para una ambientación más lúgubre acorde con la ubicación, y se hace uso de los contrastes tanto de forma, como de color y tamaño. De esta forma el escenario está compuesto de formas triangulares llenas de ángulos y una paleta monocromática fría, donde Darwin destaca por su forma redonda y color cálido, generando un ambiente más agresivo y oscuro, en el que encontramos a un Darwin solo e indefenso.
 
+**Diseño escenarios fase 2** 
+
+![EnvironmentSheetFase2](https://github.com/tapeogames/Upstream/assets/82976203/770b82f7-e674-4a99-96c1-9ed9dfc1b01b)
+![ThumbnailsYValues](https://github.com/tapeogames/Upstream/assets/82976203/5400f654-0b20-4a6c-8b4a-b6b3b25c5584)
+
+Los niveles de la fase 2 y 3 se ubican en el exterior del río, rodeado por la naturaleza. En la fase dos se busca un tono sentimental, nostálgico y de esperanza por la vuelta a casa, por lo que se hace uso de una iluminación de amanecer la cual da una paleta de cálidos en contraste con las sombras que genera. Además el entorno se vuelve menos hostil por lo que las formas angulosas desaparecen en su mayoría.
+Por último, en la fase tres la iluminación se vuelve diurna dando más sensación de bienestar al entorno, Darwin ya es adulto, es más consciente de sus capacidades y cada vez está mas cerca de casa. También se incorporan algunos elementos humanos para dar sensación de próximidad a alguna zona poblada y de un mayor avance por el río. 
+
 **Diseño Props**
 ![Peperomia](https://github.com/tapeogames/Upstream/assets/82976203/63b33f98-bbbc-4221-bf53-b02cf6e2af1f)
 ![Rocas](https://github.com/tapeogames/Upstream/assets/82976203/c2c7fb1a-30cf-4c8c-b116-2d8914e96987)
+![Arbusto](https://github.com/tapeogames/Upstream/assets/82976203/fb5fd2fd-1e62-4319-9867-40696a40521d)
+![nenufar](https://github.com/tapeogames/Upstream/assets/82976203/98a84152-b2f2-4149-b46b-ddeb07b50e42)
+![moodboardHelecho](https://github.com/tapeogames/Upstream/assets/82976203/de8bfede-5b91-44f8-8385-f5a5d87681d4)
+![moodboardMalanga](https://github.com/tapeogames/Upstream/assets/82976203/e00a44a1-2b35-428a-98aa-17f4518c0597)
 
 
 <br>
