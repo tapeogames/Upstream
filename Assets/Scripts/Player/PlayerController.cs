@@ -48,7 +48,7 @@ public class PlayerController : SceneObject
     {
         moving = false;
         grabbing = false;
-        estado = true;
+        //estado = true;
         rotating = false;
         rotatingNormal = false;
     }
@@ -71,19 +71,19 @@ public class PlayerController : SceneObject
             NormalRotateTowardsDirection();
         }
 
-        if (grabbing && estado)
+        if (grabbing /*&& estado*/)
         {
             normal.SetActive(false);
             retroalimentacion.SetActive(true);
             imagen.SetActive(true);
-            estado = false;
+            //estado = false;
         }
-        else if (!grabbing && !estado)
+        else if (!grabbing /*&& !estado*/)
         {
             normal.SetActive(true);
             retroalimentacion.SetActive(false);
             imagen.SetActive(false);
-            estado = true;
+            //estado = true;
         }
         
         //Comprobaciones de teclado
@@ -109,6 +109,10 @@ public class PlayerController : SceneObject
         {
             inputCont++;
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            inputCont++;
+        }
     }
 
     public void ReadInputUp()
@@ -129,6 +133,10 @@ public class PlayerController : SceneObject
         {
             inputCont--;
         }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            inputCont--;
+        }
     }
 
     public void OnMove(InputValue input)
@@ -142,8 +150,11 @@ public class PlayerController : SceneObject
 
     public void OnGrab(InputValue input)
     {
-
-        Grab();
+        if (inputCont == 1)
+        {
+            Grab();
+        }
+        
 
     }
 
