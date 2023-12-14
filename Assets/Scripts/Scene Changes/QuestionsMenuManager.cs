@@ -16,8 +16,10 @@ public class QuestionsMenuManager : MonoBehaviour
     public Button otro;
     public Sprite pressed;
     public Sprite normal;
-    string gender = "x";
-    int value;
+    public string gender = "x";
+    public int value;
+
+    public bool send = false;
 
     public void Start()
     {
@@ -34,7 +36,8 @@ public class QuestionsMenuManager : MonoBehaviour
             Image imagenBotonChico = chico.GetComponent<Image>();
             Image imagenBotonChica = chica.GetComponent<Image>();
             Image imagenBotonOtro = otro.GetComponent<Image>();
-            
+
+
             if (gender == "Chico")
             {
                 
@@ -58,6 +61,8 @@ public class QuestionsMenuManager : MonoBehaviour
               
                 imagenBotonOtro.sprite = pressed;
             }
+
+
         }
 
         
@@ -78,6 +83,7 @@ public class QuestionsMenuManager : MonoBehaviour
 
     public void NextScene()
     {
+        send = true;
         StartCoroutine(DelayedNextScene());
     }
     private IEnumerator DelayedNextScene()

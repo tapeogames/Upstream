@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Information : MonoBehaviour
 {
     // Start is called before the first frame update
     public TMP_Text text;
     public WinCondition winCondition;
+
     private void Update()
     {
         if (winCondition.winLevel)
@@ -16,8 +18,7 @@ public class Information : MonoBehaviour
             string mS = "<size=60>"+winCondition.movementString+"</size>";
 
             text.text = "¡Has hecho " + mS + " movimientos! \n" + tS;
-
-
         }
     }
+
 }

@@ -19,8 +19,8 @@ public class WinCondition : MonoBehaviour
     public string movementString;
     public string timeString;
 
-    
-    
+    public bool send;
+    public int currentLevel;
 
     void Awake()
     {
@@ -58,7 +58,8 @@ public class WinCondition : MonoBehaviour
             if (levelToUnlock > lastLevel) { 
             PlayerPrefs.SetInt("levelReached", levelToUnlock);
             }
-           
+
+            send = true;
         }
     }
 
