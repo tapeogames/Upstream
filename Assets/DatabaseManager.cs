@@ -1,16 +1,21 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.Networking;
+using System.Linq;
 
 public class DatabaseManager : MonoBehaviour
 {
     string username;
     string password;
     string uri;
+    string uriGet;
     string contentType = "application/json";
+
 
     public WinCondition levelData;
     public QuestionsMenuManager qManager;
@@ -21,19 +26,21 @@ public class DatabaseManager : MonoBehaviour
     }
     void Update()
     {
-        if(qManager != null && qManager.send )
+        if (qManager != null && qManager.send)
         {
             StartCoroutine(SendPostRequestUsuario());
             qManager.send = false;
         }
         if (levelData != null && levelData.send)
         {
-            StartCoroutine(SendPostRequestNivel());
+            string tableUsuarios = "Usuarios";
+            string data = CreateJSON(tableUsuarios);
+            StartCoroutine(SendGetRequest(data));
             levelData.send = false;
         }
     }
 
-    string CreateJSONUsuario(string tabla,int edad, string genero)
+    string CreateJSONUsuario(string tabla, int edad, string genero)
     {
         //Construye JSON para la petición REST         
         string json = $@"{{
@@ -49,15 +56,16 @@ public class DatabaseManager : MonoBehaviour
         return json;
     }
 
-    string CreateJSONDatosNiveles(string tabla, int nivel, string movimientos, string tiempo)
+    string CreateJSONDatosNiveles(string tabla, int id, int nivel, string movimientos, string tiempo)
     {
-        Debug.Log("Level: " + nivel + "movs: " + movimientos + "time: " + tiempo);
+        //UnityEngine.Debug.Log("Level: " + nivel + "movs: " + movimientos + "time: " + tiempo);
         //Construye JSON para la petición REST         
         string json = $@"{{
             ""username"":""{username}"",
             ""password"":""{password}"",
             ""table"":""{tabla}"",
             ""data"": {{
+		        ""UsuarioID"":""{id}"",
                 ""Nivel"": ""{nivel}"",
                 ""Movimientos"": ""{movimientos}"",
                 ""TiempoResolucion"": ""{tiempo}""
@@ -67,7 +75,20 @@ public class DatabaseManager : MonoBehaviour
         return json;
     }
 
-  
+
+    string CreateJSON(string tabla)
+    {
+        string json = $@"{{
+            ""username"":""{username}"",
+            ""password"":""{password}"",
+            ""table"":""{tabla}"",
+            ""filter"":{{
+            }}
+        }}";
+
+        return json;
+    }
+
 
     IEnumerator SendPostRequestUsuario()
     {
@@ -87,15 +108,16 @@ public class DatabaseManager : MonoBehaviour
                     print("Respuesta: " + www.downloadHandler.text);
                 }
             }
-        }        
-       
+        }
+
     }
 
-    IEnumerator SendPostRequestNivel()
+    IEnumerator SendPostRequestNivel(int id)
     {
         if (levelData != null)
         {
-            string datosNiveles = CreateJSONDatosNiveles("DatosNiveles", levelData.currentLevel, levelData.movementString, levelData.timeString);
+
+            string datosNiveles = CreateJSONDatosNiveles("DatosNiveles", id, levelData.currentLevel, levelData.movementString, levelData.timeString);
 
             using (UnityWebRequest www = UnityWebRequest.Post(uri, datosNiveles, contentType))
             {
@@ -114,22 +136,75 @@ public class DatabaseManager : MonoBehaviour
 
     }
 
+
+    IEnumerator SendGetRequest(string data)
+    {
+        UnityEngine.Debug.Log("entro get request");
+        UnityEngine.Debug.Log("Data: " + data);
+
+        using (UnityWebRequest www = UnityWebRequest.Post(uriGet, data, contentType))
+        {
+            yield return www.SendWebRequest();
+            print("entro en el using");
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                print("Error: " + www.error);
+            }
+            else
+            {
+                print("Respuesta: " + www.downloadHandler.text);
+                string answer = www.downloadHandler.text;
+                // Procesa la respuesta para obtener el último ID
+                LastInsertedIDResponse response = JsonUtility.FromJson<LastInsertedIDResponse>(answer);
+                if (response.data != null && response.data.Count > 0)
+                {
+                    // Encuentra el UsuarioID más grande 
+                    int maxId = response.data.Max(item => item.UsuarioID);
+
+                    if (maxId > 0)
+                    {
+                        //id = maxUserID;
+                        print("Último ID insertado: " + maxId);
+                        StartCoroutine(SendPostRequestNivel(maxId));
+                    }
+                    else
+                    {
+                        print("No se encontraron UsuarioID válidos en la respuesta.");
+                    }
+                }
+                else
+                {
+                    print("No se encontraron datos en la respuesta.");
+                }
+
+            }
+        }
+    }
+
+
     void LoadCredentials()
     {
-        string configPath = "Assets/config.json";
+        TextAsset configData = Resources.Load<TextAsset>("configBuild");
 
-        if (File.Exists(configPath))
+        if (Application.isEditor)
         {
-            string configJson = File.ReadAllText(configPath);
-            var config = JsonUtility.FromJson<Credentials>(configJson);
+            configData = Resources.Load<TextAsset>("config");
+        }
+
+        if (configData != null)
+        {
+
+            var config = JsonUtility.FromJson<Credentials>(configData.text);
 
             username = config.username;
             password = config.password;
             uri = config.uri;
+            uriGet = config.uriGet;
         }
         else
         {
-            Debug.LogError("Config file not found!");
+            UnityEngine.Debug.LogError("Config file not found!");
         }
     }
 
@@ -139,5 +214,21 @@ public class DatabaseManager : MonoBehaviour
         public string username;
         public string password;
         public string uri;
+        public string uriGet;
+    }
+
+    [System.Serializable]
+    private class LastInsertedIDResponse
+    {
+        public string result;
+        public List<UserData> data;
+
+        [System.Serializable]
+        public class UserData
+        {
+            public int UsuarioID;
+            public int Edad;
+            public string Genero;
+        }
     }
 }
